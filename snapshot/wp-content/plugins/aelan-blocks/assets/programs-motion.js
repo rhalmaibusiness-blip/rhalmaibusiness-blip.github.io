@@ -22,6 +22,7 @@
         var desktopTimeline = null;
         var mobileTimelines = [];
         var fastPassTimer = null;
+        var suppressEntryUntil = 0;
         var matchMedia;
 
         if (! gsap || ! ScrollTrigger || reducedMotion) {
@@ -273,6 +274,11 @@
         function playDesktop() {
             var timeline;
 
+            if (Date.now() < suppressEntryUntil) {
+                finishImmediately();
+                return;
+            }
+
             if (isSectionOutsideViewport() || directVisit) {
                 finishImmediately();
                 return;
@@ -312,7 +318,12 @@
             var line = membrane ? membrane.querySelector('.aelan-programs__membrane-line') : null;
             var timeline;
 
-            if (! trigger || directVisit || isSectionOutsideViewport()) {
+            if (
+                ! trigger ||
+                directVisit ||
+                isSectionOutsideViewport() ||
+                Date.now() < suppressEntryUntil
+            ) {
                 finishMobilePanel(panel, index);
                 return;
             }
@@ -520,11 +531,17 @@
             }
         }
 
+        function onInternalPanelChange() {
+            suppressEntryUntil = Date.now() + 900;
+            finishImmediately();
+        }
+
         matchMedia = gsap.matchMedia();
         matchMedia.add('(min-width: 783px)', setupDesktop);
         matchMedia.add('(max-width: 782px)', setupMobile);
         window.addEventListener('hashchange', onHashChange);
         root.addEventListener('click', onProgramInteraction);
+        root.addEventListener('aelan:internal-panel-change', onInternalPanelChange);
     }
 
     document.querySelectorAll('[data-aelan-programs]').forEach(init);

@@ -71,7 +71,15 @@
             if (index < 0 || index >= tabs.length) {
                 return;
             }
+
+            if (index === activeIndex) {
+                return;
+            }
+
             activeIndex = index;
+            root.dispatchEvent(new window.CustomEvent('aelan:internal-panel-change', {
+                detail: { block: 'program-selector', index: index }
+            }));
             applyState(focusTab);
         }
 

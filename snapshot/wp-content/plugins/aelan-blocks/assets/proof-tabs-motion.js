@@ -12,6 +12,7 @@
         var ScrollTrigger = window.ScrollTrigger;
         var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         var bypassNextEntry = isDirectDestination();
+        var suppressEntryUntil = 0;
         var current = null;
         var matchMedia;
 
@@ -180,6 +181,11 @@
             function playEntry() {
                 var timeline;
 
+                if (Date.now() < suppressEntryUntil) {
+                    finishImmediately();
+                    return;
+                }
+
                 if (bypassNextEntry) {
                     bypassNextEntry = false;
                     finishImmediately();
@@ -229,10 +235,16 @@
             }
         }
 
+        function onInternalPanelChange() {
+            suppressEntryUntil = Date.now() + 900;
+            finishImmediately();
+        }
+
         matchMedia = gsap.matchMedia();
         matchMedia.add('(min-width: 783px)', function () { return setup(false); });
         matchMedia.add('(max-width: 782px)', function () { return setup(true); });
         window.addEventListener('hashchange', onHashChange);
+        root.addEventListener('aelan:internal-panel-change', onInternalPanelChange);
     }
 
     document.querySelectorAll('[data-aelan-proof-tabs]').forEach(init);
