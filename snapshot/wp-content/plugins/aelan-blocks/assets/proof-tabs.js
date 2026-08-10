@@ -3,13 +3,41 @@
 
     var mobileQuery = window.matchMedia('(max-width: 782px)');
 
-    function requestMotionRefresh() {
-        if (! window.ScrollTrigger) {
-            return;
-        }
+    function setScrollPosition(position) {
+        var previousInlineBehavior = document.documentElement.style.scrollBehavior;
 
+        document.documentElement.style.scrollBehavior = 'auto';
+        window.scrollTo(0, position);
+        document.documentElement.style.scrollBehavior = previousInlineBehavior;
+    }
+
+    function requestMotionRefresh(anchor, anchorTop) {
         window.requestAnimationFrame(function () {
-            window.ScrollTrigger.refresh();
+            var stableScrollY;
+            var currentTop;
+
+            function restoreScrollPosition() {
+                if (Math.abs(window.scrollY - stableScrollY) > 1) {
+                    setScrollPosition(stableScrollY);
+                }
+                if (window.ScrollTrigger) {
+                    window.ScrollTrigger.update();
+                }
+            }
+
+            if (anchor && Number.isFinite(anchorTop)) {
+                currentTop = anchor.getBoundingClientRect().top;
+                if (Number.isFinite(currentTop)) {
+                    setScrollPosition(window.scrollY + currentTop - anchorTop);
+                }
+            }
+
+            stableScrollY = window.scrollY;
+            if (window.ScrollTrigger) {
+                window.ScrollTrigger.refresh();
+            }
+            restoreScrollPosition();
+            window.requestAnimationFrame(restoreScrollPosition);
         });
     }
 
@@ -25,7 +53,7 @@
 
         root.classList.add('is-enhanced');
 
-        function applyState(focusTab) {
+        function applyState(focusTab, anchor, anchorTop) {
             tabs.forEach(function (tab, index) {
                 var selected = index === activeIndex;
                 tab.setAttribute('aria-selected', selected ? 'true' : 'false');
@@ -57,13 +85,20 @@
             });
 
             if (focusTab && tabs[activeIndex]) {
-                tabs[activeIndex].focus();
+                try {
+                    tabs[activeIndex].focus({ preventScroll: true });
+                } catch (error) {
+                    tabs[activeIndex].focus();
+                }
             }
 
-            requestMotionRefresh();
+            requestMotionRefresh(anchor, anchorTop);
         }
 
         function activate(index, focusTab) {
+            var anchor;
+            var anchorTop;
+
             if (index < 0 || index >= tabs.length) {
                 return;
             }
@@ -72,11 +107,13 @@
                 return;
             }
 
+            anchor = mobileQuery.matches ? accordionTriggers[index] : tabs[index];
+            anchorTop = anchor ? anchor.getBoundingClientRect().top : null;
             activeIndex = index;
             root.dispatchEvent(new window.CustomEvent('aelan:internal-panel-change', {
                 detail: { block: 'proof-tabs', index: index }
             }));
-            applyState(focusTab);
+            applyState(focusTab, anchor, anchorTop);
         }
 
         tabs.forEach(function (tab, index) {
