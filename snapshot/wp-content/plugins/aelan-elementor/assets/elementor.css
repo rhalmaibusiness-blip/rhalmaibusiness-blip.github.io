@@ -1,0 +1,666 @@
+@font-face {
+    font-family: "Satoshi";
+    src: url("fonts/Satoshi-Variable.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300 900;
+}
+
+@font-face {
+    font-family: "Marcellus";
+    src: url("fonts/Marcellus-Regular.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.aelan-elementor-page,
+.aelan-elementor-page .elementor {
+    --wp--preset--font-family--marcellus: "Marcellus", Georgia, serif;
+    --wp--preset--font-family--satoshi: "Satoshi", Arial, sans-serif;
+    color: var(--aelan-navy, #303463);
+    font-family: var(--wp--preset--font-family--satoshi);
+    margin: 0;
+    overflow-x: clip;
+    padding: 0;
+}
+
+.aelan-elementor-page .elementor-element.e-con,
+.aelan-elementor-page .e-con-inner,
+.aelan-elementor-page .elementor-widget,
+.aelan-elementor-page .elementor-widget-container {
+    --container-default-padding-top: 0px;
+    --container-default-padding-right: 0px;
+    --container-default-padding-bottom: 0px;
+    --container-default-padding-left: 0px;
+}
+
+.aelan-elementor-page .aelan-elementor-section,
+.aelan-elementor-page .aelan-elementor-section > .e-con-inner,
+.aelan-elementor-page .aelan-elementor-section .elementor-widget-container {
+    gap: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    width: 100%;
+}
+
+/* Keep section backgrounds attached to their approved page positions while
+ * allowing the Elementor content widgets to swap places independently. */
+.aelan-elementor-page .aelan-elementor-slot--proof {
+    --aelan-section-bridge: #f9e6e1;
+    background-color: var(--aelan-soft-peach, #fff7f0);
+    background-image: linear-gradient(
+        180deg,
+        var(--aelan-section-bridge) 0,
+        #fceee9 44%,
+        var(--aelan-soft-peach, #fff7f0) 74%,
+        var(--aelan-soft-peach, #fff7f0) 100%
+    );
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 180px;
+    isolation: isolate;
+}
+
+@supports (background: linear-gradient(180deg in oklab, #000, #fff)) {
+    .aelan-elementor-page .aelan-elementor-slot--proof {
+        background-image: linear-gradient(
+            180deg in oklab,
+            var(--aelan-section-bridge) 0,
+            #fceee9 44%,
+            var(--aelan-soft-peach, #fff7f0) 74%,
+            var(--aelan-soft-peach, #fff7f0) 100%
+        );
+    }
+}
+
+.aelan-elementor-page .aelan-elementor-slot--programs {
+    background-color: var(--aelan-soft-peach, #fff7f0) !important;
+    background-image: linear-gradient(
+        180deg,
+        var(--aelan-peach, #f3bf99) 0,
+        #f9dfd4 8%,
+        var(--aelan-soft-peach, #fff7f0) 24%,
+        var(--aelan-soft-peach, #fff7f0) 100%
+    ) !important;
+    background-position: top left !important;
+    background-repeat: no-repeat !important;
+    margin-top: -1px;
+    overflow: clip;
+}
+
+.aelan-elementor-page .aelan-elementor-slot--proof .aelan-programs,
+.aelan-elementor-page .aelan-elementor-slot--programs .aelan-proof-tabs {
+    background: transparent !important;
+    background-image: none !important;
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .aelan-elementor-page .aelan-elementor-slot--proof {
+        background-size: 100% 150px;
+    }
+}
+
+.aelan-elementor-page .elementor-widget-aelan-header,
+.aelan-elementor-page .elementor-widget-aelan-footer,
+.aelan-elementor-page .elementor-widget-aelan-hero,
+.aelan-elementor-page .elementor-widget-aelan-manifesto,
+.aelan-elementor-page .elementor-widget-aelan-proof-tabs,
+.aelan-elementor-page .elementor-widget-aelan-measurement,
+.aelan-elementor-page .elementor-widget-aelan-method,
+.aelan-elementor-page .elementor-widget-aelan-services,
+.aelan-elementor-page .elementor-widget-aelan-team,
+.aelan-elementor-page .elementor-widget-aelan-credo,
+.aelan-elementor-page .elementor-widget-aelan-final-cta,
+.aelan-elementor-page .elementor-widget-aelan-section-navigation {
+    margin: 0;
+    width: 100%;
+}
+
+.aelan-elementor-page .elementor-location-header,
+.aelan-elementor-page .elementor-location-footer,
+.aelan-elementor-page .elementor-location-single,
+.aelan-elementor-page .elementor-location-archive {
+    margin: 0;
+    padding: 0;
+}
+
+.aelan-elementor-page .aelan-site-footer__brand {
+    margin-inline: auto;
+    max-width: 1240px;
+    width: calc(100% - 2rem);
+}
+
+.aelan-elementor-page .wp-block-navigation__responsive-container-open,
+.aelan-elementor-page .wp-block-navigation__responsive-container-close {
+    display: none;
+}
+
+.aelan-elementor-page .aelan-site-header__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aelan-elementor-page .aelan-header-navigation .wp-block-navigation__submenu-icon {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    padding: 0;
+}
+
+.aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container,
+.aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-close,
+.aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-dialog,
+.aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container-content {
+    align-items: center;
+    display: flex;
+    position: static;
+}
+
+.aelan-elementor-page .wp-block-navigation__container,
+.aelan-elementor-page .wp-block-navigation__submenu-container,
+.aelan-elementor-page .wp-block-social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.aelan-elementor-page .aelan-header-navigation .wp-block-navigation__container {
+    display: flex;
+}
+
+.aelan-elementor-page .aelan-header-navigation .wp-block-navigation-item {
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+
+.aelan-elementor-page .aelan-header-navigation .aelan-header-cta {
+    margin-left: clamp(0.25rem, 0.8vw, 0.8rem);
+}
+
+/* Elementor's generic image rule uses `height: auto` after widget styles. */
+.aelan-elementor-page :is(
+    .aelan-hero__image,
+    .aelan-manifesto__background-image,
+    .aelan-measurement__icon-image,
+    .aelan-programs__image,
+    .aelan-card__image,
+    .aelan-person-card__image,
+    .aelan-product-card__image,
+    .aelan-final-cta__background img,
+    .aelan-credo__bubble-image
+) {
+    height: 100%;
+}
+
+.aelan-elementor-page .aelan-header-navigation .wp-block-navigation__submenu-container {
+    flex-direction: column;
+    position: absolute;
+}
+
+.aelan-elementor-page .aelan-site-footer__socials {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 1.35rem auto 0;
+    max-width: 760px;
+}
+
+.aelan-elementor-page .aelan-site-footer__socials a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.aelan-elementor-page .aelan-site-footer__socials svg {
+    fill: currentColor;
+    height: 1em;
+    width: 1em;
+}
+
+.aelan-elementor-page .aelan-site-footer__inner {
+    margin-bottom: 1.75em;
+    max-width: 1240px;
+}
+
+.aelan-elementor-page .aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.aelan-elementor-page .aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation-item {
+    display: flex;
+    margin: 0;
+}
+
+.aelan-elementor-page .aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation-item__content {
+    font-weight: 500;
+}
+
+.aelan-elementor-page .aelan-site-footer__divider {
+    margin: clamp(4rem, 6vw, 5.5rem) auto 0.5rem;
+    max-width: 1180px;
+    width: 100px;
+}
+
+.aelan-elementor-page .aelan-site-footer__copyright {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    margin: 0.875rem auto 0;
+    max-width: 760px;
+    text-align: center;
+}
+
+.aelan-elementor-page .aelan-site-footer {
+    --aelan-footer-left-edge: max(1rem, calc((100vw - 1240px) / 2 + clamp(1.25rem, 2.8vw, 2.75rem)));
+}
+
+.aelan-elementor-page .aelan-site-footer__brand {
+    box-sizing: border-box;
+    padding-inline: clamp(1.25rem, 2.8vw, 2.75rem);
+    text-align: center;
+}
+
+.aelan-elementor-page .aelan-site-footer__brand .aelan-site-logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aelan-elementor-page .aelan-site-footer__socials {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+}
+
+.aelan-elementor-page .aelan-site-footer__inner > .wp-block-column,
+.aelan-elementor-page .aelan-site-footer__heading,
+.aelan-elementor-page .aelan-site-footer .aelan-contact-details li,
+.aelan-elementor-page .aelan-site-footer__hours {
+    text-align: left;
+}
+
+.aelan-elementor-page .aelan-site-footer__heading::after {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Desktop footer: headings are a shared visual layer, while the column
+ * content remains left-aligned for fast scanning. */
+@media (min-width: 621px) {
+    .aelan-elementor-page .aelan-site-footer__heading {
+        font-size: clamp(1.1rem, 1.15vw, 1.25rem);
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .aelan-elementor-page .aelan-site-footer__heading::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.aelan-elementor-page .aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation__container {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.aelan-elementor-page .aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation-item {
+    align-items: flex-start;
+    width: 100%;
+}
+
+.aelan-elementor-page .aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation-item__content {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.aelan-elementor-page .aelan-site-footer__divider {
+    margin-left: var(--aelan-footer-left-edge);
+    margin-right: 0;
+}
+
+.aelan-elementor-page .aelan-site-footer__copyright {
+    margin-left: var(--aelan-footer-left-edge);
+    margin-right: 1rem;
+    max-width: none;
+    text-align: left;
+}
+
+@media (min-width: 901px) {
+    .aelan-elementor-page .aelan-site-logo img {
+        height: 48px;
+        max-height: 48px;
+        width: auto;
+    }
+
+    .aelan-elementor-page .aelan-site-header.is-scrolled .aelan-site-logo img {
+        height: 40px;
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container-open {
+        display: flex;
+    }
+
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container,
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation__responsive-close,
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation__responsive-dialog,
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content {
+        display: flex;
+    }
+
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container {
+        align-items: stretch;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation__responsive-close {
+        align-items: stretch;
+        flex: 0 0 auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation__responsive-dialog {
+        align-items: stretch;
+        flex: 0 0 auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content,
+    .aelan-elementor-page .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation__container {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 620px) {
+    .aelan-elementor-page .aelan-site-footer__socials {
+        margin-top: 1rem;
+    }
+
+    .aelan-elementor-page .aelan-site-footer__inner,
+    .aelan-elementor-page .aelan-site-footer__copyright {
+        width: calc(100% - 2rem);
+    }
+
+    .aelan-elementor-page .aelan-site-footer__divider {
+        margin-top: 2.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aelan-elementor-page *,
+    .aelan-elementor-page *::before,
+    .aelan-elementor-page *::after {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Pearl veil hero. The generated artwork remains an independent transparent
+ * media layer; only the underlying CSS surface blends into the next section. */
+.aelan-elementor-page .aelan-hero.is-pearl-veil {
+    align-items: flex-start;
+    background:
+        radial-gradient(ellipse 42% 42% at 86% 20%, rgba(198, 192, 224, 0.12), transparent 72%),
+        radial-gradient(ellipse 38% 36% at 16% 38%, rgba(243, 191, 153, 0.1), transparent 74%),
+        linear-gradient(180deg, var(--aelan-cream, #fff8f3) 0%, #fff9f5 72%, var(--aelan-warm-white, #fffcf9) 100%);
+    color: var(--aelan-navy, #303463);
+    isolation: isolate;
+    min-height: clamp(760px, 92svh, 900px);
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__visual {
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__picture {
+    display: block;
+    height: 100%;
+    inset: 0;
+    max-width: none;
+    position: absolute;
+    transform: none;
+    width: 100%;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__image {
+    display: block;
+    filter: none;
+    height: 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__veil {
+    display: none;
+}
+
+/* A pure tonal crossfade connects the generated hero plate to the clean
+ * manifesto surface. It deliberately contains no fluid or decorative shape. */
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__transition-mist {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 252, 249, 0) 0%,
+        rgba(255, 252, 249, 0.08) 20%,
+        rgba(255, 252, 249, 0.32) 48%,
+        rgba(255, 250, 247, 0.76) 78%,
+        #fffaf7 100%
+    );
+    bottom: -1px;
+    display: block;
+    height: clamp(150px, 15vw, 220px);
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    transform: none;
+    visibility: visible;
+    z-index: 1;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__transition-mist::before,
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__transition-mist::after {
+    display: none;
+}
+
+.aelan-elementor-page .aelan-manifesto {
+    background: linear-gradient(
+        180deg,
+        #fffaf7 0%,
+        #fff9f5 22%,
+        var(--aelan-cream, #fff8f3) 52%,
+        var(--aelan-cream, #fff8f3) 100%
+    );
+}
+
+.aelan-elementor-page .aelan-manifesto::before,
+.aelan-elementor-page .aelan-manifesto__background {
+    display: none;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__content {
+    margin-inline: 0;
+    max-width: none;
+    padding-bottom: clamp(7rem, 10vw, 9rem);
+    padding-inline: clamp(2.5rem, 6vw, 6rem);
+    padding-top: clamp(11.75rem, 21.5vh, 12.5rem);
+    z-index: 2;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil h1 {
+    color: var(--aelan-navy, #303463);
+    font-size: clamp(3.6rem, 6vw, 5.4rem);
+    letter-spacing: -0.025em;
+    line-height: 1;
+    max-width: none;
+    text-shadow: none;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__subtitle {
+    color: var(--aelan-taupe, #a38b73);
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+    line-height: 1.16;
+    margin-top: 0.9rem;
+    text-shadow: none;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-lead {
+    color: var(--aelan-navy, #303463);
+    font-size: clamp(1rem, 1.35vw, 1.2rem);
+    line-height: 1.62;
+    margin-top: 1.35rem;
+    max-width: 780px;
+    text-shadow: none;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-actions,
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__cta-note {
+    max-width: 29rem;
+    width: 100%;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-actions {
+    margin-top: 1.65rem;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-button {
+    box-shadow: 0 14px 34px rgba(24, 30, 73, 0.2);
+    min-height: 68px;
+    width: 100%;
+}
+
+.aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__cta-note {
+    color: var(--aelan-navy, #303463);
+    font-size: clamp(0.82rem, 0.92vw, 0.92rem);
+    line-height: 1.45;
+    margin-top: 0.8rem;
+    text-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .aelan-elementor-page .aelan-hero.is-pearl-veil {
+        align-items: flex-start;
+        min-height: clamp(680px, 94svh, 780px);
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__image {
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__picture {
+        height: 100%;
+        inset: 0;
+        transform: none;
+        width: 100%;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__content {
+        max-width: 100%;
+        padding-bottom: clamp(12.5rem, 45vw, 15rem);
+        padding-inline: clamp(1rem, 4.8vw, 1.25rem);
+        padding-top: clamp(7.25rem, 22vw, 8rem);
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil h1 {
+        font-size: clamp(2.4rem, 11.8vw, 3.35rem);
+        line-height: 0.99;
+        max-width: 23rem;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__subtitle {
+        font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+        margin-top: 0.7rem;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-lead {
+        font-size: clamp(0.86rem, 3.7vw, 0.94rem);
+        line-height: 1.5;
+        margin-top: 0.9rem;
+        max-width: 23rem;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-actions {
+        margin-top: 1.2rem;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-actions,
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__cta-note {
+        max-width: 23rem;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-button {
+        min-height: 56px;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__transition-mist {
+        height: clamp(104px, 30vw, 142px);
+    }
+}
+
+@media (max-width: 380px) {
+    .aelan-elementor-page .aelan-hero.is-pearl-veil {
+        min-height: max(700px, 100svh);
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil h1 {
+        font-size: clamp(2.18rem, 11.7vw, 2.8rem);
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__content {
+        padding-bottom: 9rem;
+        padding-top: 6.8rem;
+    }
+}
+
+@media (max-width: 900px) and (max-height: 520px) and (orientation: landscape) {
+    .aelan-elementor-page .aelan-hero.is-pearl-veil {
+        min-height: 540px;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__content {
+        padding-bottom: 6.5rem;
+        padding-top: 5.15rem;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-lead {
+        line-height: 1.45;
+        max-width: 31rem;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-actions {
+        margin-top: 0.95rem;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__image {
+        object-position: center center;
+    }
+
+    .aelan-elementor-page .aelan-hero.is-pearl-veil .aelan-hero__picture {
+        height: 100%;
+        inset: 0;
+        transform: none;
+        width: 100%;
+    }
+}

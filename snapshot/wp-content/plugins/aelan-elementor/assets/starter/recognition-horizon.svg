@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 200" fill="none">
+  <defs>
+    <linearGradient id="pearl" x1="0" y1="0" x2="1600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3A377"/><stop offset=".24" stop-color="#F3BF99"/><stop offset=".48" stop-color="#C6C0E0"/><stop offset=".67" stop-color="#FFFFFF"/><stop offset="1" stop-color="#98CDF0"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-180%" width="120%" height="500%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="soft" x="-10%" y="-120%" width="120%" height="350%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <path d="M-50 154 Q800 -47 1650 154" stroke="url(#pearl)" stroke-width="22" opacity=".52" filter="url(#glow)"/>
+  <path d="M-50 154 Q800 -47 1650 154" stroke="url(#pearl)" stroke-width="8" opacity=".85" filter="url(#soft)"/>
+  <path d="M-50 154 Q800 -47 1650 154" stroke="url(#pearl)" stroke-width="3.5"/>
+  <path d="M-50 153 Q800 -48 1650 153" stroke="#FFFCF9" stroke-width="1.4" vector-effect="non-scaling-stroke"/>
+  <path d="M-50 164 Q800 -38 1650 164" stroke="url(#pearl)" stroke-width="2" opacity=".18" filter="url(#soft)"/>
+</svg>

@@ -1,0 +1,139 @@
+/* Shared, locked Team section presets. No entrance animations or hidden state. */
+.aelan-team-continuation {
+    --tc-width: 1280px;
+    --tc-space: clamp(4rem, 7vw, 7rem);
+    --tc-inset: clamp(1.25rem, 4vw, 4rem);
+    --tc-gap: clamp(1.25rem, 2.25vw, 2rem);
+    --tc-column-gap: clamp(2.5rem, 5vw, 5rem);
+    --tc-card-padding: clamp(1.5rem, 3vw, 3rem);
+    --tc-title: clamp(2.25rem, 4vw, 3.5rem);
+    --tc-card-title: clamp(1.5rem, 2.25vw, 1.875rem);
+    --tc-body: 1.125rem;
+    --tc-leading: 1.75;
+    --tc-heading-leading: 1.17;
+    --tc-serif: var(--wp--preset--font-family--marcellus, Marcellus, serif);
+    --tc-sans: var(--wp--preset--font-family--satoshi, Satoshi, sans-serif);
+    --tc-white-edge: rgba(255, 255, 255, .95);
+    --tc-peach-light: rgba(243, 191, 153, .13);
+    --tc-peach-glow: rgba(243, 191, 153, .22);
+    --tc-lavender-glow: rgba(198, 192, 224, .19);
+    --tc-rule: rgba(163, 139, 115, .26);
+    --tc-card-shadow: 0 16px 42px rgba(48, 52, 99, .045);
+    --tc-icon-size: 4rem;
+    --tc-icon-drawing: 3.5rem;
+    --tc-icon-stroke: 1.5;
+    --tc-row-gap: 1rem;
+    --tc-title-gap: 3rem;
+    --tc-copy-gap: 1.5rem;
+    --tc-button-height: 3.25rem;
+    --tc-button-padding: .85rem 1.75rem;
+    --tc-button-size: 1rem;
+    --tc-button-radius: 999px;
+    --tc-arc-width: clamp(20rem, 65vw, 70rem);
+    --tc-arc-opacity: .32;
+    background: var(--aelan-cream);
+    color: var(--aelan-navy);
+    font-family: var(--tc-sans);
+    padding: var(--tc-space) var(--tc-inset);
+}
+.aelan-team-continuation__shell { max-width: var(--tc-width); margin-inline: auto; min-width: 0; }
+.aelan-team-continuation__title { font: 400 var(--tc-title)/var(--tc-heading-leading) var(--tc-serif); letter-spacing: -.025em; color: inherit; margin: 0 0 var(--tc-title-gap); text-wrap: balance; overflow-wrap: break-word; }
+.aelan-team-continuation__body { font-size: var(--tc-body); line-height: var(--tc-leading); overflow-wrap: break-word; }
+.aelan-team-continuation__body p { margin: 0 0 var(--tc-copy-gap); }
+.aelan-team-continuation__body p:last-child { margin-bottom: 0; }
+.aelan-team-continuation .aelan-team-continuation__button { display: inline-flex; align-items: center; justify-content: space-between; gap: var(--tc-copy-gap); min-height: var(--tc-button-height); height: auto; max-width: 100%; padding: var(--tc-button-padding); border-radius: var(--tc-button-radius); background: var(--aelan-navy); color: var(--aelan-warm-white); border: 1px solid var(--aelan-navy); font: 700 var(--tc-button-size)/1.4 var(--tc-sans); text-decoration: none; white-space: normal; text-align: left; overflow-wrap: break-word; }
+.aelan-team-continuation__button span { flex: 0 0 auto; }
+.aelan-team-continuation .aelan-team-continuation__button:disabled { opacity: 1; cursor: default; transform: none; box-shadow: none; }
+.aelan-team-competencies { background: linear-gradient(var(--aelan-cream), var(--aelan-warm-white)); }
+.aelan-team-competencies .aelan-team-continuation__title { max-width: 24ch; margin-inline: auto; text-align: center; }
+.aelan-team-competencies__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--tc-gap); }
+.aelan-team-competencies__card { min-width: 0; padding: var(--tc-card-padding); border: 1px solid var(--tc-white-edge); border-radius: var(--aelan-radius-md); background: radial-gradient(ellipse at 100% 100%, var(--tc-lavender-glow), transparent 60%), linear-gradient(135deg, var(--aelan-warm-white), var(--aelan-cream)); box-shadow: var(--tc-card-shadow); }
+.aelan-team-competencies__icon { width: var(--tc-icon-size); height: var(--tc-icon-size); display: grid; place-items: center; border-radius: 50%; background: var(--tc-peach-light); margin-bottom: var(--tc-copy-gap); }
+.aelan-team-competencies__icon img { display: block; width: var(--tc-icon-drawing); height: var(--tc-icon-drawing); object-fit: contain; }
+.aelan-team-competencies__card h3 { font: 400 var(--tc-card-title)/1.25 var(--tc-serif); margin: 0 0 var(--tc-row-gap); color: inherit; overflow-wrap: break-word; }
+.aelan-team-method { background: radial-gradient(ellipse at 85% 70%, var(--tc-peach-light), transparent 65%), var(--aelan-warm-white); }
+.aelan-team-method__layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: var(--tc-column-gap); }
+.aelan-team-method__copy { min-width: 0; }
+.aelan-team-method__phases { margin: 0 0 var(--tc-title-gap); font-size: var(--tc-body); line-height: var(--tc-leading); }
+.aelan-team-method__phase { display: grid; grid-template-columns: minmax(0, .3fr) minmax(0, 1fr); gap: var(--tc-row-gap); padding-block: var(--tc-row-gap); border-bottom: 1px solid var(--tc-rule); }
+.aelan-team-method__phase:first-child { border-top: 1px solid var(--tc-rule); }
+.aelan-team-method__phase dt { font-weight: 700; }
+.aelan-team-method__phase dd { margin: 0; overflow-wrap: break-word; }
+.aelan-team-method__media { width: 100%; aspect-ratio: 4 / 3; position: relative; overflow: hidden; border: 1px solid var(--tc-white-edge); border-radius: var(--aelan-radius-md); background: radial-gradient(ellipse at 16% 20%, var(--tc-lavender-glow), transparent 65%), radial-gradient(ellipse at 88% 90%, var(--tc-peach-glow), transparent 62%), var(--aelan-cream); box-shadow: var(--tc-card-shadow); }
+.aelan-team-method__media .aelan-team-method__image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.aelan-team-final-cta {
+    align-items: center;
+    background:
+        radial-gradient(ellipse at 6% 0%, rgba(200, 191, 226, .46), transparent 38%),
+        radial-gradient(ellipse at 91% 100%, rgba(200, 191, 226, .42), transparent 41%),
+        linear-gradient(118deg, #333761 0%, #303561 52%, #343861 100%);
+    color: var(--aelan-warm-white);
+    display: grid;
+    isolation: isolate;
+    min-height: clamp(29rem, 43vw, 39rem);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.aelan-team-final-cta::before {
+    border: 1px solid rgba(218, 211, 239, .22);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    content: "";
+    height: 42%;
+    left: -13%;
+    pointer-events: none;
+    position: absolute;
+    top: 46%;
+    transform: rotate(2.5deg);
+    width: 126%;
+    z-index: -1;
+}
+.aelan-team-final-cta::after {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .055), transparent);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: -2;
+}
+.aelan-team-final-cta__copy { max-width: 61rem; position: relative; }
+.aelan-team-final-cta__eyebrow {
+    color: var(--aelan-peach);
+    font: 500 .72rem/1.2 var(--tc-sans);
+    letter-spacing: .22em;
+    margin: 0 0 1.5rem;
+    text-transform: uppercase;
+}
+.aelan-team-final-cta .aelan-team-continuation__title {
+    font-size: clamp(2.8rem, 4.5vw, 4rem);
+    letter-spacing: -.035em;
+    margin-bottom: 1.6rem;
+}
+.aelan-team-final-cta .aelan-team-continuation__body {
+    color: rgba(255, 252, 249, .88);
+    line-height: 1.72;
+    margin: 0 auto 2.5rem;
+    max-width: 62ch;
+}
+.aelan-team-final-cta .aelan-team-continuation__button {
+    background: var(--aelan-cream);
+    border-color: rgba(255, 255, 255, .88);
+    color: var(--aelan-navy);
+    min-width: 12.5rem;
+    padding-inline: 1.9rem;
+}
+@media (max-width: 900px) {
+    .aelan-team-competencies__grid, .aelan-team-method__layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 620px) {
+    .aelan-team-continuation { --tc-body: 1rem; --tc-title-gap: 2rem; --tc-arc-opacity: .2; }
+    .aelan-team-method__phase { grid-template-columns: minmax(0, 1fr); gap: .25rem; }
+    .aelan-team-continuation .aelan-team-continuation__button { width: 100%; }
+    .aelan-team-final-cta { min-height: 32rem; padding-block: 5rem; }
+    .aelan-team-final-cta::before { height: 30%; left: -45%; top: 56%; width: 190%; }
+    .aelan-team-final-cta__eyebrow { font-size: .68rem; margin-bottom: 1.25rem; }
+    .aelan-team-final-cta .aelan-team-continuation__title { font-size: clamp(2.35rem, 11vw, 3.2rem); margin-bottom: 1.35rem; }
+    .aelan-team-final-cta .aelan-team-continuation__body { margin-bottom: 2rem; }
+}

@@ -1,0 +1,1209 @@
+:root {
+    --aelan-navy: #303463;
+    --aelan-taupe: #a38b73;
+    --aelan-cream: #fff8f3;
+    --aelan-soft-peach: #fff7f0;
+    --aelan-warm-white: #fffcf9;
+    --aelan-peach: #f3bf99;
+    --aelan-coral: #f3a377;
+    --aelan-lavender: #c6c0e0;
+    --aelan-pink: #fda3dd;
+    --aelan-violet: #5309cc;
+    --aelan-border: rgba(163, 139, 115, 0.22);
+    --aelan-radius-sm: 16px;
+    --aelan-radius-md: 28px;
+    --aelan-radius-lg: 40px;
+    --aelan-shadow-soft: 0 18px 50px rgba(48, 52, 99, 0.1);
+    --aelan-shadow-pearl: 0 22px 60px rgba(163, 139, 115, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    --aelan-transition: 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: clip;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+    outline: 3px solid var(--aelan-coral);
+    outline-offset: 3px;
+}
+
+.aelan-site-header {
+    background: transparent;
+    border: 0;
+    left: 0;
+    padding: clamp(0.65rem, 1.1vw, 0.9rem) 0 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.admin-bar .aelan-site-header {
+    top: 32px;
+}
+
+.aelan-site-header__inner {
+    align-items: center;
+    background:
+        radial-gradient(ellipse 64% 230% at 52% 48%, rgba(198, 192, 224, 0.13) 0%, rgba(253, 163, 221, 0.07) 42%, transparent 76%),
+        linear-gradient(105deg, rgba(255, 252, 249, 0.74) 0%, rgba(255, 248, 243, 0.68) 48%, rgba(249, 246, 252, 0.7) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.91);
+    border-radius: 999px;
+    box-shadow:
+        0 18px 46px rgba(71, 52, 42, 0.11),
+        0 3px 12px rgba(48, 52, 99, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(198, 192, 224, 0.17);
+    isolation: isolate;
+    margin-inline: auto;
+    max-width: min(1440px, calc(100vw - clamp(1rem, 2.4vw, 2.25rem))) !important;
+    min-height: 66px;
+    overflow: visible;
+    padding: 0.42rem clamp(0.85rem, 1.5vw, 1.4rem) 0.42rem clamp(1.05rem, 1.7vw, 1.6rem);
+    pointer-events: auto;
+    position: relative;
+    transition:
+        background-color var(--aelan-transition),
+        box-shadow var(--aelan-transition),
+        min-height var(--aelan-transition),
+        padding var(--aelan-transition),
+        transform var(--aelan-transition);
+    width: 100%;
+    -webkit-backdrop-filter: blur(25px) saturate(145%);
+    backdrop-filter: blur(25px) saturate(145%);
+}
+
+.aelan-site-header__inner::before,
+.aelan-site-header__inner::after {
+    border-radius: inherit;
+    clip-path: inset(0 round 999px);
+    content: "";
+    pointer-events: none;
+    position: absolute;
+}
+
+.aelan-site-header__inner::before {
+    background: linear-gradient(100deg, rgba(253, 163, 221, 0.12) 0%, rgba(198, 192, 224, 0.07) 21%, transparent 43%, rgba(243, 191, 153, 0.07) 64%, rgba(198, 192, 224, 0.12) 84%, rgba(253, 163, 221, 0.1) 100%);
+    inset: 0;
+    opacity: 0.82;
+    z-index: -2;
+}
+
+.aelan-site-header__inner::after {
+    background: linear-gradient(90deg, transparent 7%, rgba(255, 255, 255, 0.12) 36%, rgba(255, 255, 255, 0.16) 52%, rgba(255, 255, 255, 0.1) 69%, transparent 93%);
+    inset: 0;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+.aelan-site-header.is-scrolled .aelan-site-header__inner {
+    background:
+        radial-gradient(ellipse 64% 230% at 52% 48%, rgba(198, 192, 224, 0.11) 0%, rgba(253, 163, 221, 0.06) 42%, transparent 76%),
+        rgba(255, 252, 249, 0.82);
+    box-shadow:
+        0 14px 36px rgba(71, 52, 42, 0.09),
+        0 3px 12px rgba(48, 52, 99, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.97);
+    min-height: 58px;
+    padding-block: 0.28rem;
+}
+
+.aelan-site-header__inner > * {
+    position: relative;
+    z-index: 1;
+}
+
+.aelan-site-logo,
+.aelan-site-logo .custom-logo-link {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    line-height: 0;
+}
+
+.aelan-site-header .aelan-site-logo {
+    width: clamp(100px, 8vw, 116px);
+}
+
+.aelan-site-logo img {
+    display: block;
+    max-height: 38px;
+    object-fit: contain;
+    transition: max-height var(--aelan-transition), width var(--aelan-transition);
+    width: 100%;
+}
+
+.aelan-site-header.is-scrolled .aelan-site-logo img {
+    max-height: 33px;
+}
+
+.aelan-header-navigation {
+    color: var(--aelan-navy);
+    flex: 1 1 auto;
+    margin-left: clamp(1rem, 2vw, 2rem);
+    min-width: 0;
+}
+
+.aelan-header-navigation .wp-block-navigation__container {
+    align-items: center;
+    column-gap: clamp(0.75rem, 1.45vw, 1.55rem);
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.aelan-header-navigation .wp-block-navigation-item__content {
+    color: var(--aelan-navy);
+    display: block;
+    font-family: var(--wp--preset--font-family--satoshi, Satoshi, sans-serif);
+    font-size: clamp(0.78rem, 0.86vw, 0.9rem);
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 0.72rem 0.1rem 0.8rem;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+    transition: color var(--aelan-transition), transform var(--aelan-transition);
+    white-space: nowrap;
+}
+
+.aelan-header-navigation .wp-block-navigation-item__content::after {
+    background: linear-gradient(90deg, var(--aelan-navy), var(--aelan-coral));
+    border-radius: 999px;
+    bottom: 0.35rem;
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform var(--aelan-transition);
+    width: calc(100% - 0.3rem);
+}
+
+.aelan-header-navigation .wp-block-navigation-item__content:hover,
+.aelan-header-navigation .wp-block-navigation-item__content:focus-visible,
+.aelan-header-navigation .wp-block-navigation-item__content[aria-current="location"],
+.aelan-header-navigation .current-menu-item > .wp-block-navigation-item__content {
+    color: #242952;
+    transform: translateY(-1px);
+}
+
+.aelan-header-navigation .wp-block-navigation-item__content:hover::after,
+.aelan-header-navigation .wp-block-navigation-item__content:focus-visible::after,
+.aelan-header-navigation .wp-block-navigation-item__content[aria-current="location"]::after,
+.aelan-header-navigation .current-menu-item > .wp-block-navigation-item__content::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.aelan-header-navigation .wp-block-navigation-item__content:focus-visible {
+    border-radius: 8px;
+    outline: 2px solid var(--aelan-coral);
+    outline-offset: 4px;
+}
+
+.aelan-header-navigation .wp-block-navigation__submenu-icon {
+    color: var(--aelan-navy);
+    height: 0.85rem;
+    margin-left: 0.35rem;
+    transition: transform var(--aelan-transition);
+    width: 0.85rem;
+}
+
+.aelan-header-navigation .aelan-services-mobile-toggle {
+    display: none !important;
+}
+
+.aelan-header-navigation .wp-block-navigation-item.has-child:hover > .wp-block-navigation__submenu-icon,
+.aelan-header-navigation .wp-block-navigation-item.has-child:focus-within > .wp-block-navigation__submenu-icon {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 901px) {
+    .aelan-header-navigation,
+    .aelan-header-navigation .wp-block-navigation__responsive-container,
+    .aelan-header-navigation .wp-block-navigation__responsive-close,
+    .aelan-header-navigation .wp-block-navigation__responsive-dialog,
+    .aelan-header-navigation .wp-block-navigation__responsive-container-content {
+        display: flex;
+        flex: 1 1 auto;
+    }
+
+    .aelan-header-navigation,
+    .aelan-header-navigation .wp-block-navigation__responsive-container,
+    .aelan-header-navigation .wp-block-navigation__responsive-close,
+    .aelan-header-navigation .wp-block-navigation__responsive-dialog,
+    .aelan-header-navigation .wp-block-navigation__responsive-container-content,
+    .aelan-header-navigation .wp-block-navigation__container {
+        overflow: visible;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container,
+    .aelan-header-navigation .wp-block-navigation__responsive-close,
+    .aelan-header-navigation .wp-block-navigation__responsive-dialog,
+    .aelan-header-navigation .wp-block-navigation__responsive-container-content {
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__container {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+    }
+
+    .aelan-header-navigation .aelan-header-cta {
+        margin-inline-start: clamp(0.8rem, 1.35vw, 1.35rem) !important;
+    }
+
+    .aelan-header-navigation .wp-block-navigation-item.has-child {
+        position: relative;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__submenu-container {
+        align-items: stretch;
+        background:
+            radial-gradient(ellipse 72% 42% at 14% 3%, rgba(253, 163, 221, 0.18), transparent 72%),
+            radial-gradient(ellipse 68% 46% at 93% 98%, rgba(198, 192, 224, 0.24), transparent 74%),
+            linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(255, 248, 243, 0.62));
+        border: 1px solid rgba(255, 255, 255, 0.96) !important;
+        border-radius: 30px;
+        box-shadow:
+            0 28px 64px rgba(48, 52, 99, 0.16),
+            0 6px 20px rgba(163, 139, 115, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 1),
+            inset 0 -1px 0 rgba(198, 192, 224, 0.2);
+        display: flex;
+        gap: 0.62rem;
+        height: auto !important;
+        left: 50% !important;
+        min-width: 21.5rem !important;
+        opacity: 0;
+        overflow: visible !important;
+        padding: 0.72rem;
+        top: calc(100% + 1.75rem) !important;
+        transform: translate(-50%, 10px) scale(0.985);
+        transform-origin: top center;
+        transition:
+            opacity 180ms ease,
+            transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+            visibility 180ms ease;
+        visibility: hidden;
+        width: 21.5rem !important;
+        z-index: 50;
+        -webkit-backdrop-filter: blur(28px) saturate(155%);
+        backdrop-filter: blur(28px) saturate(155%);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__submenu-container::before {
+        content: "";
+        height: 2.15rem;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: -2rem;
+    }
+
+    .aelan-header-navigation .wp-block-navigation-item.has-child:hover > .wp-block-navigation__submenu-container,
+    .aelan-header-navigation .wp-block-navigation-item.has-child:focus-within > .wp-block-navigation__submenu-container,
+    .aelan-header-navigation .wp-block-navigation-item.has-child .wp-block-navigation-submenu__toggle[aria-expanded="true"] ~ .wp-block-navigation__submenu-container {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+        visibility: visible;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item {
+        border-radius: 22px;
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+        align-items: center;
+        background:
+            radial-gradient(ellipse 48% 88% at 5% 0%, rgba(243, 191, 153, 0.16), transparent 70%),
+            radial-gradient(ellipse 42% 82% at 100% 100%, rgba(198, 192, 224, 0.28), transparent 72%),
+            radial-gradient(ellipse 36% 70% at 92% 18%, rgba(253, 163, 221, 0.12), transparent 74%),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 249, 245, 0.7));
+        border: 1px solid rgba(255, 255, 255, 0.98);
+        border-radius: 22px;
+        box-shadow:
+            0 10px 24px rgba(70, 54, 70, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 1),
+            inset 0 -1px 0 rgba(198, 192, 224, 0.2);
+        display: flex;
+        font-size: 0.96rem;
+        font-weight: 560;
+        justify-content: center;
+        min-height: 4rem;
+        padding: 0.85rem 1.15rem;
+        text-align: center;
+        text-shadow: none;
+        transition:
+            background var(--aelan-transition),
+            border-color var(--aelan-transition),
+            box-shadow var(--aelan-transition),
+            color var(--aelan-transition),
+            transform var(--aelan-transition);
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content::after {
+        display: none;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
+    .aelan-header-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content:focus-visible {
+        border-color: rgba(243, 163, 119, 0.34);
+        color: #242952;
+        box-shadow:
+            0 14px 30px rgba(48, 52, 99, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 1),
+            inset 0 -2px 0 rgba(243, 163, 119, 0.24);
+        transform: translateY(-2px);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content[aria-current="location"],
+    .aelan-header-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
+    .aelan-header-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item__content:focus-visible {
+        background:
+            radial-gradient(ellipse 68% 118% at 8% 4%, rgba(255, 255, 255, 0.24), transparent 48%),
+            radial-gradient(ellipse 54% 90% at 100% 100%, rgba(83, 9, 204, 0.28), transparent 68%),
+            linear-gradient(145deg, #354482, #263468 72%);
+        border-color: rgba(255, 255, 255, 0.54);
+        box-shadow:
+            0 13px 30px rgba(48, 52, 99, 0.24),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3),
+            inset 0 -2px 0 rgba(243, 163, 119, 0.78);
+        color: #fff;
+    }
+
+}
+
+.aelan-header-navigation .aelan-header-cta {
+    margin-left: auto;
+    padding-left: clamp(0.35rem, 0.85vw, 0.9rem);
+}
+
+.aelan-header-navigation .aelan-header-cta > .wp-block-navigation-item__content {
+    align-items: center;
+    background: linear-gradient(145deg, #354482, #263468);
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 999px;
+    box-shadow:
+        0 10px 26px rgba(48, 52, 99, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.26),
+        inset 0 -1px 0 rgba(12, 23, 71, 0.22);
+    color: #fff;
+    display: inline-flex;
+    font-size: clamp(0.78rem, 0.86vw, 0.9rem);
+    font-weight: 550;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 44px;
+    padding: 0.65rem clamp(1rem, 1.55vw, 1.45rem);
+    text-shadow: none;
+    transition: box-shadow var(--aelan-transition), transform var(--aelan-transition), background-color var(--aelan-transition);
+}
+
+.aelan-header-navigation .aelan-header-cta > .wp-block-navigation-item__content::before {
+    display: none;
+}
+
+.aelan-header-navigation .aelan-header-cta > .wp-block-navigation-item__content::after {
+    background: none;
+    bottom: auto;
+    content: "\2192";
+    display: inline-block;
+    height: auto;
+    left: auto;
+    position: static;
+    transform: none;
+    width: auto;
+}
+
+.aelan-header-navigation .aelan-header-cta > .wp-block-navigation-item__content:hover,
+.aelan-header-navigation .aelan-header-cta > .wp-block-navigation-item__content:focus-visible,
+.aelan-header-navigation .aelan-header-cta > .wp-block-navigation-item__content[aria-current="location"] {
+    background: linear-gradient(145deg, #3b4c8f, #293972);
+    box-shadow:
+        0 14px 34px rgba(48, 52, 99, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.aelan-site-footer__inner {
+    align-items: stretch;
+    column-gap: 0;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-inline: auto;
+    max-width: 1180px;
+    row-gap: 3rem;
+}
+
+.aelan-site-footer {
+    background: var(--aelan-navy);
+    color: #fff;
+    overflow: hidden;
+    padding-block: clamp(4.5rem, 7vw, 6.75rem) clamp(2rem, 3.5vw, 3rem) !important;
+}
+
+.aelan-site-footer :where(a, h2, h3, p) {
+    color: inherit;
+}
+
+.aelan-site-footer__inner > .wp-block-column {
+    margin: 0;
+    min-width: 0;
+    padding-inline: clamp(1.25rem, 2.8vw, 2.75rem);
+    position: relative;
+}
+
+.aelan-site-footer__inner > .wp-block-column:not(:first-child)::before {
+    background: linear-gradient(180deg, transparent, rgba(163, 139, 115, 0.42) 14%, rgba(163, 139, 115, 0.42) 86%, transparent);
+    content: '';
+    inset: 0 auto 0 0;
+    position: absolute;
+    width: 1px;
+}
+
+.aelan-site-footer__brand {
+    margin-bottom: clamp(4rem, 6vw, 5.5rem);
+    text-align: center;
+}
+
+.aelan-site-footer__brand .aelan-site-logo {
+    margin: 0 auto clamp(0.5rem, 1vw, 0.85rem);
+    width: fit-content;
+}
+
+.aelan-site-footer__tagline {
+    color: var(--aelan-taupe, #a38b73);
+    font-family: var(--wp--preset--font-family--marcellus, Marcellus, Georgia, serif);
+    font-size: clamp(1.08rem, 1.45vw, 1.35rem);
+    line-height: 1.2;
+    margin: 0;
+    max-width: none;
+    white-space: nowrap;
+}
+
+.aelan-site-footer__socials {
+    gap: 0.55rem;
+    justify-content: center;
+    margin-top: 1.35rem;
+}
+
+.aelan-site-footer__socials .wp-social-link {
+    background: transparent !important;
+}
+
+.aelan-site-footer__socials .wp-social-link a {
+    align-items: center;
+    border: 1px solid rgba(243, 191, 153, 0.42);
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    transition: background-color var(--aelan-transition), border-color var(--aelan-transition), transform var(--aelan-transition);
+    width: 40px;
+}
+
+.aelan-site-footer__socials .wp-social-link a:hover,
+.aelan-site-footer__socials .wp-social-link a:focus-visible {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(243, 191, 153, 0.82);
+    transform: translateY(-2px);
+}
+
+.aelan-site-footer__heading {
+    color: var(--aelan-taupe, #a38b73);
+    font-family: var(--wp--preset--font-family--marcellus, Marcellus, Georgia, serif);
+    font-size: clamp(1.25rem, 1.7vw, 1.6rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.65rem;
+    text-align: center;
+}
+
+.aelan-site-footer__heading::after {
+    background: var(--aelan-peach, #f3bf99);
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0.62rem auto 0;
+    width: 28px;
+}
+
+.aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) {
+    font-size: 0.94rem;
+}
+
+.aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation__container {
+    align-items: center;
+    gap: 0.72rem;
+    text-align: center;
+    width: 100%;
+}
+
+.aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation-item__content {
+    line-height: 1.42;
+    opacity: 0.74;
+    text-decoration: none;
+    transition: color var(--aelan-transition), opacity var(--aelan-transition), transform var(--aelan-transition);
+}
+
+.aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation-item__content:hover,
+.aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation-item__content:focus-visible {
+    color: var(--aelan-peach, #f3bf99);
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+.aelan-site-footer .aelan-contact-details li {
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.55;
+    margin-bottom: 1.05rem;
+    text-align: center;
+}
+
+.aelan-site-footer .aelan-contact-details li > span {
+    color: var(--aelan-peach, #f3bf99);
+    margin-bottom: 0.22rem;
+    opacity: 0.9;
+}
+
+.aelan-site-footer__hours {
+    display: grid;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.aelan-site-footer__hours li {
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.5;
+}
+
+.aelan-site-footer__hours strong,
+.aelan-site-footer__hours span {
+    display: block;
+}
+
+.aelan-site-footer__hours strong {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.92rem;
+    font-weight: 550;
+    margin-bottom: 0.2rem;
+}
+
+.aelan-site-footer .aelan-contact-details a {
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+    text-underline-offset: 0.2em;
+}
+
+.aelan-site-footer .aelan-contact-details a:hover,
+.aelan-site-footer .aelan-contact-details a:focus-visible {
+    color: var(--aelan-peach, #f3bf99);
+}
+
+.aelan-site-footer__divider {
+    margin-top: clamp(4rem, 6vw, 5.5rem);
+    max-width: 1180px;
+    opacity: 0.2;
+}
+
+.aelan-site-footer__copyright {
+    margin-bottom: 0;
+    opacity: 0.58;
+}
+
+@media (max-width: 1050px) {
+    .aelan-site-footer__inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 3.5rem;
+    }
+
+    .aelan-site-footer__inner > .wp-block-column {
+        padding-inline: clamp(1.5rem, 5vw, 3.5rem);
+    }
+
+    .aelan-site-footer__inner > .wp-block-column::before {
+        display: none;
+    }
+
+    .aelan-site-footer__inner > .wp-block-column:nth-child(even)::before {
+        display: block;
+    }
+}
+
+@media (max-width: 620px) {
+    .aelan-site-footer__inner {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 0;
+    }
+
+    .aelan-site-footer__brand {
+        margin-bottom: 3.75rem;
+    }
+
+    .aelan-site-footer__tagline {
+        max-width: none;
+        white-space: nowrap;
+    }
+
+    .aelan-site-footer__inner > .wp-block-column {
+        padding: 2.4rem 0;
+    }
+
+    .aelan-site-footer__inner > .wp-block-column:first-child {
+        padding-top: 0;
+    }
+
+    .aelan-site-footer__inner > .wp-block-column::before,
+    .aelan-site-footer__inner > .wp-block-column:nth-child(even)::before {
+        background: linear-gradient(90deg, transparent, rgba(163, 139, 115, 0.34), transparent);
+        display: block;
+        height: 1px;
+        inset: 0 12% auto;
+        width: auto;
+    }
+
+    .aelan-site-footer__inner > .wp-block-column:first-child::before {
+        display: none;
+    }
+}
+
+.wp-element-button,
+.wp-block-button__link {
+    transition: transform var(--aelan-transition), box-shadow var(--aelan-transition), background-color var(--aelan-transition);
+}
+
+.wp-element-button:hover,
+.wp-block-button__link:hover {
+    box-shadow: 0 10px 30px rgba(48, 52, 99, 0.2);
+    transform: translateY(-1px);
+}
+
+.woocommerce :where(button.button, a.button, input.button) {
+    background: var(--aelan-navy);
+    border: 0;
+    border-radius: 999px;
+    color: #fff;
+    font-family: var(--wp--preset--font-family--satoshi);
+}
+
+.woocommerce :where(input, select, textarea),
+.aelan-form-field {
+    background: var(--aelan-warm-white);
+    border: 1px solid var(--aelan-border);
+    border-radius: var(--aelan-radius-sm);
+    color: var(--aelan-navy);
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+}
+
+.woocommerce :where(.woocommerce-message, .woocommerce-info, .woocommerce-error) {
+    background: var(--aelan-warm-white);
+    border: 1px solid var(--aelan-border);
+    border-radius: var(--aelan-radius-sm);
+    color: var(--aelan-navy);
+}
+
+@media (max-width: 900px) {
+    html.aelan-menu-open,
+    html.aelan-menu-open body {
+        overflow: hidden !important;
+        overscroll-behavior: none;
+    }
+
+    .aelan-site-header {
+        --aelan-mobile-admin-offset: 0px;
+        --aelan-mobile-pill-height: 58px;
+        padding-top: max(0.5rem, env(safe-area-inset-top));
+    }
+
+    .admin-bar .aelan-site-header {
+        --aelan-mobile-admin-offset: 46px;
+        top: 46px;
+    }
+
+    .aelan-site-header__inner {
+        border-radius: 999px;
+        gap: 1rem;
+        max-width: calc(100vw - 1.5rem) !important;
+        min-height: 58px;
+        padding: 0.35rem 0.45rem 0.35rem 0.85rem;
+    }
+
+    .aelan-site-header.is-scrolled .aelan-site-header__inner {
+        min-height: 54px;
+        padding-block: 0.2rem;
+    }
+
+    .aelan-site-header.is-scrolled {
+        --aelan-mobile-pill-height: 54px;
+    }
+
+    .aelan-site-header__inner:has(.wp-block-navigation__responsive-container.is-menu-open) {
+        overflow: visible;
+    }
+
+    .aelan-site-logo {
+        width: clamp(88px, 25vw, 108px) !important;
+    }
+
+    .aelan-site-logo img {
+        max-height: 34px;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container {
+        background:
+            radial-gradient(ellipse 95% 48% at -7% -3%, rgba(253, 163, 221, 0.2), rgba(198, 192, 224, 0.11) 42%, transparent 70%),
+            radial-gradient(ellipse 100% 55% at 108% 102%, rgba(83, 9, 204, 0.055), rgba(243, 191, 153, 0.16) 42%, transparent 72%),
+            linear-gradient(150deg, #fffefc, #fff9f5);
+        border: 1px solid rgba(255, 255, 255, 0.96);
+        border-radius: 24px;
+        box-shadow: 0 22px 56px rgba(48, 52, 99, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.98);
+        color: var(--aelan-navy);
+        height: calc(
+            100dvh
+            - var(--aelan-mobile-admin-offset)
+            - max(0.5rem, env(safe-area-inset-top))
+            - var(--aelan-mobile-pill-height)
+            - 1rem
+        );
+        left: -1px;
+        max-height: none;
+        max-width: none;
+        opacity: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding: clamp(0.85rem, 3.5vw, 1.15rem);
+        pointer-events: none;
+        right: -1px;
+        top: calc(100% + 0.5rem);
+        transform: translateY(-6px);
+        transition:
+            opacity 220ms ease,
+            transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+            visibility 220ms ease;
+        visibility: hidden;
+        width: auto;
+        -webkit-backdrop-filter: blur(24px) saturate(145%);
+        backdrop-filter: blur(24px) saturate(145%);
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-open {
+        align-items: center;
+        background:
+            radial-gradient(circle at 22% 16%, rgba(253, 163, 221, 0.26), transparent 44%),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 248, 243, 0.52));
+        border: 1px solid rgba(255, 255, 255, 0.92);
+        border-radius: 15px;
+        box-shadow: 0 8px 22px rgba(48, 52, 99, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+        color: var(--aelan-navy);
+        display: flex !important;
+        height: 44px;
+        justify-content: center;
+        width: 44px;
+        -webkit-backdrop-filter: blur(12px) saturate(140%);
+        backdrop-filter: blur(12px) saturate(140%);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-open:focus-visible,
+    .aelan-header-navigation .wp-block-navigation__responsive-container-close:focus-visible {
+        outline: 2px solid var(--aelan-coral);
+        outline-offset: 3px;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-open svg {
+        height: 26px;
+        width: 26px;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-open .aelan-menu-icon__line {
+        transform-box: fill-box;
+        transform-origin: center;
+        transition: transform var(--aelan-transition);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-open[aria-expanded="true"] .aelan-menu-icon__line--top {
+        transform: translateY(4.5px) rotate(45deg);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-open[aria-expanded="true"] .aelan-menu-icon__line--bottom {
+        transform: translateY(-4.5px) rotate(-45deg);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-close {
+        display: none !important;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-close,
+    .aelan-header-navigation .wp-block-navigation__responsive-dialog {
+        height: auto;
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-content {
+        align-items: flex-start !important;
+        height: auto;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+        align-items: stretch;
+        gap: 0.12rem;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+        align-items: center;
+        border: 0;
+        display: flex;
+        font-size: clamp(1rem, 4.5vw, 1.1rem);
+        font-weight: 560;
+        min-height: 48px;
+        padding: 0.7rem 0.8rem;
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content::after {
+        bottom: -1px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        width: min(170px, 56%);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover::after,
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:focus-visible::after,
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content[aria-current="location"]::after {
+        transform: scaleX(1);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aelan-header-navigation .aelan-services-desktop-link,
+    .aelan-header-navigation .aelan-services-desktop-toggle {
+        display: none !important;
+    }
+
+    .aelan-header-navigation .aelan-services-mobile-toggle {
+        appearance: none;
+        background: transparent;
+        color: var(--aelan-navy);
+        cursor: pointer;
+        display: flex !important;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .aelan-header-navigation .aelan-services-mobile-toggle svg {
+        flex: 0 0 auto;
+        margin-left: 1rem;
+        transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .aelan-header-navigation .aelan-services-mobile-toggle[aria-expanded="true"] svg {
+        transform: rotate(180deg);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        display: grid;
+        gap: 0;
+        margin: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 0 0 0.7rem;
+        position: static;
+        transform: translateY(-6px);
+        transition:
+            max-height 200ms cubic-bezier(0.2, 0.8, 0.2, 1),
+            opacity 200ms ease,
+            transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1),
+            visibility 200ms ease;
+        visibility: hidden;
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.is-open {
+        max-height: 360px;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        font-size: clamp(0.875rem, 3.9vw, 0.9375rem);
+        font-weight: 500;
+        justify-content: flex-start;
+        min-height: 44px;
+        padding: 0.58rem 0.8rem;
+        text-align: left;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item:last-child .wp-block-navigation-item__content {
+        border: 0;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content::after {
+        display: none;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content:focus-visible,
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content[aria-current="location"] {
+        background: rgba(255, 255, 255, 0.42);
+        color: #242952;
+        transform: translateX(2px);
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .aelan-header-cta {
+        margin-left: 0;
+        margin-top: 0.45rem;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .aelan-header-cta > .wp-block-navigation-item__content {
+        align-items: center;
+        background: linear-gradient(145deg, #354482, #263468);
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        border-radius: 999px;
+        box-shadow: 0 14px 34px rgba(48, 52, 99, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0.7rem 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .aelan-header-cta > .wp-block-navigation-item__content::before,
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .aelan-header-cta > .wp-block-navigation-item__content::after {
+        display: none;
+    }
+
+    .editor-styles-wrapper .aelan-site-header {
+        padding-top: 0.75rem;
+    }
+}
+
+.editor-styles-wrapper .aelan-site-header {
+    pointer-events: auto;
+    position: relative;
+    top: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Full-height mobile header geometry and narrow-screen refinements. */
+@media (max-width: 900px) {
+    .aelan-site-header {
+        padding-top: max(0.5rem, env(safe-area-inset-top));
+    }
+
+    .aelan-site-header__inner {
+        gap: 0.75rem;
+        margin-inline: 0.5rem;
+        max-width: calc(100vw - 1rem) !important;
+        min-height: 58px;
+        padding: 0.35rem 0.45rem 0.35rem 0.85rem;
+        width: calc(100% - 1rem) !important;
+    }
+
+    .aelan-site-header.is-scrolled .aelan-site-header__inner {
+        min-height: 54px;
+    }
+
+    .aelan-site-header.is-scrolled .aelan-site-logo img {
+        max-height: 30px;
+    }
+
+    .aelan-site-logo {
+        flex: 0 1 108px;
+        max-width: 108px;
+        width: clamp(88px, 25vw, 108px) !important;
+    }
+
+    .aelan-header-navigation {
+        flex: 0 0 44px;
+        margin-left: auto;
+        min-width: 44px;
+        position: static;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-close,
+    .aelan-header-navigation .wp-block-navigation__responsive-dialog {
+        height: auto;
+        min-height: 0;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container-content {
+        height: auto;
+        min-height: 0;
+        padding: 0 !important;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+        gap: 0.12rem;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+        font-size: clamp(1rem, 4.5vw, 1.1rem);
+        min-height: 48px;
+        padding-block: 0.7rem;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container {
+        gap: 0;
+        padding: 0 0 0 0.7rem;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+        font-size: clamp(0.875rem, 3.9vw, 0.9375rem);
+        min-height: 44px;
+        padding: 0.58rem 0.8rem;
+    }
+
+    .aelan-header-navigation .wp-block-navigation__responsive-container.is-menu-open .aelan-header-cta {
+        margin-top: 0.45rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .aelan-site-footer {
+        padding-block: 3.25rem 2rem !important;
+    }
+
+    .aelan-site-footer__brand {
+        margin-bottom: 2.25rem;
+    }
+
+    .aelan-site-footer__tagline {
+        font-size: clamp(1rem, 5.2vw, 1.15rem);
+        line-height: 1.25;
+        margin-inline: auto;
+        max-width: 20rem;
+        text-wrap: balance;
+        white-space: normal;
+    }
+
+    .aelan-site-footer__socials {
+        margin-top: 1rem;
+    }
+
+    .aelan-site-footer__socials .wp-social-link a {
+        height: 44px;
+        width: 44px;
+    }
+
+    .aelan-site-footer__inner > .wp-block-column {
+        padding: 1.65rem 0;
+    }
+
+    .aelan-site-footer__inner > .wp-block-column:first-child {
+        padding: 0 0 2rem;
+    }
+
+    .aelan-site-footer__heading {
+        font-size: 1.3rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation__container {
+        display: grid !important;
+        gap: 0.15rem 0.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .aelan-site-footer .aelan-footer-services-navigation .wp-block-navigation__container > .wp-block-navigation-item:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+
+    .aelan-site-footer :where(.aelan-footer-services-navigation, .aelan-footer-legal-navigation) .wp-block-navigation-item__content {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-height: 44px;
+        padding-block: 0.35rem;
+    }
+
+    .aelan-site-footer .aelan-contact-details li {
+        margin-bottom: 0.75rem;
+    }
+
+    .aelan-site-footer__hours {
+        gap: 0.8rem;
+    }
+
+    .aelan-site-footer__divider {
+        margin-top: 2.25rem;
+    }
+}
+
+@media (max-width: 900px) and (max-height: 520px) and (orientation: landscape) {
+    .aelan-header-navigation .wp-block-navigation__responsive-container-content {
+        justify-content: flex-start !important;
+        padding-top: 0 !important;
+    }
+}

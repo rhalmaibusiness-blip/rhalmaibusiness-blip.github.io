@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="840" viewBox="0 0 840 840" fill="none">
+  <!-- Locked Aelan Method pearl preset. All four cards use this same orientation.
+       Light-only colours preserve navy text contrast across the entire surface. -->
+  <defs>
+    <radialGradient id="pearl" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(326 262) rotate(59) scale(658)">
+      <stop stop-color="#FFFEFD"/>
+      <stop offset=".38" stop-color="#F8F4F9"/>
+      <stop offset=".65" stop-color="#E9E5F3"/>
+      <stop offset=".87" stop-color="#F9E2DB"/>
+      <stop offset="1" stop-color="#FFF7EF"/>
+    </radialGradient>
+    <radialGradient id="lavender" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(586 217) rotate(141) scale(558 202)">
+      <stop stop-color="#DDD9EE" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#E4DEEE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="peach" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(635 632) rotate(-142) scale(517 232)">
+      <stop stop-color="#F5CEBC" stop-opacity=".64"/>
+      <stop offset="1" stop-color="#FBE5DD" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(170 499) rotate(50) scale(466 195)">
+      <stop stop-color="#D8E6F7" stop-opacity=".68"/>
+      <stop offset="1" stop-color="#E7EDF9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="silk" x1="108" y1="242" x2="547" y2="668" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset=".42" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset=".50" stop-color="#FFFFFF" stop-opacity=".76"/>
+      <stop offset=".55" stop-color="#FFFDFB" stop-opacity=".24"/>
+      <stop offset=".65" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="101" y1="91" x2="715" y2="764" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7D9F3"/>
+      <stop offset=".24" stop-color="#FFFDFC"/>
+      <stop offset=".47" stop-color="#F6D9CA"/>
+      <stop offset=".65" stop-color="#DFE7F9"/>
+      <stop offset=".83" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9DAF2"/>
+    </linearGradient>
+  </defs>
+  <circle cx="420" cy="420" r="417" fill="url(#pearl)"/>
+  <circle cx="420" cy="420" r="417" fill="url(#lavender)"/>
+  <circle cx="420" cy="420" r="417" fill="url(#peach)"/>
+  <circle cx="420" cy="420" r="417" fill="url(#blue)"/>
+  <circle cx="420" cy="420" r="417" fill="url(#silk)"/>
+  <circle cx="420" cy="420" r="416" stroke="url(#rim)" stroke-width="5"/>
+  <circle cx="420" cy="420" r="411" stroke="#FFFFFF" stroke-opacity=".85" stroke-width="2"/>
+</svg>

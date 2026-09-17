@@ -1,0 +1,349 @@
+/* Locked editorial presets. All selectors stay inside migrated content widgets;
+ * the reference, header and footer do not inherit these layout changes. */
+.aelan-elementor-page .aelan-editorial {
+    --aelan-editorial-body: 1.125rem;
+    --aelan-editorial-leading: 1.7;
+    --aelan-editorial-heading: clamp(2.25rem, 3.6vw, 3.4rem);
+    --aelan-editorial-card-heading: clamp(1.6rem, 2.2vw, 2rem);
+    --aelan-editorial-brand: clamp(3.1rem, 4.7vw, 4.6rem);
+    --aelan-editorial-space: clamp(4rem, 7vw, 7rem);
+    --aelan-editorial-gap: clamp(1.5rem, 3vw, 3rem);
+    --aelan-editorial-inset: clamp(1.5rem, 4vw, 4rem);
+    --aelan-editorial-copy-width: 70ch;
+    --aelan-editorial-hero-copy: 42rem;
+    --aelan-editorial-hero-art: clamp(240px, 64vw, 360px);
+    --aelan-editorial-outline: rgba(255, 255, 255, .92);
+    --aelan-editorial-glass: rgba(255, 252, 249, .72);
+    --aelan-editorial-navy-soft: #383c6e;
+    --aelan-editorial-navy-deep: #262a50;
+    --aelan-editorial-pending: #5a5e82;
+    --aelan-editorial-hero-top: clamp(10.5rem, 16vw, 12rem);
+    width: 100%;
+    min-width: 0;
+}
+.aelan-editorial .aelan-section { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); }
+.aelan-editorial .aelan-section h2 {
+    color: var(--aelan-navy);
+    font-family: var(--wp--preset--font-family--marcellus);
+    font-size: var(--aelan-editorial-heading);
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: -.025em;
+    text-wrap: balance;
+}
+.aelan-editorial .aelan-section p { margin-block: 0 1.15em; }
+.aelan-editorial .aelan-section p:last-child { margin-bottom: 0; }
+.aelan-editorial .aelan-button {
+    font-family: inherit;
+    font-size: 1rem;
+    min-width: 0;
+    min-height: 48px;
+    max-width: 100%;
+    height: auto;
+    line-height: 1.45;
+    white-space: normal;
+    gap: 1.25rem;
+    text-align: left;
+    padding: .9rem 1.4rem;
+}
+.aelan-editorial .aelan-button > span { flex: 0 0 auto; }
+.aelan-editorial .aelan-button.is-pending {
+    background: var(--aelan-editorial-pending);
+    border-color: var(--aelan-editorial-pending);
+    color: var(--aelan-warm-white);
+    opacity: 1;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+.aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil { min-height: 0; }
+.aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__content {
+    padding-top: var(--aelan-editorial-hero-top);
+    padding-bottom: var(--aelan-editorial-space);
+    width: 100%;
+}
+.aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__content > * {
+    max-width: var(--aelan-editorial-hero-copy);
+}
+.aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil h1.aelan-hero__seo-title {
+    font-family: var(--wp--preset--font-family--satoshi);
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: .015em;
+    margin: 0 0 1.25rem;
+}
+.aelan-editorial .aelan-hero__brand {
+    font-family: var(--wp--preset--font-family--marcellus);
+    font-size: var(--aelan-editorial-brand);
+    line-height: 1.06;
+    letter-spacing: -.035em;
+    margin-bottom: 1.5rem !important;
+    text-wrap: balance;
+}
+.aelan-editorial .aelan-hero__editorial-lead { font-size: 1.375rem; line-height: 1.5; font-weight: 600; }
+.aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__subtitle {
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.4;
+    margin-block: 1.25rem;
+    color: var(--aelan-navy);
+}
+.aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-lead {
+    font-size: var(--aelan-editorial-body);
+    line-height: var(--aelan-editorial-leading);
+    margin-top: 0;
+}
+.aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-actions { width: fit-content; margin-top: 1.75rem; }
+.aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-button { min-height: 54px; }
+
+.aelan-editorial .aelan-manifesto__shell { padding-block: var(--aelan-editorial-space); }
+.aelan-editorial .aelan-manifesto__panel { padding: var(--aelan-editorial-inset); }
+.aelan-editorial .aelan-manifesto__title { max-width: 25ch; margin-inline: auto; }
+.aelan-editorial .aelan-manifesto__subtitle { font-weight: 600; max-width: 52ch; margin: 1.5rem auto 2rem !important; text-align: center; }
+.aelan-editorial .aelan-manifesto__body { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); max-width: var(--aelan-editorial-copy-width); text-align: left; margin: 0 auto; }
+
+.aelan-editorial .aelan-recognition {
+    background: linear-gradient(115deg, var(--aelan-editorial-navy-soft), var(--aelan-navy) 55%, var(--aelan-editorial-navy-deep));
+    color: var(--aelan-warm-white);
+}
+.aelan-editorial .aelan-recognition__shell { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .8fr); align-items: center; gap: var(--aelan-editorial-gap); }
+.aelan-editorial .aelan-recognition h2 { color: inherit; margin: 0 0 2rem; }
+.aelan-editorial .aelan-recognition__questions p { margin-bottom: .75em; }
+.aelan-editorial .aelan-recognition__closing { border-top: 1px solid rgba(198,192,224,.4); padding-top: 1.5rem; margin-top: 1.5rem; font-weight: 600; }
+.aelan-editorial .aelan-recognition .aelan-button { margin-top: 2rem; background: var(--aelan-warm-white); color: var(--aelan-navy); border-color: var(--aelan-warm-white); }
+.aelan-editorial .aelan-recognition__art { position: relative; min-width: 0; pointer-events: none; mix-blend-mode: screen; mask-image: radial-gradient(ellipse, black 45%, transparent 73%); }
+.aelan-editorial .aelan-recognition__art img { width: 100%; max-width: none; display: block; margin: 0; }
+
+.aelan-editorial .aelan-measurement { background: var(--aelan-cream); padding: var(--aelan-editorial-space) clamp(1rem, 3vw, 2.5rem); }
+.aelan-editorial .aelan-measurement > .aelan-measurement__shell {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.3fr);
+    gap: var(--aelan-editorial-gap);
+    border: 1px solid var(--aelan-editorial-outline);
+    border-radius: var(--aelan-radius-lg);
+    background: linear-gradient(125deg, var(--aelan-editorial-glass), var(--aelan-soft-peach));
+    box-shadow: var(--aelan-shadow-pearl);
+    padding: var(--aelan-editorial-inset);
+}
+.aelan-editorial .aelan-measurement__header { text-align: left; margin: 0; max-width: none; }
+.aelan-editorial .aelan-measurement__subtitle { font-weight: 600; margin-top: 1.5rem !important; }
+.aelan-editorial .aelan-measurement__editorial-copy { min-width: 0; }
+.aelan-editorial .aelan-measurement__footer { grid-column: 1 / -1; border-top: 1px solid var(--aelan-border); padding-top: 2rem; margin: 0; align-items: flex-start; text-align: left; gap: 1.5rem; }
+.aelan-editorial .aelan-measurement__closing { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); max-width: var(--aelan-editorial-copy-width); font-weight: 600; }
+
+.aelan-editorial .aelan-programs { background: var(--aelan-soft-peach); }
+.aelan-editorial .aelan-programs__shell { padding-block: var(--aelan-editorial-space); }
+.aelan-editorial .aelan-programs__heading { text-align: center; margin: 0 0 3rem; }
+.aelan-editorial .aelan-programs__frame { min-height: 0; grid-template-columns: minmax(220px, .24fr) minmax(0, 1fr); }
+.aelan-editorial .aelan-programs__tab { text-transform: none; letter-spacing: 0; font-size: 1rem; }
+.aelan-editorial .aelan-programs__content { padding: var(--aelan-editorial-gap); max-width: none; align-self: center; }
+.aelan-editorial .aelan-programs__content h3 { color: var(--aelan-navy); font-size: var(--aelan-editorial-card-heading); line-height: 1.18; letter-spacing: -.025em; margin-bottom: 1.25rem; overflow-wrap: break-word; }
+.aelan-editorial .aelan-programs__body { grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr); }
+.aelan-editorial .aelan-programs__description { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); }
+.aelan-editorial .aelan-programs__lead { font-weight: 600; }
+.aelan-editorial .aelan-programs__description p + p { margin-top: 1.15em; }
+.aelan-editorial .aelan-programs__cta { font-size: .9375rem; }
+.aelan-editorial .aelan-programs:not(.is-enhanced) .aelan-programs__body { animation: none; }
+/* Overlapping grid cells reserve the tallest desktop panel. Hidden panels are
+ * also inert/aria-hidden: they contribute geometry, not focus or spoken content. */
+@media (min-width: 783px) {
+    .aelan-editorial .aelan-programs.is-enhanced .aelan-programs__panels { display: grid; }
+    .aelan-editorial .aelan-programs.is-enhanced .aelan-programs__panel { grid-area: 1 / 1; align-self: stretch; height: auto; }
+    .aelan-editorial .aelan-programs.is-enhanced .aelan-programs__panel[hidden] { display: block !important; visibility: hidden; pointer-events: none; }
+    .aelan-editorial .aelan-programs:not(.is-enhanced) .aelan-programs__tablist { display: none; }
+    .aelan-editorial .aelan-programs:not(.is-enhanced) .aelan-programs__frame { display: block; }
+    .aelan-editorial .aelan-programs:not(.is-enhanced) .aelan-programs__panel + .aelan-programs__panel { margin-top: 2rem; }
+}
+
+.aelan-editorial .aelan-method__intro,
+.aelan-editorial .aelan-method__description,
+.aelan-editorial .aelan-team__lead,
+.aelan-editorial .aelan-final-cta__content .aelan-lead { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); }
+.aelan-editorial .aelan-method__description { width: 82%; max-width: 54ch; }
+.aelan-editorial .aelan-method__card { height: auto; min-height: 290px; }
+.aelan-editorial .aelan-method__card h3 { font-size: 1.125rem; }
+.aelan-editorial .aelan-method__footer { max-width: var(--aelan-editorial-copy-width); margin: 2.5rem auto 0; text-align: center; }
+.aelan-editorial .aelan-method__footer p { font-weight: 600; }
+.aelan-editorial .aelan-method__footer .aelan-button { margin-top: 1.5rem; }
+/* One shared circle, cropped by the four inner corners. Its centre includes
+ * half the grid gap plus the card border; none of the quadrants is mirrored.
+ * The page and exact card-count guards keep the mobile/legacy surfaces intact. */
+@media (min-width: 783px) {
+    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) {
+        --aelan-method-circle-gap: clamp(1rem, 1.7vw, 1.5rem);
+        --aelan-method-circle-border: 1px;
+        --aelan-method-circle-diameter: clamp(180px, 27cqw, 315px);
+        --aelan-method-circle-opacity: .72;
+        --aelan-method-circle-offset: calc((var(--aelan-method-circle-diameter) + var(--aelan-method-circle-gap)) / -2 - var(--aelan-method-circle-border));
+        --aelan-method-circle-art: url('starter/aelan-method-pearl-circle.svg');
+        container-type: inline-size;
+        gap: var(--aelan-method-circle-gap);
+        grid-auto-rows: 1fr;
+    }
+    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card {
+        border-width: var(--aelan-method-circle-border);
+    }
+    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card > .aelan-method__lens {
+        inset: auto;
+        width: var(--aelan-method-circle-diameter);
+        height: var(--aelan-method-circle-diameter);
+        border-radius: 0;
+        background: var(--aelan-method-circle-art) center / contain no-repeat;
+        opacity: var(--aelan-method-circle-opacity);
+        transform: none;
+    }
+    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card:nth-child(1) > .aelan-method__lens { right: var(--aelan-method-circle-offset); bottom: var(--aelan-method-circle-offset); }
+    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card:nth-child(2) > .aelan-method__lens { left: var(--aelan-method-circle-offset); bottom: var(--aelan-method-circle-offset); }
+    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card:nth-child(3) > .aelan-method__lens { right: var(--aelan-method-circle-offset); top: var(--aelan-method-circle-offset); }
+    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card:nth-child(4) > .aelan-method__lens { left: var(--aelan-method-circle-offset); top: var(--aelan-method-circle-offset); }
+}
+.aelan-editorial .aelan-team__shell { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); align-items: center; gap: var(--aelan-editorial-gap); max-width: 1320px; }
+.aelan-editorial .aelan-team__intro { margin: 0; text-align: left; }
+.aelan-editorial .aelan-team__grid { width: 100%; max-width: none; gap: 1rem; }
+.aelan-editorial .aelan-person-card { aspect-ratio: auto; grid-template-rows: minmax(280px, 1fr) auto; }
+.aelan-editorial .aelan-person-card__meta h3 { font-size: 1.45rem; }
+.aelan-editorial .aelan-values { background: var(--aelan-cream); }
+.aelan-editorial .aelan-values h2 { text-align: center; margin: 0 0 3rem; }
+.aelan-editorial .aelan-values__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.aelan-editorial .aelan-values__card { position: relative; border-radius: var(--aelan-radius-md); padding: 2rem; }
+.aelan-editorial .aelan-values__icon { display: block; width: 96px; height: 96px; object-fit: contain; margin: -.5rem 0 1.5rem -.5rem; }
+.aelan-editorial .aelan-values__card h3 { font-size: 1.625rem; line-height: 1.25; margin-bottom: 1.25rem; }
+.aelan-editorial .aelan-final-cta__content .aelan-section-heading h2 { white-space: normal; max-width: 24ch; }
+.aelan-editorial .aelan-final-cta__content { max-width: min(760px, 72%); }
+
+/* Blend the full decorative layer, including the liquid artwork, into Values. */
+.page-id-102 .aelan-editorial .aelan-final-cta {
+    --aelan-final-blend-height: clamp(160px, 17vw, 260px);
+}
+.page-id-102 .aelan-editorial .aelan-final-cta::before {
+    content: '';
+    position: absolute;
+    inset: -1px 0 auto;
+    height: var(--aelan-final-blend-height);
+    background: var(--aelan-cream);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 2%, rgba(0, 0, 0, .94) 18%, rgba(0, 0, 0, .72) 38%, rgba(0, 0, 0, .35) 64%, rgba(0, 0, 0, .08) 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 2%, rgba(0, 0, 0, .94) 18%, rgba(0, 0, 0, .72) 38%, rgba(0, 0, 0, .35) 64%, rgba(0, 0, 0, .08) 85%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+@media (max-width: 782px) {
+    .page-id-102 .aelan-editorial .aelan-final-cta {
+        --aelan-final-blend-height: clamp(120px, 32vw, 160px);
+    }
+}
+
+@media (min-width: 1161px) {
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__brand { max-width: 55rem; text-wrap: nowrap; }
+}
+
+@media (min-width: 783px) and (max-width: 1160px) {
+    .aelan-editorial .aelan-programs__body { grid-template-columns: 1fr; grid-template-rows: auto 300px; }
+    .aelan-editorial .aelan-programs__media { height: 300px; min-height: 300px; }
+}
+@media (max-width: 1023px) {
+    .aelan-editorial .aelan-team__shell { grid-template-columns: 1fr; }
+    .aelan-editorial .aelan-team__intro { max-width: var(--aelan-editorial-copy-width); }
+    .aelan-editorial .aelan-team__grid { max-width: 760px; }
+    .aelan-editorial .aelan-values__grid { grid-template-columns: 1fr; }
+    .aelan-editorial .aelan-values__card { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 0 1.5rem; }
+    .aelan-editorial .aelan-values__icon { grid-row: 1 / 3; margin: 0; }
+    .aelan-editorial .aelan-measurement > .aelan-measurement__shell { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+    .aelan-elementor-page .aelan-editorial {
+        --aelan-editorial-hero-copy: 44rem;
+        --aelan-editorial-hero-top: 7.5rem;
+    }
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil { display: flex; flex-direction: column; }
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__content { order: 1; margin: 0 auto; padding-bottom: 1.5rem; max-width: 48rem; }
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__visual { order: 2; position: relative; inset: auto; width: 100%; height: var(--aelan-editorial-hero-art); }
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__visual::before { content: ''; position: absolute; inset: 0 0 auto; height: 48px; background: linear-gradient(var(--aelan-cream), transparent); z-index: 2; }
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__image { object-position: center bottom; }
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-hero__transition-mist { height: 100px; }
+}
+@media (max-width: 782px) {
+    .aelan-elementor-page .aelan-editorial {
+        --aelan-editorial-body: 1rem;
+        --aelan-editorial-heading: clamp(2rem, 7.8vw, 2.75rem);
+        --aelan-editorial-card-heading: clamp(1.8rem, 7vw, 2.3rem);
+        --aelan-editorial-brand: clamp(2.25rem, 8.8vw, 3rem);
+        --aelan-editorial-inset: 1.5rem;
+    }
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil h1.aelan-hero__seo-title { font-size: 1rem; }
+    .aelan-editorial .aelan-hero__editorial-lead { font-size: 1.125rem; }
+    .aelan-editorial .aelan-hero__brand { margin-bottom: 1.25rem !important; }
+    .aelan-elementor-page .aelan-editorial .aelan-hero.is-pearl-veil .aelan-actions { width: 100%; }
+    .aelan-editorial .aelan-button { width: 100%; justify-content: space-between; }
+    .aelan-editorial .aelan-manifesto__title { max-width: none; }
+    .aelan-editorial .aelan-recognition__shell { grid-template-columns: 1fr; gap: 1.5rem; padding-bottom: 1.5rem; }
+    .aelan-editorial .aelan-recognition__art { height: 240px; overflow: hidden; }
+    .aelan-editorial .aelan-recognition__art img { margin: 0 auto; width: 100%; max-width: 460px; }
+    .aelan-editorial .aelan-programs__frame { display: block; }
+    .aelan-editorial .aelan-programs__body { grid-template-columns: 1fr; }
+    .aelan-editorial .aelan-programs__accordion-trigger { font-size: 1rem; text-transform: none; letter-spacing: 0; }
+    .aelan-editorial .aelan-programs__content { padding: 1.5rem 1.25rem; }
+    .aelan-editorial .aelan-method__grid { grid-template-columns: 1fr; }
+    .aelan-editorial .aelan-method__description { width: 90%; }
+    .aelan-editorial .aelan-method__card-heading { width: 100%; }
+    .aelan-editorial .aelan-method__card { min-height: 0; padding: 1.5rem; }
+    .aelan-editorial .aelan-final-cta__content { max-width: 100%; }
+    .aelan-editorial .aelan-final-cta__inner { padding-bottom: 13rem; height: auto; }
+}
+@media (max-width: 619px) {
+    .aelan-editorial .aelan-team__grid { grid-template-columns: 1fr; max-width: 380px; }
+    .aelan-editorial .aelan-person-card { grid-template-rows: minmax(330px, 1fr) auto; }
+    .aelan-editorial .aelan-values__card { display: block; padding: 1.5rem; }
+    .aelan-editorial .aelan-values__icon { margin-bottom: 1.25rem; }
+}
+
+/* 0.3.7: reference-led horizon dialogue and full editorial doctor cards. */
+.aelan-elementor-page .aelan-editorial {
+    --aelan-dialogue-background: #232f56;
+    --aelan-dialogue-pad: clamp(3.5rem, 6vw, 6rem);
+    --aelan-dialogue-divider: rgba(198, 192, 224, .42);
+    --aelan-dialogue-arc-height: clamp(80px, 12.5vw, 200px);
+    --aelan-team-intro-width: 62rem;
+    --aelan-team-profile-width: 74rem;
+    --aelan-team-portrait-height: clamp(320px, 30vw, 420px);
+    --aelan-team-profile-pad: clamp(1.5rem, 3vw, 2.75rem);
+    --aelan-team-profile-name: clamp(1.8rem, 2.5vw, 2.3rem);
+}
+.aelan-editorial .aelan-recognition.is-horizon-dialogue {
+    background: radial-gradient(ellipse at 50% 45%, var(--aelan-editorial-navy-soft), transparent 65%), var(--aelan-dialogue-background);
+    padding: var(--aelan-dialogue-pad) 0;
+    overflow: hidden;
+}
+.aelan-editorial .aelan-recognition__dialogue { max-width: 78rem; }
+.aelan-editorial .aelan-recognition.is-horizon-dialogue > .aelan-shell { padding-block: 0; }
+.aelan-editorial .aelan-recognition__dialogue h2 { margin-bottom: 2rem; }
+.aelan-editorial .aelan-recognition__columns { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.2fr); gap: 0; align-items: stretch; }
+.aelan-editorial .aelan-recognition__columns > div { display: flex; flex-direction: column; justify-content: center; padding-right: var(--aelan-dialogue-pad); }
+.aelan-editorial .aelan-recognition__columns > div + div { border-left: 1px solid var(--aelan-dialogue-divider); padding-right: 0; padding-left: var(--aelan-dialogue-pad); }
+.aelan-editorial .aelan-recognition__columns p + p { margin-top: 1.5rem; }
+.aelan-editorial .aelan-recognition__horizon { height: var(--aelan-dialogue-arc-height); width: 100%; margin-top: 1rem; background: url('starter/recognition-horizon.svg') center / 100% 100% no-repeat; pointer-events: none; }
+.aelan-editorial .aelan-recognition__invitation { max-width: var(--aelan-team-intro-width); text-align: center; }
+.aelan-editorial .is-horizon-dialogue .aelan-recognition__closing { margin-top: 0; padding-top: 0; border: 0; font-weight: 600; }
+.aelan-editorial .is-horizon-dialogue .aelan-button { width: fit-content; max-width: 100%; }
+.aelan-editorial .aelan-team.is-profile-cards .aelan-team__shell { display: block; max-width: var(--aelan-team-profile-width); }
+.aelan-editorial .aelan-team.is-profile-cards .aelan-team__intro { max-width: var(--aelan-team-intro-width); margin: 0 auto 3.5rem; text-align: center; }
+.aelan-editorial .aelan-team.is-profile-cards .aelan-team__lead { max-width: none; margin-inline: auto; }
+.aelan-editorial .aelan-team.is-profile-cards .aelan-team__grid { max-width: none; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--aelan-editorial-gap); }
+.aelan-editorial .is-profile-cards .aelan-person-card { grid-template-rows: var(--aelan-team-portrait-height) 1fr; }
+.aelan-editorial .is-profile-cards .aelan-person-card__image { object-fit: contain; object-position: center bottom; }
+.aelan-editorial .is-profile-cards .aelan-person-card__meta { display: flex; flex-direction: column; align-items: flex-start; padding: var(--aelan-team-profile-pad); text-align: left; gap: 0; }
+.aelan-editorial .is-profile-cards .aelan-person-card__meta h3 { color: var(--aelan-navy); font-size: var(--aelan-team-profile-name); line-height: 1.2; margin-bottom: 1rem; }
+.aelan-editorial .is-profile-cards .aelan-person-card__meta > p { font-size: var(--aelan-editorial-body); text-transform: none; letter-spacing: 0; line-height: 1.6; font-weight: 500; margin-bottom: 1rem; }
+.aelan-editorial .is-profile-cards .aelan-person-card__credentials { color: var(--aelan-navy); font-weight: 400 !important; }
+.aelan-editorial .is-profile-cards .aelan-person-card__description { margin-bottom: 1.75rem; }
+.aelan-editorial .is-profile-cards .aelan-person-card__description p { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); text-transform: none; letter-spacing: 0; font-weight: 400; }
+.aelan-editorial .is-profile-cards .aelan-person-card__cta { margin-top: auto; width: auto; }
+@media (max-width: 782px) {
+    .aelan-editorial .aelan-recognition__columns { grid-template-columns: 1fr; gap: 1.25rem; }
+    .aelan-editorial .aelan-recognition__columns > div { padding: 0; }
+    .aelan-editorial .aelan-recognition__columns > div + div { border-left: 0; padding: 0; }
+    .aelan-editorial .aelan-recognition__columns p + p { margin-top: 1.25rem; }
+    .aelan-editorial .is-horizon-dialogue .aelan-button { width: 100%; }
+    .aelan-editorial .aelan-team.is-profile-cards .aelan-team__grid { grid-template-columns: 1fr; max-width: 34rem; margin-inline: auto; }
+    .aelan-editorial .is-profile-cards .aelan-person-card__cta { width: 100%; }
+}

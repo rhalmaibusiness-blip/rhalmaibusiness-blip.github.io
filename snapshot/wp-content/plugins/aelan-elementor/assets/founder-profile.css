@@ -1,0 +1,160 @@
+/* Locked profile presets. Only this widget is affected; no hero/header overrides. */
+.aelan-founder {
+    --founder-shell: 1280px;
+    --founder-space: clamp(4rem, 7vw, 7rem);
+    --founder-inset: clamp(1.25rem, 4vw, 4rem);
+    --founder-gap: clamp(2.5rem, 6vw, 6rem);
+    --founder-rhythm: 2.5rem;
+    --founder-body: 1.125rem;
+    --founder-leading: 1.8;
+    --founder-title: clamp(2.5rem, 4.15vw, 4rem);
+    --founder-quote: clamp(1.125rem, 1.6vw, 1.375rem);
+    --founder-icon: 3.5rem;
+    --founder-rule: rgba(243, 191, 153, .7);
+    --founder-icon-bg: rgba(243, 191, 153, .13);
+    --founder-serif: var(--wp--preset--font-family--marcellus, Marcellus, serif);
+    --founder-sans: var(--wp--preset--font-family--satoshi, Satoshi, sans-serif);
+    background: linear-gradient(180deg, var(--aelan-cream), var(--aelan-warm-white) 24%);
+    color: var(--aelan-navy);
+    font-family: var(--founder-sans);
+    font-size: var(--founder-body);
+    line-height: var(--founder-leading);
+    padding: var(--founder-space) var(--founder-inset);
+    position: relative;
+    width: 100%;
+}
+.aelan-founder__shell {
+    display: grid;
+    column-gap: var(--founder-gap);
+    grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+    grid-template-rows: auto 1fr;
+    margin-inline: auto;
+    max-width: var(--founder-shell);
+}
+.aelan-founder__heading,
+.aelan-founder__content { grid-column: 2; min-width: 0; }
+.aelan-founder__heading { grid-row: 1; margin-bottom: var(--founder-rhythm); }
+.aelan-founder__heading h2 {
+    color: inherit;
+    font-family: var(--founder-serif);
+    font-size: var(--founder-title);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    text-wrap: balance;
+}
+.aelan-founder__role { font-size: var(--founder-body); line-height: 1.65; margin: 0; }
+.aelan-founder__visual {
+    align-self: start;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    isolation: isolate;
+    margin: 1rem 0 0;
+    min-width: 0;
+    position: relative;
+}
+.aelan-founder__visual::before {
+    background: url('starter/team-page/aelan-team-hero-bg-desktop.webp') center / cover no-repeat;
+    content: '';
+    inset: -3rem -2rem -5rem;
+    mask-image: radial-gradient(ellipse at center, black 35%, transparent 72%);
+    opacity: .85;
+    pointer-events: none;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: -1;
+}
+.aelan-founder__portrait {
+    display: block;
+    height: auto;
+    mask-image: linear-gradient(black 75%, transparent 100%);
+    max-width: 100%;
+    width: 100%;
+}
+.aelan-founder__credentials {
+    display: grid;
+    gap: 1.75rem 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style: none;
+    margin: 0 0 var(--founder-rhythm);
+    padding: 0 0 var(--founder-rhythm);
+    border-bottom: 1px solid var(--founder-rule);
+}
+.aelan-founder__credentials li {
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    gap: 1rem;
+    line-height: 1.5;
+    min-width: 0;
+}
+.aelan-founder__icon {
+    align-items: center;
+    background: var(--founder-icon-bg);
+    border-radius: 50%;
+    display: flex;
+    flex: 0 0 var(--founder-icon);
+    height: var(--founder-icon);
+    justify-content: center;
+}
+.aelan-founder__icon svg { width: 2rem; height: 2rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.aelan-founder__biography { margin-bottom: var(--founder-rhythm); max-width: 70ch; }
+.aelan-founder__biography p,
+.aelan-founder__detail-copy p { margin: 0 0 1.75rem; }
+.aelan-founder__biography p:last-child,
+.aelan-founder__detail-copy p:last-child { margin-bottom: 0; }
+.aelan-founder__disclosure { border-block: 1px solid var(--founder-rule); }
+.aelan-founder__disclosure + .aelan-founder__disclosure { border-top: 0; }
+.aelan-founder__disclosure summary {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-family: var(--founder-serif);
+    font-size: 1.375rem;
+    gap: 1.25rem;
+    justify-content: space-between;
+    line-height: 1.5;
+    list-style: none;
+    min-height: 64px;
+    padding-block: 1.1rem;
+}
+.aelan-founder__disclosure summary::-webkit-details-marker { display: none; }
+.aelan-founder__disclosure summary::marker { content: ''; }
+.aelan-founder__disclosure summary:hover { color: var(--aelan-navy); background: var(--founder-icon-bg); }
+.aelan-founder__disclosure summary:focus-visible { outline: 2px solid var(--aelan-navy); outline-offset: 5px; border-radius: 2px; }
+.aelan-founder__disclosure summary svg { width: 1.4rem; height: 1.4rem; flex: 0 0 1.4rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.aelan-founder__disclosure[open] summary svg { transform: rotate(180deg); }
+.aelan-founder__detail-copy { font-size: var(--founder-body); line-height: var(--founder-leading); padding: .25rem 0 1.75rem; }
+.aelan-founder__quote { border: 0; color: inherit; font-family: var(--founder-serif); font-size: var(--founder-quote); font-style: italic; line-height: 1.65; margin: var(--founder-rhythm) 0; padding: 0; }
+.aelan-founder__quote p { margin: 0; }
+
+/* Mirror the composition, not the portrait image; mobile keeps reading order. */
+.aelan-founder--portrait-right { background: var(--aelan-warm-white); }
+@media (min-width: 901px) {
+    .aelan-founder--portrait-right .aelan-founder__shell { grid-template-columns: minmax(0, 1.28fr) minmax(0, .72fr); }
+    .aelan-founder--portrait-right .aelan-founder__heading,
+    .aelan-founder--portrait-right .aelan-founder__content { grid-column: 1; }
+    .aelan-founder--portrait-right .aelan-founder__visual { grid-column: 2; }
+    .aelan-founder--portrait-right .aelan-founder__visual::before { transform: none; }
+}
+
+@media (max-width: 1100px) {
+    .aelan-founder { --founder-gap: 2.5rem; --founder-icon: 3rem; }
+    .aelan-founder__credentials { column-gap: 1rem; }
+    .aelan-founder__credentials li { gap: .75rem; }
+}
+@media (max-width: 900px) {
+    .aelan-founder { --founder-title: clamp(2.5rem, 6vw, 3.5rem); --founder-rhythm: 2rem; }
+    .aelan-founder__shell { grid-template-columns: minmax(0, 1fr); max-width: 44rem; }
+    .aelan-founder__heading { grid-column: 1; grid-row: 1; }
+    .aelan-founder__visual { grid-column: 1; grid-row: 2; justify-self: center; margin: 0 0 1.5rem; width: min(100%, 380px); }
+    .aelan-founder__content { grid-column: 1; grid-row: 3; }
+    .aelan-founder__visual::before { inset: -1rem 0 -2rem; }
+}
+@media (max-width: 620px) {
+    .aelan-founder { --founder-body: 1rem; --founder-space: 3.5rem; --founder-leading: 1.75; --founder-title: clamp(2.25rem, 9vw, 3rem); --founder-icon: 3rem; }
+    .aelan-founder__credentials { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+    .aelan-founder__credentials li { gap: 1rem; }
+    .aelan-founder__disclosure summary { font-size: 1.25rem; }
+}
