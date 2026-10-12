@@ -181,7 +181,7 @@
         --aelan-method-circle-diameter: clamp(180px, 27cqw, 315px);
         --aelan-method-circle-opacity: .72;
         --aelan-method-circle-offset: calc((var(--aelan-method-circle-diameter) + var(--aelan-method-circle-gap)) / -2 - var(--aelan-method-circle-border));
-        --aelan-method-circle-art: url('starter/aelan-method-pearl-circle.svg');
+        --aelan-method-circle-art: url('starter/aelan-method-pearl-imagegen.webp');
         container-type: inline-size;
         gap: var(--aelan-method-circle-gap);
         grid-auto-rows: 1fr;
