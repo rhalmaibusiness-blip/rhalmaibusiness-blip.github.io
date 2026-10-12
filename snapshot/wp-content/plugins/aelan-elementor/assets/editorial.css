@@ -16,7 +16,7 @@
     --aelan-editorial-glass: rgba(255, 252, 249, .72);
     --aelan-editorial-navy-soft: #383c6e;
     --aelan-editorial-navy-deep: #262a50;
-    --aelan-editorial-pending: #5a5e82;
+    --aelan-editorial-pending: var(--aelan-bronze-cta, #80583f);
     --aelan-editorial-hero-top: clamp(10.5rem, 16vw, 12rem);
     width: 100%;
     min-width: 0;

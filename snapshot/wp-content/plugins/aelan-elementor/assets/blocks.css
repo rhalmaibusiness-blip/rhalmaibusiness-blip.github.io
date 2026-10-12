@@ -86,8 +86,8 @@
 
 .aelan-button {
     align-items: center;
-    background: var(--aelan-navy, #303463);
-    border: 1px solid var(--aelan-navy, #303463);
+    background: var(--aelan-bronze-cta, #80583f);
+    border: 1px solid var(--aelan-bronze-cta, #80583f);
     border-radius: 999px;
     color: #fff;
     display: inline-flex;
@@ -102,7 +102,9 @@
 }
 
 .aelan-button:hover {
-    box-shadow: 0 12px 32px rgba(48, 52, 99, 0.24);
+    background: var(--aelan-bronze-cta-hover, #6f4933);
+    border-color: var(--aelan-bronze-cta-hover, #6f4933);
+    box-shadow: 0 12px 32px var(--aelan-bronze-cta-shadow, rgba(128, 88, 63, 0.24));
     color: #fff;
     transform: translateY(-2px);
 }
