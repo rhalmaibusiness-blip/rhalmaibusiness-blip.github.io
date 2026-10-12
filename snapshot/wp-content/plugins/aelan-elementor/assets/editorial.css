@@ -390,3 +390,103 @@
     .aelan-editorial .aelan-team.is-profile-cards .aelan-team__grid { grid-template-columns: 1fr; max-width: 34rem; margin-inline: auto; }
     .aelan-editorial .is-profile-cards .aelan-person-card__cta { width: 100%; }
 }
+
+/* 0.3.33: selected minimal Sunset Light closing CTA.
+ * This preset is intentionally image-free: only continuous CSS colour fields
+ * remain, so there is no pearl artwork, horizon line or loading seam. */
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light {
+    --aelan-final-sunset-min-height: clamp(680px, 50vw, 780px);
+    background:
+        radial-gradient(ellipse 42% 68% at 66% 50%, rgba(245, 151, 101, .78) 0%, rgba(248, 177, 133, .56) 38%, rgba(251, 211, 187, .22) 66%, transparent 82%),
+        radial-gradient(ellipse 78% 56% at 36% 108%, rgba(243, 177, 134, .58) 0%, rgba(249, 211, 185, .28) 58%, transparent 82%),
+        linear-gradient(180deg, #fffaf7 0%, #fff8f4 18%, #fde9dc 48%, #f8ceb2 76%, #f3bb91 100%);
+    min-height: var(--aelan-final-sunset-min-height);
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light::before,
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__background,
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__button-sheen {
+    display: none;
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__inner {
+    align-items: center;
+    display: grid;
+    min-height: var(--aelan-final-sunset-min-height);
+    padding-block: clamp(5.5rem, 8vw, 7.5rem);
+    padding-inline: clamp(2rem, 3vw, 3.5rem);
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content {
+    max-width: min(660px, 56%);
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-section-heading {
+    margin-bottom: 2.35rem;
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-section-heading h2 {
+    color: var(--aelan-navy);
+    font-size: clamp(3.35rem, 4.15vw, 4rem);
+    line-height: 1.03;
+    max-width: 12em;
+    text-wrap: wrap;
+    white-space: normal;
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-lead {
+    max-width: 60ch;
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-lead p {
+    margin-top: 1.6rem;
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__action {
+    margin-top: .55rem;
+}
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__button,
+.page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__button.is-pending {
+    background: var(--aelan-navy);
+    border-color: var(--aelan-navy);
+    color: #fff;
+    cursor: default;
+    min-height: 56px;
+    padding-inline: 2rem;
+}
+
+@media (max-width: 782px) {
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light {
+        --aelan-final-sunset-min-height: 0px;
+        background:
+            radial-gradient(ellipse 95% 50% at 58% 54%, rgba(245, 151, 101, .72) 0%, rgba(248, 181, 139, .48) 42%, rgba(251, 218, 198, .18) 70%, transparent 86%),
+            linear-gradient(180deg, #fffaf7 0%, #fff7f3 17%, #fde5d5 50%, #f6c49f 100%);
+        min-height: 0;
+    }
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__inner {
+        display: block;
+        min-height: 0;
+        padding: clamp(4.5rem, 16vw, 6rem) clamp(1.25rem, 6vw, 2rem) clamp(5rem, 18vw, 6.75rem);
+    }
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content {
+        max-width: 100%;
+    }
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-section-heading {
+        margin-bottom: 1.75rem;
+    }
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-section-heading h2 {
+        font-size: clamp(2.45rem, 12vw, 3.25rem);
+        line-height: 1.04;
+        max-width: 9.5em;
+    }
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-lead {
+        font-size: 1rem;
+        line-height: 1.65;
+        max-width: 34rem;
+    }
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-lead p {
+        margin-top: 1.35rem;
+    }
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__action,
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__content .aelan-section-heading h2 {
+        font-size: clamp(2.2rem, 11.5vw, 2.75rem);
+    }
+}
