@@ -16,7 +16,7 @@
     --aelan-editorial-glass: rgba(255, 252, 249, .72);
     --aelan-editorial-navy-soft: #383c6e;
     --aelan-editorial-navy-deep: #262a50;
-    --aelan-editorial-pending: var(--aelan-bronze-cta, #80583f);
+    --aelan-editorial-pending: var(--aelan-bronze-cta, #a38b73);
     --aelan-editorial-hero-top: clamp(10.5rem, 16vw, 12rem);
     width: 100%;
     min-width: 0;
@@ -50,7 +50,7 @@
 .aelan-editorial .aelan-button.is-pending {
     background: var(--aelan-editorial-pending);
     border-color: var(--aelan-editorial-pending);
-    color: var(--aelan-warm-white);
+    color: var(--aelan-bronze-cta-text, #1f223f);
     opacity: 1;
     cursor: not-allowed;
     box-shadow: none;

@@ -86,10 +86,10 @@
 
 .aelan-button {
     align-items: center;
-    background: var(--aelan-bronze-cta, #80583f);
-    border: 1px solid var(--aelan-bronze-cta, #80583f);
+    background: var(--aelan-bronze-cta, #a38b73);
+    border: 1px solid var(--aelan-bronze-cta, #a38b73);
     border-radius: 999px;
-    color: #fff;
+    color: var(--aelan-bronze-cta-text, #1f223f);
     display: inline-flex;
     font-size: 0.9rem;
     font-weight: 600;
@@ -102,10 +102,10 @@
 }
 
 .aelan-button:hover {
-    background: var(--aelan-bronze-cta-hover, #6f4933);
-    border-color: var(--aelan-bronze-cta-hover, #6f4933);
-    box-shadow: 0 12px 32px var(--aelan-bronze-cta-shadow, rgba(128, 88, 63, 0.24));
-    color: #fff;
+    background: var(--aelan-bronze-cta-hover, #aa927a);
+    border-color: var(--aelan-bronze-cta-hover, #aa927a);
+    box-shadow: 0 12px 32px var(--aelan-bronze-cta-shadow, rgba(163, 139, 115, 0.3));
+    color: var(--aelan-bronze-cta-text, #1f223f);
     transform: translateY(-2px);
 }
 
@@ -565,14 +565,13 @@ html.is-aelan-hero-scroll-controlled {
 .aelan-proof-tabs__tab.is-active,
 .aelan-proof-tabs__tab[aria-selected="true"],
 .aelan-proof-tabs__accordion-trigger.is-active {
-    background:
-        radial-gradient(circle at 18% 0, rgba(198, 192, 224, 0.26), transparent 42%),
-        linear-gradient(145deg, #3b4078, var(--aelan-navy, #303463));
+    background-color: var(--aelan-bronze-cta, #a38b73);
+    background-image: radial-gradient(circle at 18% 0, rgba(255, 255, 255, 0.22), transparent 42%);
     box-shadow:
-        0 18px 38px rgba(48, 52, 99, 0.24),
+        0 18px 38px var(--aelan-bronze-cta-shadow, rgba(163, 139, 115, 0.3)),
         inset 0 1px 0 rgba(255, 255, 255, 0.26),
-        inset 0 -1px 0 rgba(243, 163, 119, 0.32);
-    color: #fff;
+        inset 0 -1px 0 rgba(243, 191, 153, 0.45);
+    color: var(--aelan-bronze-cta-text, #1f223f);
 }
 
 .aelan-proof-tabs__tab.is-active::after,
@@ -1139,15 +1138,14 @@ html.is-aelan-hero-scroll-controlled {
 }
 
 .aelan-programs__tab.is-active {
-    background:
-        radial-gradient(circle at 92% 16%, rgba(198, 192, 224, 0.24), transparent 38%),
-        linear-gradient(135deg, #242955, var(--aelan-navy, #303463));
+    background-color: var(--aelan-bronze-cta, #a38b73);
+    background-image: radial-gradient(circle at 92% 16%, rgba(255, 255, 255, 0.22), transparent 38%);
     border-color: rgba(255, 255, 255, 0.82);
     box-shadow:
-        0 18px 38px rgba(48, 52, 99, 0.2),
-        0 4px 0 rgba(243, 163, 119, 0.5),
+        0 18px 38px var(--aelan-bronze-cta-shadow, rgba(163, 139, 115, 0.3)),
+        0 4px 0 rgba(243, 191, 153, 0.52),
         inset 0 0 0 1px rgba(198, 192, 224, 0.36);
-    color: #fff;
+    color: var(--aelan-bronze-cta-text, #1f223f);
     transform: translateX(8px);
 }
 
@@ -2142,11 +2140,12 @@ html.is-aelan-hero-scroll-controlled {
         width: 100%;
     }
     .aelan-programs__accordion-trigger.is-active {
-        background: linear-gradient(135deg, #242955, var(--aelan-navy, #303463));
+        background-color: var(--aelan-bronze-cta, #a38b73);
+        background-image: radial-gradient(circle at 92% 16%, rgba(255, 255, 255, 0.22), transparent 38%);
         box-shadow:
-            0 14px 30px rgba(48, 52, 99, 0.17),
-            0 3px 0 rgba(243, 163, 119, 0.46);
-        color: #fff;
+            0 14px 30px var(--aelan-bronze-cta-shadow, rgba(163, 139, 115, 0.3)),
+            0 3px 0 rgba(243, 191, 153, 0.48);
+        color: var(--aelan-bronze-cta-text, #1f223f);
     }
     .aelan-programs__accordion-trigger .aelan-programs__icon {
         border-radius: 16px;
