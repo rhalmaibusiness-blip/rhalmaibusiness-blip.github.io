@@ -28,8 +28,8 @@
 }
 .aelan-method-page__shell { margin-inline: auto; max-width: var(--mp-width); min-width: 0; }
 .aelan-method-page h1, .aelan-method-page h2, .aelan-method-page h3 { color: inherit; font-family: var(--mp-serif); font-weight: 400; letter-spacing: -.025em; text-wrap: balance; overflow-wrap: break-word; }
-.aelan-method-page h1 { font-size: var(--mp-h1); line-height: 1.08; margin: 0 0 2rem; }
-.aelan-method-page h2 { font-size: var(--mp-h2); line-height: 1.13; margin: 0 0 1.5rem; }
+.aelan-method-page h1 { color: var(--aelan-taupe); font-size: var(--mp-h1); line-height: 1.08; margin: 0 0 2rem; }
+.aelan-method-page h2 { color: var(--aelan-taupe); font-size: var(--mp-h2); line-height: 1.13; margin: 0 0 1.5rem; }
 .aelan-method-page h3 { font-size: var(--mp-h3); line-height: 1.2; margin: 0 0 1.25rem; }
 .aelan-method-page__body { font-size: var(--mp-body); line-height: var(--mp-leading); overflow-wrap: break-word; }
 .aelan-method-page__body p { margin: 0 0 1.25em; }
@@ -67,6 +67,7 @@
 .aelan-method-page-timeline__cta { margin-left: calc(56px + clamp(1.5rem, 3vw, 3rem)); margin-top: 3rem; }
 .aelan-method-page-location { background: var(--aelan-cream); padding: 0; }
 .aelan-method-page-location__arrival { background: radial-gradient(ellipse 50% 135% at 92% 20%, rgba(198, 192, 224, .62), transparent 68%), var(--aelan-navy); color: var(--aelan-warm-white); padding: var(--mp-space) var(--mp-inset); }
+.aelan-method-page-location__arrival h2 { color: var(--aelan-warm-white); }
 .aelan-method-page-location__arrival-copy { max-width: var(--mp-width); }
 .aelan-method-page-location__arrival-copy h2, .aelan-method-page-location__arrival-copy .aelan-method-page__body { max-width: 50rem; }
 .aelan-method-page-location__content { padding: clamp(3rem, 6vw, 5rem) var(--mp-inset) var(--mp-space); }

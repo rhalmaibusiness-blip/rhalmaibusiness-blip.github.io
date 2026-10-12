@@ -22,7 +22,7 @@
 }
 .aelan-team-members__shell { margin-inline: auto; max-width: var(--team-members-width); }
 .aelan-team-members__header { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); column-gap: clamp(2.5rem, 6vw, 6rem); align-items: start; margin-bottom: 3rem; }
-.aelan-team-members__header h2 { font: 400 var(--team-members-heading)/1.15 var(--team-members-serif); letter-spacing: -.03em; color: inherit; margin: 0; }
+.aelan-team-members__header h2 { font: 400 var(--team-members-heading)/1.15 var(--team-members-serif); letter-spacing: -.03em; color: var(--aelan-taupe); margin: 0; }
 .aelan-team-members__intro { font-size: 1.125rem; line-height: 1.8; max-width: 70ch; }
 .aelan-team-members__intro p { margin: 0; }
 .aelan-team-members__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--team-members-gap); list-style: none; padding: 0; margin: 0; }

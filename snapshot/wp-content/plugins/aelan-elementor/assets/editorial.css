@@ -23,7 +23,7 @@
 }
 .aelan-editorial .aelan-section { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); }
 .aelan-editorial .aelan-section h2 {
-    color: var(--aelan-navy);
+    color: var(--aelan-taupe);
     font-family: var(--wp--preset--font-family--marcellus);
     font-size: var(--aelan-editorial-heading);
     font-weight: 400;
@@ -74,6 +74,7 @@
     margin: 0 0 1.25rem;
 }
 .aelan-editorial .aelan-hero__brand {
+    color: var(--aelan-taupe);
     font-family: var(--wp--preset--font-family--marcellus);
     font-size: var(--aelan-editorial-brand);
     line-height: 1.06;
@@ -100,6 +101,10 @@
 .aelan-editorial .aelan-manifesto__shell { padding-block: var(--aelan-editorial-space); }
 .aelan-editorial .aelan-manifesto__panel { padding: var(--aelan-editorial-inset); }
 .aelan-editorial .aelan-manifesto__title { max-width: 25ch; margin-inline: auto; }
+.aelan-editorial .aelan-measurement h2,
+.aelan-editorial .aelan-programs h2,
+.aelan-editorial .aelan-method h2,
+.aelan-editorial .aelan-final-cta h2 { color: var(--aelan-navy); }
 .aelan-editorial .aelan-manifesto__subtitle { font-weight: 600; max-width: 52ch; margin: 1.5rem auto 2rem !important; text-align: center; }
 .aelan-editorial .aelan-manifesto__body { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); max-width: var(--aelan-editorial-copy-width); text-align: left; margin: 0 auto; }
 

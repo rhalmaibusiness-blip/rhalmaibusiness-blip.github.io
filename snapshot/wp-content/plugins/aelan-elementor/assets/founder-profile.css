@@ -35,7 +35,7 @@
 .aelan-founder__content { grid-column: 2; min-width: 0; }
 .aelan-founder__heading { grid-row: 1; margin-bottom: var(--founder-rhythm); }
 .aelan-founder__heading h2 {
-    color: inherit;
+    color: var(--aelan-taupe);
     font-family: var(--founder-serif);
     font-size: var(--founder-title);
     font-weight: 400;

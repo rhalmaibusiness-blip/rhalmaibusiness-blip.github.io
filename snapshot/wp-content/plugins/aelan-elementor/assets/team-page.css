@@ -54,7 +54,7 @@
 }
 
 .aelan-team-page-hero__headline {
-    color: var(--aelan-navy);
+    color: var(--aelan-taupe);
     font-family: var(--wp--preset--font-family--marcellus, Marcellus, serif);
     font-size: clamp(3.15rem, 4.1vw, 3.75rem);
     font-weight: 400;
