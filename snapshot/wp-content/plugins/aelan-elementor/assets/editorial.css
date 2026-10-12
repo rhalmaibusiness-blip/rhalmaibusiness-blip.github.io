@@ -374,6 +374,26 @@
 .aelan-editorial .is-profile-cards .aelan-person-card__description { margin-bottom: 1.75rem; }
 .aelan-editorial .is-profile-cards .aelan-person-card__description p { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); text-transform: none; letter-spacing: 0; font-weight: 400; }
 .aelan-editorial .is-profile-cards .aelan-person-card__cta { margin-top: auto; width: auto; }
+
+/* 0.3.35: selected Sand Bronze surfaces. Keep the original portraits, content
+ * and geometry; only the homepage profile cards lose their rainbow washes. */
+.aelan-editorial .aelan-team.is-profile-cards {
+    --aelan-team-bronze-portrait-light: #d9c8b4;
+    --aelan-team-bronze-portrait-deep: #a88e73;
+    --aelan-team-bronze-copy-light: #fbf7f2;
+    --aelan-team-bronze-copy-warm: #f0e4d6;
+    --aelan-team-bronze-edge: rgba(163, 139, 115, .32);
+}
+.aelan-editorial .is-profile-cards .aelan-person-card::before { background: none; }
+.aelan-editorial .is-profile-cards .aelan-person-card__portrait {
+    background: linear-gradient(180deg, var(--aelan-team-bronze-portrait-light) 0%, var(--aelan-team-bronze-portrait-deep) 100%);
+}
+.aelan-editorial .is-profile-cards .aelan-person-card__meta.aelan-pearl-surface {
+    background: linear-gradient(180deg, var(--aelan-team-bronze-copy-light) 0%, var(--aelan-team-bronze-copy-light) 25%, var(--aelan-team-bronze-copy-warm) 100%);
+}
+.aelan-editorial .is-profile-cards .aelan-person-card__meta-line {
+    background: linear-gradient(90deg, transparent, var(--aelan-team-bronze-edge), transparent);
+}
 @media (max-width: 782px) {
     .aelan-editorial .aelan-recognition.is-horizon-dialogue {
         background:
