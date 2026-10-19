@@ -217,10 +217,11 @@
 /* 0.3.42: one side-to-side ribbon behind the cards, never inside a quadrant.
  * Its height is capped so the rotated artwork stays away from section edges. */
 .page-id-102 .aelan-editorial .aelan-method__grid {
-    --aelan-method-ribbon-opacity: .24;
+    --aelan-method-ribbon-opacity: .18;
     --aelan-method-ribbon-angle: -10deg;
     --aelan-method-ribbon-height: clamp(180px, 32vw, 460px);
     --aelan-method-heading-bronze: #a38b73;
+    --aelan-method-card-surface: rgba(255, 255, 255, .72);
     position: relative;
     isolation: isolate;
 }
@@ -240,6 +241,27 @@
 .page-id-102 .aelan-editorial .aelan-method__lens { display: none; }
 .page-id-102 .aelan-editorial .aelan-method__number,
 .page-id-102 .aelan-editorial .aelan-method__card h3 { color: var(--aelan-method-heading-bronze); }
+/* 0.3.43: white translucent cards, single-line step 03, and a navy CTA. */
+.page-id-102 .aelan-editorial .aelan-method__card {
+    background: var(--aelan-method-card-surface);
+}
+.page-id-102 .aelan-editorial .aelan-method__card-heading { width: 100%; }
+.page-id-102 .aelan-editorial .aelan-method__card:nth-child(3) h3 { white-space: nowrap; }
+.page-id-102 .aelan-editorial .aelan-method__footer .aelan-button {
+    --aelan-method-cta-hover: #25294f;
+    background: var(--aelan-navy, #303463);
+    border-color: var(--aelan-navy, #303463);
+    color: #fff;
+    box-shadow: none;
+}
+.page-id-102 .aelan-editorial .aelan-method__footer .aelan-button:hover {
+    background: var(--aelan-method-cta-hover);
+    border-color: var(--aelan-method-cta-hover);
+}
+@media (max-width: 380px) {
+    .page-id-102 .aelan-editorial .aelan-method__card:nth-child(3) .aelan-method__card-heading { gap: .75rem; }
+    .page-id-102 .aelan-editorial .aelan-method__card:nth-child(3) h3 { font-size: .875rem; letter-spacing: .05em; }
+}
 @media (min-width: 783px) {
     .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) {
         container-type: inline-size;
