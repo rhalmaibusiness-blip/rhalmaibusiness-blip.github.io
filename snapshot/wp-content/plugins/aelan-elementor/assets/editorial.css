@@ -349,6 +349,26 @@
 .page-id-102 .aelan-editorial .aelan-manifesto::after { display: none; }
 /* 0.3.38: after the peach recognition edge, a continuous white surface
  * carries measurement and programs into the Method's warm gradient. */
+.page-id-102 .aelan-interior-banner {
+    --aelan-interior-ratio: 2600 / 671;
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    line-height: 0;
+}
+.page-id-102 .aelan-interior-banner img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: var(--aelan-interior-ratio);
+    margin: 0;
+    border-radius: 0;
+}
 .page-id-102 .aelan-editorial .aelan-measurement,
 .page-id-102 .aelan-editorial .aelan-programs {
     background: var(--aelan-home-flow-white);
