@@ -1,0 +1,81 @@
+/* Charcoal footer preset: isolated from the older footer's centered layout. */
+.aelan-site-footer.is-charcoal {
+    --af-charcoal: #282827;
+    --af-white: #fff;
+    --af-copy: #e3e1de;
+    --af-bronze: #a38b73;
+    --af-hover: #f3bf99;
+    --af-line: rgb(163 139 115 / 48%);
+    --af-field-line: rgb(255 255 255 / 55%);
+    --af-shell: 1180px;
+    --af-gap: clamp(20px, 2.2vw, 28px);
+    --af-radius: 12px;
+    background: var(--af-charcoal);
+    color: var(--af-copy);
+    padding: clamp(64px, 8vw, 120px) 32px 40px !important;
+    font-family: var(--aelan-font-body, 'Satoshi', sans-serif);
+    font-size: 15px;
+    line-height: 1.7;
+}
+.is-charcoal .af-footer__shell { max-width: var(--af-shell); margin-inline: auto; }
+.is-charcoal .af-footer__main { display: grid; grid-template-columns: .95fr 1.25fr 1.1fr 1.15fr; }
+.is-charcoal .af-footer__main > * { min-width: 0; }
+.is-charcoal .af-footer__brand { align-self: center; padding-right: var(--af-gap); text-align: left; }
+.is-charcoal .af-footer__logo { display: block; width: 75%; max-width: 172.5px; }
+.is-charcoal .af-footer__logo img { display: block; width: 100%; height: auto; max-height: none; filter: brightness(0) invert(1); }
+.is-charcoal .af-footer__tagline { color: var(--af-white); font: 400 clamp(15px, 1.575vw, 21.75px)/1.3 'Marcellus', serif; margin: 7.5px 0 0; white-space: nowrap; }
+.is-charcoal .af-footer__column { border-left: 1px solid var(--af-line); padding: 0 var(--af-gap); }
+.is-charcoal .af-footer__column:last-child { padding-right: 0; }
+.aelan-site-footer.is-charcoal .af-footer__heading { color: var(--af-white); font: 400 22px/1.3 'Marcellus', serif; margin: 0 0 18px; text-align: left; }
+.aelan-site-footer.is-charcoal .wp-block-navigation__container { display: flex !important; flex-direction: column; align-items: flex-start !important; gap: 7px !important; list-style: none; padding: 0; margin: 0; }
+.aelan-site-footer.is-charcoal .wp-block-navigation-item { margin: 0 !important; width: auto !important; }
+.aelan-site-footer.is-charcoal .wp-block-navigation-item__content { color: var(--af-copy); opacity: 1; font-size: 15px; font-weight: 400; text-align: left; padding: 0; line-height: 1.7; text-decoration: none; transform: none; }
+.is-charcoal .af-footer__address { display: flex; align-items: flex-start; gap: 9px; font-style: normal; margin: 0; line-height: 1.7; }
+.is-charcoal .af-footer__address svg { flex: 0 0 22px; margin-top: 2px; }
+.is-charcoal .af-footer__hours { list-style: none; margin: 20px 0 10px; padding: 0; }
+.is-charcoal .af-footer__socials { display: flex; gap: 5px; list-style: none; margin: 0 0 0 -8px; padding: 0; }
+.is-charcoal .af-footer__socials li { margin: 0; padding: 0; background: none; }
+.is-charcoal .af-footer__socials :is(a,button) { display: grid; place-items: center; color: var(--af-white); background: transparent; border: 0; border-radius: 8px; padding: 8px; width: 44px; height: 44px; opacity: 1; box-shadow: none; }
+.is-charcoal .af-footer__socials a svg { fill: currentColor; }
+.is-charcoal .af-footer__newsletter { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 36px 0; margin-top: 36px; border-block: 1px solid var(--af-line); }
+.is-charcoal .af-footer__newsletter .af-footer__heading { padding-top: 8px; margin: 0; }
+.is-charcoal .af-footer__form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 16px; min-width: 0; }
+.is-charcoal .af-footer__field { min-width: 0; }
+.is-charcoal .af-footer__field input { width: 100%; min-width: 0; height: 52px; border: 1px solid var(--af-field-line); border-radius: var(--af-radius); color: var(--af-white); background: transparent; padding: 12px 18px; font: inherit; box-shadow: none; }
+.is-charcoal .af-footer__field input::placeholder { color: var(--af-copy); opacity: 1; }
+.is-charcoal .af-footer__submit { min-height: 52px; border: 0; border-radius: 999px; color: var(--af-white); background: var(--af-bronze); opacity: 1; padding: 12px 24px; display: flex; align-items: center; justify-content: center; gap: 12px; font: 500 15px/1.4 'Satoshi', sans-serif; box-shadow: none; }
+.is-charcoal .af-footer__submit span { font-size: 22px; }
+.is-charcoal .af-footer__consent { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 12px; font-size: 14px; }
+.is-charcoal .af-footer__consent input { appearance: none; flex: 0 0 22px; width: 22px; height: 22px; margin: 1px 0 0; border: 1px solid var(--af-field-line); border-radius: 5px; background: transparent; }
+.is-charcoal .af-footer__consent input:checked { appearance: auto; accent-color: var(--af-bronze); }
+.is-charcoal .af-footer__consent a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.is-charcoal .af-footer__copyright { margin: 30px 0 0; text-align: center; color: var(--af-copy); font-size: 13px; }
+.is-charcoal :is(a,button,input):focus-visible { outline: 2px solid var(--af-white); outline-offset: 4px; }
+.aelan-site-footer.is-charcoal :is(.wp-block-navigation-item__content, .af-footer__socials a):is(:hover, :focus-visible) { color: var(--af-hover); text-decoration: none; transform: none; }
+@media (max-width: 1100px) {
+    .is-charcoal .af-footer__main { grid-template-columns: .9fr 1.3fr 1.1fr 1.15fr; }
+    .aelan-site-footer.is-charcoal .af-footer__heading { font-size: 22px; }
+    .is-charcoal .af-footer__newsletter { grid-template-columns: 120px 1fr; }
+    .is-charcoal .af-footer__form { grid-template-columns: 1fr 1fr; }
+    .is-charcoal .af-footer__submit { grid-column: 1 / -1; grid-row: 3; justify-self: start; }
+}
+@media (max-width: 900px) {
+    .is-charcoal .af-footer__main { grid-template-columns: 1fr 1fr; gap: 40px 0; }
+    .is-charcoal .af-footer__column:nth-child(3) { border-left: 0; padding-left: 0; }
+    .is-charcoal .af-footer__logo { max-width: 165px; }
+    .is-charcoal .af-footer__tagline { font-size: 20.25px; }
+    .is-charcoal .af-footer__newsletter { grid-template-columns: 1fr; }
+    .is-charcoal .af-footer__newsletter .af-footer__heading { padding-top: 0; }
+}
+@media (max-width: 600px) {
+    .aelan-site-footer.is-charcoal { padding: 56px 24px 28px !important; font-size: 16px; }
+    .is-charcoal .af-footer__main { grid-template-columns: 1fr; gap: 32px; }
+    .is-charcoal .af-footer__brand { padding: 0 0 8px; }
+    .is-charcoal .af-footer__column { padding: 0; border: 0; }
+    .aelan-site-footer.is-charcoal .wp-block-navigation-item__content { font-size: 16px; }
+    .is-charcoal .af-footer__form { grid-template-columns: 1fr; }
+    .is-charcoal .af-footer__submit { grid-row: auto; grid-column: auto; order: 1; width: 100%; }
+    .is-charcoal .af-footer__consent { grid-column: auto; }
+    .is-charcoal .af-footer__field input { font-size: 16px; }
+    .is-charcoal .af-footer__newsletter { margin-top: 32px; padding: 28px 0; }
+}
