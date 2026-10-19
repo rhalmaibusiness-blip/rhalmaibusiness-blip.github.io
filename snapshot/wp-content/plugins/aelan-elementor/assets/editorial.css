@@ -523,6 +523,50 @@
 .aelan-editorial .is-profile-cards .aelan-person-card__description p { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); text-transform: none; letter-spacing: 0; font-weight: 400; }
 .aelan-editorial .is-profile-cards .aelan-person-card__cta { margin-top: auto; width: auto; }
 
+/* 0.3.44: editorial introduction and original SVG mark share a centred row. */
+.page-id-102 .aelan-editorial .aelan-team.is-profile-cards {
+    --aelan-team-brand-width: 22rem;
+    --aelan-team-overview-gap: clamp(3rem, 6vw, 6rem);
+    --aelan-team-cards-gap: clamp(3rem, 4.5vw, 4rem);
+}
+.page-id-102 .aelan-editorial .aelan-team.is-profile-cards .aelan-team__shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+    grid-template-areas: "intro brand" "cards cards";
+    align-items: center;
+    column-gap: var(--aelan-team-overview-gap);
+    row-gap: var(--aelan-team-cards-gap);
+}
+.page-id-102 .aelan-editorial .aelan-team.is-profile-cards .aelan-team__intro {
+    grid-area: intro;
+    max-width: none;
+    margin: 0;
+    text-align: left;
+}
+.page-id-102 .aelan-editorial .aelan-team.is-profile-cards .aelan-team__lead { margin-inline: 0; }
+.page-id-102 .aelan-editorial .aelan-team.is-profile-cards .aelan-team__intro .aelan-eyebrow::after { margin-inline: 0; }
+.page-id-102 .aelan-editorial .aelan-team.is-profile-cards .aelan-team__brand {
+    grid-area: brand;
+    justify-self: center;
+    width: min(100%, var(--aelan-team-brand-width));
+}
+.page-id-102 .aelan-editorial .aelan-team.is-profile-cards .aelan-team__brand img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.page-id-102 .aelan-editorial .aelan-team.is-profile-cards .aelan-team__grid { grid-area: cards; }
+@media (max-width: 900px) {
+    .page-id-102 .aelan-editorial .aelan-team.is-profile-cards {
+        --aelan-team-brand-width: 14rem;
+        --aelan-team-cards-gap: 2.5rem;
+    }
+    .page-id-102 .aelan-editorial .aelan-team.is-profile-cards .aelan-team__shell {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "intro" "brand" "cards";
+    }
+}
+
 /* 0.3.35: selected Sand Bronze surfaces. Keep the original portraits, content
  * and geometry; only the homepage profile cards lose their rainbow washes. */
 .aelan-editorial .aelan-team.is-profile-cards {
