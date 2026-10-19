@@ -369,6 +369,27 @@
     margin: 0;
     border-radius: 0;
 }
+.page-id-102 .aelan-interior-banner__caption {
+    --aelan-interior-caption-size: .875rem;
+    --aelan-interior-caption-inset: clamp(1.25rem, 3.5vw, 3rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem 2rem;
+    padding: 1rem var(--aelan-interior-caption-inset);
+    margin: 0;
+    background: #fff;
+    color: var(--aelan-navy);
+    font-family: var(--wp--preset--font-family--satoshi);
+    font-size: var(--aelan-interior-caption-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+.page-id-102 .aelan-interior-banner__caption > :last-child { text-align: right; }
+@media (max-width: 480px) {
+    .page-id-102 .aelan-interior-banner__caption { flex-direction: column; gap: .375rem; }
+    .page-id-102 .aelan-interior-banner__caption > :last-child { text-align: left; }
+}
 .page-id-102 .aelan-editorial .aelan-measurement,
 .page-id-102 .aelan-editorial .aelan-programs {
     background: var(--aelan-home-flow-white);
