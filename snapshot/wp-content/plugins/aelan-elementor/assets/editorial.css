@@ -20,8 +20,6 @@
     --aelan-editorial-navy-soft: #383c6e;
     --aelan-editorial-navy-deep: #262a50;
     --aelan-editorial-pending: var(--aelan-bronze-cta, #a38b73);
-    --aelan-editorial-outline-cta-surface: transparent;
-    --aelan-editorial-outline-cta-ink: var(--aelan-bronze-cta, #a38b73);
     --aelan-editorial-hero-top: clamp(10.5rem, 16vw, 12rem);
     width: 100%;
     min-width: 0;
@@ -243,22 +241,22 @@
 .page-id-102 .aelan-editorial .aelan-method__lens { display: none; }
 .page-id-102 .aelan-editorial .aelan-method__number,
 .page-id-102 .aelan-editorial .aelan-method__card h3 { color: var(--aelan-method-heading-bronze); }
-/* White translucent cards, single-line step 03, and transparent/bronze CTA. */
+/* White translucent cards, single-line step 03, and the approved navy CTA. */
 .page-id-102 .aelan-editorial .aelan-method__card {
     background: var(--aelan-method-card-surface);
 }
 .page-id-102 .aelan-editorial .aelan-method__card-heading { width: 100%; }
 .page-id-102 .aelan-editorial .aelan-method__card:nth-child(3) h3 { white-space: nowrap; }
 .page-id-102 .aelan-editorial .aelan-method__footer .aelan-button {
-    background: var(--aelan-editorial-outline-cta-surface);
-    border-color: var(--aelan-editorial-outline-cta-ink);
-    color: var(--aelan-editorial-outline-cta-ink);
+    --aelan-method-cta-hover: #25294f;
+    background: var(--aelan-navy, #303463);
+    border-color: var(--aelan-navy, #303463);
+    color: #fff;
     box-shadow: none;
 }
 .page-id-102 .aelan-editorial .aelan-method__footer .aelan-button:hover {
-    background: var(--aelan-editorial-outline-cta-surface);
-    border-color: var(--aelan-editorial-outline-cta-ink);
-    color: var(--aelan-editorial-outline-cta-ink);
+    background: var(--aelan-method-cta-hover);
+    border-color: var(--aelan-method-cta-hover);
 }
 @media (max-width: 380px) {
     .page-id-102 .aelan-editorial .aelan-method__card:nth-child(3) .aelan-method__card-heading { gap: .75rem; }
@@ -816,9 +814,9 @@
 }
 .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__button,
 .page-id-102 .aelan-editorial .aelan-final-cta.is-sunset-light .aelan-final-cta__button.is-pending {
-    background: var(--aelan-editorial-outline-cta-surface);
-    border-color: var(--aelan-editorial-outline-cta-ink);
-    color: var(--aelan-editorial-outline-cta-ink);
+    background: var(--aelan-navy);
+    border-color: var(--aelan-navy);
+    color: #fff;
     cursor: default;
     min-height: 56px;
     padding-inline: 2rem;
