@@ -1246,6 +1246,14 @@ img {
     outline-offset: 2px;
 }
 
+/* The Services trigger keeps its original plain appearance; only its child is outlined. */
+[data-aelan-elementor-header] .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation-item.has-child > .wp-block-navigation-item__content,
+[data-aelan-elementor-header] .aelan-header-navigation .wp-block-navigation__responsive-container .wp-block-navigation-item.has-child > .wp-block-navigation-item__content:is(:hover, :focus-visible, [aria-current], [aria-expanded="true"]) {
+    background: transparent;
+    border-color: transparent;
+    color: var(--aelan-navy);
+}
+
 @media (min-width: 901px) {
     [data-aelan-elementor-header] .aelan-header-navigation .wp-block-navigation__container {
         column-gap: clamp(.25rem, .65vw, .65rem);
@@ -1260,15 +1268,18 @@ img {
         padding-right: .55rem;
     }
     [data-aelan-elementor-header] .aelan-header-navigation .wp-block-navigation-item.has-child:has([data-aelan-services-toggle][aria-expanded="true"], [aria-current="page"]) {
-        background: var(--aelan-nav-surface);
-        border-color: var(--aelan-nav-active-border);
-        color: var(--aelan-nav-active-text);
+        background: transparent;
+        border-color: transparent;
+        color: var(--aelan-navy);
     }
     [data-aelan-elementor-header] .aelan-header-navigation .wp-block-navigation__responsive-container .has-child > .aelan-services-desktop-link {
         background: transparent;
         border-color: transparent;
         color: inherit;
         padding-right: .2rem;
+    }
+    [data-aelan-elementor-header] .aelan-header-navigation .wp-block-navigation-item.has-child > .aelan-services-desktop-link::after {
+        display: block;
     }
     [data-aelan-elementor-header] .aelan-header-navigation .wp-block-navigation__submenu-icon {
         color: inherit;
