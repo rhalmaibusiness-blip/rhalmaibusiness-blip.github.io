@@ -214,37 +214,37 @@
 .aelan-editorial .aelan-method__footer { max-width: var(--aelan-editorial-copy-width); margin: 2.5rem auto 0; text-align: center; }
 .aelan-editorial .aelan-method__footer p { font-weight: 600; }
 .aelan-editorial .aelan-method__footer .aelan-button { margin-top: 1.5rem; }
-/* One shared circle, cropped by the four inner corners. Its centre includes
- * half the grid gap plus the card border; none of the quadrants is mirrored.
- * The page and exact card-count guards keep the mobile/legacy surfaces intact. */
+/* 0.3.42: one side-to-side ribbon behind the cards, never inside a quadrant.
+ * Its height is capped so the rotated artwork stays away from section edges. */
+.page-id-102 .aelan-editorial .aelan-method__grid {
+    --aelan-method-ribbon-opacity: .24;
+    --aelan-method-ribbon-angle: -10deg;
+    --aelan-method-ribbon-height: clamp(180px, 32vw, 460px);
+    --aelan-method-heading-bronze: #a38b73;
+    position: relative;
+    isolation: isolate;
+}
+.page-id-102 .aelan-editorial .aelan-method__grid::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    width: calc(100vw + 12rem);
+    height: var(--aelan-method-ribbon-height);
+    background: url('starter/aelan-method-ribbon.avif') center / 100% 100% no-repeat;
+    opacity: var(--aelan-method-ribbon-opacity);
+    transform: translate(-50%, -50%) rotate(var(--aelan-method-ribbon-angle));
+}
+.page-id-102 .aelan-editorial .aelan-method__lens { display: none; }
+.page-id-102 .aelan-editorial .aelan-method__number,
+.page-id-102 .aelan-editorial .aelan-method__card h3 { color: var(--aelan-method-heading-bronze); }
 @media (min-width: 783px) {
     .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) {
-        --aelan-method-circle-gap: clamp(1rem, 1.7vw, 1.5rem);
-        --aelan-method-circle-border: 1px;
-        --aelan-method-circle-diameter: clamp(180px, 27cqw, 315px);
-        --aelan-method-circle-opacity: .72;
-        --aelan-method-circle-offset: calc((var(--aelan-method-circle-diameter) + var(--aelan-method-circle-gap)) / -2 - var(--aelan-method-circle-border));
-        --aelan-method-circle-art: url('starter/aelan-method-pearl-imagegen.webp');
         container-type: inline-size;
-        gap: var(--aelan-method-circle-gap);
         grid-auto-rows: 1fr;
     }
-    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card {
-        border-width: var(--aelan-method-circle-border);
-    }
-    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card > .aelan-method__lens {
-        inset: auto;
-        width: var(--aelan-method-circle-diameter);
-        height: var(--aelan-method-circle-diameter);
-        border-radius: 0;
-        background: var(--aelan-method-circle-art) center / contain no-repeat;
-        opacity: var(--aelan-method-circle-opacity);
-        transform: none;
-    }
-    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card:nth-child(1) > .aelan-method__lens { right: var(--aelan-method-circle-offset); bottom: var(--aelan-method-circle-offset); }
-    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card:nth-child(2) > .aelan-method__lens { left: var(--aelan-method-circle-offset); bottom: var(--aelan-method-circle-offset); }
-    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card:nth-child(3) > .aelan-method__lens { right: var(--aelan-method-circle-offset); top: var(--aelan-method-circle-offset); }
-    .page-id-102 .aelan-editorial .aelan-method__grid:has(> .aelan-method__card:nth-child(4)):not(:has(> .aelan-method__card:nth-child(5))) > .aelan-method__card:nth-child(4) > .aelan-method__lens { left: var(--aelan-method-circle-offset); top: var(--aelan-method-circle-offset); }
 }
 .aelan-editorial .aelan-team__shell { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); align-items: center; gap: var(--aelan-editorial-gap); max-width: 1320px; }
 .aelan-editorial .aelan-team__intro { margin: 0; text-align: left; }
