@@ -159,6 +159,32 @@
 .aelan-editorial .aelan-programs__heading { text-align: center; margin: 0 0 3rem; }
 .aelan-editorial .aelan-programs__frame { min-height: 0; grid-template-columns: minmax(220px, .24fr) minmax(0, 1fr); }
 .aelan-editorial .aelan-programs__tab { text-transform: none; letter-spacing: 0; font-size: 1rem; }
+/* 0.3.41: quiet outline selection, without changing the bronze CTA system. */
+.page-id-102 .aelan-editorial .aelan-programs {
+    --aelan-program-tab-bronze-text: #806b56;
+    --aelan-program-tab-bronze-border: rgba(163, 139, 115, .55);
+    --aelan-program-tab-surface: var(--aelan-warm-white, #fffcf9);
+}
+.page-id-102 .aelan-editorial .aelan-programs__tab,
+.page-id-102 .aelan-editorial .aelan-programs__accordion-trigger {
+    font-weight: 400;
+    transform: none;
+}
+.page-id-102 .aelan-editorial .aelan-programs__tab.is-active,
+.page-id-102 .aelan-editorial .aelan-programs__accordion-trigger.is-active {
+    background: var(--aelan-program-tab-surface);
+    border-color: var(--aelan-program-tab-bronze-border);
+    color: var(--aelan-program-tab-bronze-text);
+    box-shadow: none;
+}
+.page-id-102 .aelan-editorial .aelan-programs__tab:hover,
+.page-id-102 .aelan-editorial .aelan-programs__accordion-trigger:hover {
+    border-color: var(--aelan-program-tab-bronze-border);
+}
+.page-id-102 .aelan-editorial .aelan-programs__tab:focus-visible,
+.page-id-102 .aelan-editorial .aelan-programs__accordion-trigger:focus-visible {
+    outline-color: var(--aelan-navy);
+}
 .aelan-editorial .aelan-programs__content { padding: var(--aelan-editorial-gap); max-width: none; align-self: center; }
 .aelan-editorial .aelan-programs__content h3 { color: var(--aelan-navy); font-size: var(--aelan-editorial-card-heading); line-height: 1.18; letter-spacing: -.025em; margin-bottom: 1.25rem; overflow-wrap: break-word; }
 .aelan-editorial .aelan-programs__body { grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr); }
