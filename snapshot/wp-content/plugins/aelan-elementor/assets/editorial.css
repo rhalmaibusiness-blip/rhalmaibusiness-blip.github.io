@@ -523,6 +523,177 @@
 .aelan-editorial .is-profile-cards .aelan-person-card__description p { font-size: var(--aelan-editorial-body); line-height: var(--aelan-editorial-leading); text-transform: none; letter-spacing: 0; font-weight: 400; }
 .aelan-editorial .is-profile-cards .aelan-person-card__cta { margin-top: auto; width: auto; }
 
+/* 0.3.45: quiet editorial newsletter invitation before the Team section. */
+.page-id-102 .aelan-editorial .aelan-newsletter {
+    --aelan-newsletter-background: #fff7f2;
+    --aelan-newsletter-line: rgba(163, 139, 115, .72);
+    background: var(--aelan-newsletter-background);
+    padding-block: clamp(5.5rem, 8vw, 8rem);
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__shell {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(3.5rem, 6vw, 6.5rem);
+    max-width: 78rem;
+    padding-block: 0;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__copy {
+    min-width: 0;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter h2 {
+    max-width: 11ch;
+    margin: 0;
+    color: var(--aelan-taupe);
+    font-family: var(--wp--preset--font-family--marcellus, Marcellus, Georgia, serif);
+    font-size: clamp(2.4rem, 3.6vw, 3.5rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.06;
+    text-wrap: balance;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__rule {
+    display: block;
+    width: 5.5rem;
+    height: 2px;
+    margin-block: 1.5rem 1.75rem;
+    background: var(--aelan-taupe);
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__copy p {
+    max-width: 32rem;
+    margin: 0;
+    color: var(--aelan-navy);
+    font-family: var(--wp--preset--font-family--satoshi, Satoshi, Arial, sans-serif);
+    font-size: clamp(1rem, 1.25vw, 1.125rem);
+    font-weight: 400;
+    line-height: 1.65;
+    text-wrap: pretty;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__form {
+    width: 100%;
+    min-width: 0;
+    padding-left: clamp(2.25rem, 4vw, 4rem);
+    border-left: 1px solid var(--aelan-newsletter-line);
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__fields label {
+    display: block;
+    min-width: 0;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__fields input {
+    display: block;
+    width: 100%;
+    min-height: 56px;
+    padding: .9rem 1rem;
+    border: 1px solid var(--aelan-taupe);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, .18);
+    color: var(--aelan-navy);
+    font: 400 1rem/1.4 var(--wp--preset--font-family--satoshi, Satoshi, Arial, sans-serif);
+    box-shadow: none;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__fields input::placeholder {
+    color: rgba(48, 52, 99, .86);
+    opacity: 1;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__fields input:focus-visible,
+.page-id-102 .aelan-editorial .aelan-newsletter__consent input:focus-visible,
+.page-id-102 .aelan-editorial .aelan-newsletter__submit:focus-visible {
+    outline: 2px solid var(--aelan-navy);
+    outline-offset: 3px;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .9rem;
+    width: 100%;
+    min-height: 56px;
+    margin-top: .75rem;
+    padding: .9rem 1.5rem;
+    border: 1px solid var(--aelan-taupe);
+    border-radius: 13px;
+    background: var(--aelan-taupe);
+    color: #fff;
+    font: 600 1rem/1.2 var(--wp--preset--font-family--satoshi, Satoshi, Arial, sans-serif);
+    opacity: 1;
+    box-shadow: none;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__submit:disabled {
+    cursor: not-allowed;
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__consent {
+    display: grid;
+    grid-template-columns: 1.25rem minmax(0, 1fr);
+    align-items: start;
+    gap: .75rem;
+    margin-top: 1.125rem;
+    color: var(--aelan-navy);
+    font: 400 .875rem/1.45 var(--wp--preset--font-family--satoshi, Satoshi, Arial, sans-serif);
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__consent input {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: .08rem 0 0;
+    accent-color: var(--aelan-taupe);
+}
+.page-id-102 .aelan-editorial .aelan-newsletter__consent a {
+    color: inherit;
+    text-decoration-color: var(--aelan-taupe);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+}
+@media (max-width: 900px) {
+    .page-id-102 .aelan-editorial .aelan-newsletter {
+        padding-block: clamp(4.5rem, 11vw, 6rem);
+    }
+    .page-id-102 .aelan-editorial .aelan-newsletter__shell {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+    .page-id-102 .aelan-editorial .aelan-newsletter h2 {
+        max-width: 14ch;
+        font-size: clamp(2.25rem, 8vw, 3.5rem);
+    }
+    .page-id-102 .aelan-editorial .aelan-newsletter__copy p {
+        max-width: 38rem;
+    }
+    .page-id-102 .aelan-editorial .aelan-newsletter__form {
+        width: 100%;
+        max-width: 42rem;
+        padding: 2.5rem 0 0;
+        border-top: 1px solid var(--aelan-newsletter-line);
+        border-left: 0;
+    }
+}
+@media (max-width: 560px) {
+    .page-id-102 .aelan-editorial .aelan-newsletter__fields {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .page-id-102 .aelan-editorial .aelan-newsletter__form,
+    .page-id-102 .aelan-editorial .aelan-newsletter__fields,
+    .page-id-102 .aelan-editorial .aelan-newsletter__fields label,
+    .page-id-102 .aelan-editorial .aelan-newsletter__fields input,
+    .page-id-102 .aelan-editorial .aelan-newsletter__submit {
+        min-width: 0;
+        max-width: 100%;
+    }
+    .page-id-102 .aelan-editorial .aelan-newsletter__consent {
+        overflow-wrap: anywhere;
+    }
+    .page-id-102 .aelan-editorial .aelan-newsletter h2 {
+        max-width: 12ch;
+        font-size: clamp(2.2rem, 11vw, 3rem);
+    }
+    .page-id-102 .aelan-editorial .aelan-newsletter__rule {
+        margin-block: 1.25rem 1.5rem;
+    }
+}
+
 /* 0.3.44: editorial introduction and original SVG mark share a centred row. */
 .page-id-102 .aelan-editorial .aelan-team.is-profile-cards {
     --aelan-team-brand-width: 22rem;
