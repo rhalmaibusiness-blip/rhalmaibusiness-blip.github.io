@@ -347,6 +347,17 @@
 }
 /* Remove the old pink bridge, not just its last gradient stop. */
 .page-id-102 .aelan-editorial .aelan-manifesto::after { display: none; }
+/* 0.3.38: after the peach recognition edge, a continuous white surface
+ * carries measurement and programs into the Method's warm gradient. */
+.page-id-102 .aelan-editorial .aelan-measurement,
+.page-id-102 .aelan-editorial .aelan-programs {
+    background: var(--aelan-home-flow-white);
+}
+.page-id-102 .aelan-editorial .aelan-method {
+    --aelan-method-flow-light: #f9e4d6;
+    --aelan-method-flow-mid: #f7d6c0;
+    background-image: linear-gradient(180deg, var(--aelan-home-flow-white) 0%, var(--aelan-method-flow-light) 18%, var(--aelan-method-flow-mid) 54%, var(--aelan-peach) 100%);
+}
 .aelan-editorial .aelan-recognition.is-horizon-dialogue {
     --aelan-dialogue-top: var(--aelan-home-flow-white, #fff);
     --aelan-dialogue-peach: #fae5d6;
