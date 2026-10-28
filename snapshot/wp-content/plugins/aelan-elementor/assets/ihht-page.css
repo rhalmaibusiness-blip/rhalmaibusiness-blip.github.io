@@ -41,7 +41,7 @@
 .aelan-ihht__cta { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .aelan-ihht__cta.is-centered { text-align: center; }
 
-.aelan-ihht-hero { background: radial-gradient(ellipse 55% 45% at 8% 88%, rgba(243,191,153,.22), transparent 72%), var(--ihht-warm); padding: clamp(10.5rem, 14vw, 13rem) var(--ihht-inset) var(--ihht-space); }
+.aelan-ihht-hero { background: radial-gradient(ellipse 55% 45% at 8% 82%, rgba(243,191,153,.22), transparent 72%), linear-gradient(180deg, var(--ihht-warm) 0%, var(--ihht-warm) 68%, #fff 100%); padding: clamp(10.5rem, 14vw, 13rem) var(--ihht-inset) var(--ihht-space); }
 .aelan-ihht-hero__layout { align-items: stretch; display: grid; gap: clamp(2.5rem, 5vw, 5rem); grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr); }
 .aelan-ihht-hero__copy { align-self: center; min-width: 0; }
 .aelan-ihht-hero__copy h1 { font-size: clamp(calc(1.95rem + 2px), calc(2.7vw + 2px), calc(2.2rem + 2px)); max-width: none; white-space: pre; }
@@ -55,7 +55,7 @@
 .aelan-ihht-hero__media { background: radial-gradient(ellipse at 82% 18%, rgba(243,191,153,.3), transparent 66%), radial-gradient(ellipse at 10% 88%, rgba(198,192,224,.22), transparent 68%), var(--ihht-cream); border: 1px solid var(--ihht-white-edge); border-radius: clamp(1.5rem, 3vw, 3.25rem); box-shadow: var(--ihht-shadow); min-height: 680px; overflow: hidden; }
 .aelan-ihht-hero__media__image { height: 100%; object-fit: cover; width: 100%; }
 
-.aelan-ihht-process { background: radial-gradient(ellipse 44% 70% at 8% 8%, rgba(243,191,153,.13), transparent 72%), radial-gradient(ellipse 42% 62% at 92% 88%, rgba(198,192,224,.11), transparent 72%), var(--ihht-cream); padding: var(--ihht-space) var(--ihht-inset); }
+.aelan-ihht-process { background: #fff; padding: var(--ihht-space) var(--ihht-inset); }
 .aelan-ihht-process .aelan-ihht__header h2 { font-size: clamp(calc(2.35rem - 5px), calc(4.2vw - 5px), calc(4.25rem - 5px)); }
 .aelan-ihht-process__grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .aelan-ihht-process__card { border-radius: 1.75rem; color: var(--ihht-navy); display: flex; flex-direction: column; min-height: 390px; padding: clamp(1.75rem, 3vw, 2.5rem); position: relative; }
@@ -65,7 +65,7 @@
 .aelan-ihht-process__subtitle { color: inherit; display: block; font-size: clamp(1.05rem, 1.25vw, 1.2rem); letter-spacing: -.015em; line-height: 1.32; }
 .aelan-ihht-process__card p { color: rgba(48,52,99,.9); font-size: 1rem; line-height: 1.75; }
 
-.aelan-ihht-facts { background: linear-gradient(180deg, var(--ihht-cream) 0%, #fff 18%, #fff 28%, #fae5d6 100%); color: var(--ihht-navy); padding: var(--ihht-space) var(--ihht-inset) clamp(6rem, 10vw, 9rem); }
+.aelan-ihht-facts { background: linear-gradient(180deg, #fff 0%, #fff 28%, #fae5d6 100%); color: var(--ihht-navy); padding: var(--ihht-space) var(--ihht-inset) clamp(6rem, 10vw, 9rem); }
 .aelan-ihht-facts h2 { color: var(--ihht-taupe); font-size: clamp(2.5rem, 3.6vw, 3.25rem); }
 .aelan-ihht-facts__layout { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: minmax(0, 1fr) minmax(0, 2.35fr); }
 .aelan-ihht-facts .aelan-ihht__eyebrow { color: var(--ihht-taupe); }
