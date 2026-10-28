@@ -60,8 +60,9 @@
 .aelan-ihht-process__grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .aelan-ihht-process__card { border-radius: 1.75rem; color: var(--ihht-navy); display: flex; flex-direction: column; min-height: 390px; padding: clamp(1.75rem, 3vw, 2.5rem); position: relative; }
 .aelan-ihht-process__number { align-items: center; background: rgba(255,255,255,.46); border: 1px solid rgba(48,52,99,.18); border-radius: 999px; color: var(--ihht-navy); display: inline-flex; font-size: .76rem; font-variant-numeric: tabular-nums; font-weight: 700; height: 2.6rem; justify-content: center; letter-spacing: .08em; margin-bottom: 2rem; width: 2.6rem; }
-.aelan-ihht-process__card h3 { color: var(--ihht-taupe); font-size: clamp(1.42rem, 1.8vw, 1.72rem); line-height: 1.22; margin-bottom: 1.35rem; text-wrap: balance; }
-.aelan-ihht-process__card h3 span { color: inherit; }
+.aelan-ihht-process__card h3 { color: var(--ihht-taupe); display: grid; gap: .42rem; margin-bottom: 1.35rem; text-wrap: balance; }
+.aelan-ihht-process__title { color: inherit; display: block; font-size: clamp(1.65rem, 2vw, 1.95rem); line-height: 1.08; }
+.aelan-ihht-process__subtitle { color: inherit; display: block; font-size: clamp(1.05rem, 1.25vw, 1.2rem); letter-spacing: -.015em; line-height: 1.32; }
 .aelan-ihht-process__card p { color: rgba(48,52,99,.9); font-size: 1rem; line-height: 1.75; }
 
 .aelan-ihht-facts { background: radial-gradient(ellipse 45% 95% at 98% 0%, rgba(198,192,224,.38), transparent 72%), var(--ihht-navy); color: var(--ihht-warm); padding: var(--ihht-space) var(--ihht-inset); }
