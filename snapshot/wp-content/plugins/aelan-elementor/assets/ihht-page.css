@@ -44,8 +44,9 @@
 .aelan-ihht-hero { background: radial-gradient(ellipse 55% 45% at 8% 88%, rgba(243,191,153,.22), transparent 72%), var(--ihht-warm); padding: clamp(10.5rem, 14vw, 13rem) var(--ihht-inset) var(--ihht-space); }
 .aelan-ihht-hero__layout { align-items: stretch; display: grid; gap: clamp(2.5rem, 5vw, 5rem); grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr); }
 .aelan-ihht-hero__copy { align-self: center; min-width: 0; }
-.aelan-ihht-hero__copy h1 { font-size: clamp(3rem, 3.6vw, 3.5rem); max-width: 18ch; white-space: pre-line; }
-.aelan-ihht-hero__copy .aelan-ihht__body { max-width: 48rem; }
+.aelan-ihht-hero__copy h1 { font-size: clamp(2.65rem, 3.15vw, 3.15rem); max-width: 18ch; white-space: pre-line; }
+.aelan-ihht-hero__copy .aelan-ihht__body { font-size: clamp(.95rem, 1.05vw, 1rem); hyphens: auto; line-height: 1.68; max-width: 46rem; text-align: justify; text-wrap: pretty; }
+.aelan-ihht-hero__copy .aelan-ihht__body p { margin-bottom: .8em; }
 .aelan-ihht-hero__price { border-block: 1px solid var(--ihht-edge); display: grid; gap: .45rem; margin: 2.25rem 0 1rem; padding: 1.2rem 0; }
 .aelan-ihht-hero__price strong { flex-basis: 100%; font: 500 clamp(1.35rem, 2vw, 1.75rem)/1.25 var(--wp--preset--font-family--satoshi, Satoshi, sans-serif); font-variant-numeric: tabular-nums; }
 .aelan-ihht-hero__price span { color: rgba(48,52,99,.76); font-size: .88rem; }
@@ -152,6 +153,7 @@
 @media (max-width: 620px) {
     .aelan-ihht { --ihht-body: 1rem; --ihht-space: 4.5rem; }
     .aelan-ihht h1 { font-size: clamp(2.65rem, 13vw, 3.75rem); }
+    .aelan-ihht-hero__copy h1 { font-size: clamp(2.25rem, 10.5vw, 2.8rem); }
     .aelan-ihht h2 { font-size: clamp(2.15rem, 10vw, 3rem); }
     .aelan-ihht-hero { padding-top: 8.5rem; }
     .aelan-ihht-hero__price { display: grid; }
