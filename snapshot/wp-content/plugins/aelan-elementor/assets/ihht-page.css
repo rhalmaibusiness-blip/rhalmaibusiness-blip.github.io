@@ -46,9 +46,10 @@
 .aelan-ihht-hero__copy { align-self: center; min-width: 0; }
 .aelan-ihht-hero__copy h1 { font-size: clamp(3rem, 3.6vw, 3.5rem); max-width: 18ch; white-space: pre-line; }
 .aelan-ihht-hero__copy .aelan-ihht__body { max-width: 48rem; }
-.aelan-ihht-hero__price { border-block: 1px solid var(--ihht-edge); display: flex; flex-wrap: wrap; gap: .5rem 1rem; margin: 2.25rem 0 1.75rem; padding: 1.2rem 0; }
+.aelan-ihht-hero__price { border-block: 1px solid var(--ihht-edge); display: grid; gap: .45rem; margin: 2.25rem 0 1rem; padding: 1.2rem 0; }
 .aelan-ihht-hero__price strong { flex-basis: 100%; font: 500 clamp(1.35rem, 2vw, 1.75rem)/1.25 var(--wp--preset--font-family--satoshi, Satoshi, sans-serif); font-variant-numeric: tabular-nums; }
 .aelan-ihht-hero__price span { color: rgba(48,52,99,.76); font-size: .88rem; }
+.aelan-ihht-hero__finder-band { background: rgba(243,191,153,.2); border: 1px solid var(--ihht-edge); border-radius: 1rem; color: inherit; font-size: .9rem; font-weight: 700; margin: 0 0 1.75rem !important; padding: .9rem 1rem; }
 .aelan-ihht-hero__finder { margin-top: 1.25rem; max-width: 42rem; }
 .aelan-ihht-hero__media { background: radial-gradient(ellipse at 82% 18%, rgba(243,191,153,.3), transparent 66%), radial-gradient(ellipse at 10% 88%, rgba(198,192,224,.22), transparent 68%), var(--ihht-cream); border: 1px solid var(--ihht-white-edge); border-radius: clamp(1.5rem, 3vw, 3.25rem); box-shadow: var(--ihht-shadow); min-height: 680px; overflow: hidden; }
 .aelan-ihht-hero__media__image { height: 100%; object-fit: cover; width: 100%; }
@@ -154,7 +155,6 @@
     .aelan-ihht h2 { font-size: clamp(2.15rem, 10vw, 3rem); }
     .aelan-ihht-hero { padding-top: 8.5rem; }
     .aelan-ihht-hero__price { display: grid; }
-    .aelan-ihht-hero__price span[aria-hidden] { display: none; }
     .aelan-ihht .aelan-ihht__button { width: 100%; }
     .aelan-ihht-facts__item { align-items: start; grid-template-columns: minmax(0, 1fr); gap: .7rem; }
     .aelan-ihht-facts__item dt { font-size: 1.9rem; }
