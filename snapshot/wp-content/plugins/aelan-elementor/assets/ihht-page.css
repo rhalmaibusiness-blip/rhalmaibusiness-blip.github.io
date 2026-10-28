@@ -71,9 +71,9 @@
 .aelan-ihht-facts .aelan-ihht__eyebrow { color: var(--ihht-taupe); }
 .aelan-ihht-facts .aelan-ihht__header { margin-bottom: 0; }
 .aelan-ihht-facts__list { margin: 0; }
-.aelan-ihht-facts__item { align-items: center; border-top: 1px solid rgba(163,139,115,.42); display: grid; gap: clamp(1.5rem, 3vw, 2.5rem); grid-template-columns: minmax(170px, .48fr) minmax(0, 1.52fr); padding: clamp(1.25rem, 2vw, 1.75rem) 0; }
+.aelan-ihht-facts__item { align-items: center; border-top: 1px solid rgba(163,139,115,.42); display: grid; gap: clamp(2rem, 4vw, 3.5rem); grid-template-columns: minmax(190px, .52fr) minmax(0, 1.48fr); padding: clamp(1.25rem, 2vw, 1.75rem) 0; }
 .aelan-ihht-facts__item:last-child { border-bottom: 1px solid rgba(163,139,115,.42); }
-.aelan-ihht-facts__item dt { color: var(--ihht-taupe); font: 500 clamp(1.625rem, 2.3vw, 2rem)/1.2 var(--wp--preset--font-family--marcellus, Marcellus, serif); font-variant-numeric: tabular-nums; letter-spacing: -.025em; white-space: nowrap; }
+.aelan-ihht-facts__item dt { color: var(--ihht-taupe); font: 500 clamp(1.3rem, 1.8vw, 1.55rem)/1.2 var(--wp--preset--font-family--marcellus, Marcellus, serif); font-variant-numeric: tabular-nums; letter-spacing: -.025em; white-space: nowrap; }
 .aelan-ihht-facts__item dd { color: var(--ihht-navy); font-size: clamp(.98rem, 1.2vw, 1.08rem); line-height: 1.65; margin: 0; }
 
 .aelan-ihht-audience { background: radial-gradient(ellipse 42% 34% at 92% 86%, rgba(198,192,224,.12), transparent 72%), var(--ihht-warm); padding: var(--ihht-space) var(--ihht-inset); }
@@ -162,7 +162,7 @@
     .aelan-ihht-hero__price { display: grid; }
     .aelan-ihht .aelan-ihht__button { width: 100%; }
     .aelan-ihht-facts__item { align-items: start; grid-template-columns: minmax(0, 1fr); gap: .7rem; }
-    .aelan-ihht-facts__item dt { font-size: 1.9rem; }
+    .aelan-ihht-facts__item dt { font-size: 1.55rem; }
     .aelan-ihht-research__study { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
     .aelan-ihht-next__grid { grid-template-columns: minmax(0, 1fr); }
     .aelan-ihht-faq__item summary { padding: 1.2rem; }
