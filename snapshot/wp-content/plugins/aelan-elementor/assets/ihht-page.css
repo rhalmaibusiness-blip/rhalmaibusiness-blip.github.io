@@ -56,6 +56,7 @@
 .aelan-ihht-hero__media__image { height: 100%; object-fit: cover; width: 100%; }
 
 .aelan-ihht-process { background: radial-gradient(ellipse 44% 70% at 8% 8%, rgba(243,191,153,.13), transparent 72%), radial-gradient(ellipse 42% 62% at 92% 88%, rgba(198,192,224,.11), transparent 72%), var(--ihht-cream); padding: var(--ihht-space) var(--ihht-inset); }
+.aelan-ihht-process .aelan-ihht__header h2 { font-size: clamp(calc(2.35rem - 5px), calc(4.2vw - 5px), calc(4.25rem - 5px)); }
 .aelan-ihht-process__grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .aelan-ihht-process__card { border-radius: 1.75rem; color: var(--ihht-navy); display: flex; flex-direction: column; min-height: 390px; padding: clamp(1.75rem, 3vw, 2.5rem); position: relative; }
 .aelan-ihht-process__number { align-items: center; background: rgba(255,255,255,.46); border: 1px solid rgba(48,52,99,.18); border-radius: 999px; color: var(--ihht-navy); display: inline-flex; font-size: .76rem; font-variant-numeric: tabular-nums; font-weight: 700; height: 2.6rem; justify-content: center; letter-spacing: .08em; margin-bottom: 2rem; width: 2.6rem; }
@@ -155,6 +156,7 @@
     .aelan-ihht h1 { font-size: clamp(2.65rem, 13vw, 3.75rem); }
     .aelan-ihht-hero__copy h1 { font-size: clamp(calc(1.85rem + 2px), calc(8.5vw + 2px), calc(2rem + 2px)); white-space: pre-line; }
     .aelan-ihht h2 { font-size: clamp(2.15rem, 10vw, 3rem); }
+    .aelan-ihht-process .aelan-ihht__header h2 { font-size: clamp(calc(2.15rem - 5px), calc(10vw - 5px), calc(3rem - 5px)); }
     .aelan-ihht-hero { padding-top: 8.5rem; }
     .aelan-ihht-hero__price { display: grid; }
     .aelan-ihht .aelan-ihht__button { width: 100%; }
