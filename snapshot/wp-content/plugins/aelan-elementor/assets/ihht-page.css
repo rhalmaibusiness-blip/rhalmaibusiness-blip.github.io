@@ -103,14 +103,32 @@
 .aelan-ihht-system__program h3 { font-size: 1.35rem; }
 .aelan-ihht-system__program p { color: rgba(48,52,99,.72); font-size: .92rem; }
 
-.aelan-ihht-safety { background: var(--ihht-cream); padding: var(--ihht-space) var(--ihht-inset); }
-.aelan-ihht-safety__layout { align-items: center; display: grid; gap: var(--ihht-gap); grid-template-columns: minmax(0, 1.15fr) minmax(340px, .85fr); }
-.aelan-ihht-safety__panel { background: var(--ihht-warm); border: 1px solid var(--ihht-white-edge); border-radius: 1.8rem; box-shadow: var(--ihht-shadow); padding: clamp(1.75rem, 3.5vw, 3.25rem); }
-.aelan-ihht-safety__panel h3 { font-size: 1.45rem; }
-.aelan-ihht-safety__panel ul { list-style: none; margin: 0; padding: 0; }
-.aelan-ihht-safety__panel li { border-bottom: 1px solid var(--ihht-edge); padding: .8rem 0 .8rem 1.4rem; position: relative; }
-.aelan-ihht-safety__panel li::before { color: var(--ihht-taupe); content: "—"; left: 0; position: absolute; }
-.aelan-ihht-safety__note { font-size: .82rem; font-style: italic; margin-top: 1.25rem !important; }
+.aelan-ihht-safety {
+    --ihht-safety-ribbon-opacity: .24;
+    --ihht-safety-ribbon-height: clamp(15rem, 31vw, 32rem);
+    --ihht-safety-title-size: clamp(2rem, 3.3vw, 2.75rem);
+    background: var(--ihht-warm);
+    isolation: isolate;
+    overflow: hidden;
+    padding: var(--ihht-space) var(--ihht-inset);
+    position: relative;
+}
+/* The generated asset already carries the approved right-to-left orientation. */
+.aelan-ihht-safety::before { background: url('starter/aelan-ihht-safety-ribbon.webp') center / 100% 100% no-repeat; bottom: clamp(2rem, 4vw, 4.5rem); content: ""; height: var(--ihht-safety-ribbon-height); left: -10%; opacity: var(--ihht-safety-ribbon-opacity); pointer-events: none; position: absolute; width: 120%; z-index: -1; }
+.aelan-ihht-safety__layout { align-items: start; display: grid; gap: var(--ihht-gap); grid-template-columns: minmax(0, .97fr) minmax(0, 1.03fr); position: relative; }
+.aelan-ihht-safety__copy { min-width: 0; padding-top: .35rem; }
+.aelan-ihht-safety__copy .aelan-ihht__eyebrow { border-bottom: 1px solid var(--ihht-edge); margin-bottom: 1.5rem; max-width: 8rem; padding-bottom: 1rem; }
+.aelan-ihht-safety__copy h2 { font-size: var(--ihht-safety-title-size); line-height: 1.15; margin-bottom: 1.75rem; text-wrap: pretty; white-space: pre-line; }
+.aelan-ihht-safety__copy .aelan-ihht__body { color: var(--ihht-navy); font-size: 1rem; line-height: 1.75; max-width: 36rem; text-wrap: pretty; }
+.aelan-ihht-safety__copy .aelan-ihht__body p { margin-bottom: 1.1em; }
+.aelan-ihht-safety__copy .aelan-ihht__body p:first-child { font-weight: 500; }
+.aelan-ihht-safety__copy .aelan-ihht__body p:last-child { margin-bottom: 0; }
+.aelan-ihht-safety__panel { background: var(--ihht-warm); border: 1px solid var(--ihht-white-edge); border-radius: 1.8rem; box-shadow: var(--ihht-shadow); color: var(--ihht-navy); min-width: 0; padding: clamp(1.5rem, 3.2vw, 3rem); }
+.aelan-ihht-safety__panel h3 { border-bottom: 1px solid var(--ihht-edge); color: var(--ihht-taupe); font-size: clamp(1.4rem, 2vw, 1.7rem); line-height: 1.3; margin-bottom: 1rem; padding-bottom: 1rem; text-wrap: pretty; }
+.aelan-ihht-safety__panel ul { display: grid; gap: .8rem; list-style: none; margin: 0; padding: 0; }
+.aelan-ihht-safety__panel li { color: var(--ihht-navy); font-size: 1rem; line-height: 1.65; padding-left: 1.35rem; position: relative; }
+.aelan-ihht-safety__panel li::before { background: var(--ihht-taupe); border-radius: 50%; content: ""; height: .3rem; left: .1rem; position: absolute; top: .65em; width: .3rem; }
+.aelan-ihht-safety__note { border-top: 1px solid var(--ihht-edge); color: var(--ihht-navy); font-size: .875rem; line-height: 1.7; margin-top: 1.4rem !important; padding-top: 1.15rem; }
 
 .aelan-ihht-faq { background: var(--ihht-warm); padding: var(--ihht-space) var(--ihht-inset); }
 .aelan-ihht-faq__list { display: grid; gap: .9rem; margin-inline: auto; max-width: 68rem; }
@@ -142,6 +160,8 @@
 
 @media (max-width: 900px) {
     .aelan-ihht-facts__layout, .aelan-ihht-system__layout, .aelan-ihht-safety__layout { grid-template-columns: minmax(0, 1fr); }
+    .aelan-ihht-safety__copy .aelan-ihht__body { max-width: 42rem; }
+    .aelan-ihht-safety::before { bottom: 5%; height: 22rem; left: -30%; width: 160%; }
     .aelan-ihht-process__grid { grid-template-columns: minmax(0, 1fr); }
     .aelan-ihht-process__card { min-height: 0; }
     .aelan-ihht-facts__item { gap: 1.75rem; grid-template-columns: minmax(215px, .58fr) minmax(0, 1.42fr); }
