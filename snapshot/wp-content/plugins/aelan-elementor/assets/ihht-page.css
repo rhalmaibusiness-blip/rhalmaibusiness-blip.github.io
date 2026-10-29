@@ -149,6 +149,9 @@
 .aelan-ihht-next__card h3 { color: var(--ihht-taupe); }
 .aelan-ihht-next__badge { align-self: flex-start; background: transparent; border: 1px solid var(--ihht-edge); border-radius: 999px; font-size: .75rem; font-weight: 700; margin-bottom: 1rem; padding: .4rem .75rem; }
 .aelan-ihht-next__card p { color: var(--ihht-navy); }
+.aelan-ihht-next__copy { hyphens: auto; -webkit-hyphens: auto; line-height: 1.75; margin-bottom: 1.5rem; overflow-wrap: break-word; text-align: justify; text-align-last: left; }
+.aelan-ihht-next__copy p { margin-bottom: 1rem; }
+.aelan-ihht-next__copy p:last-child { margin-bottom: 0; }
 .aelan-ihht-next__price { border-block: 1px solid var(--ihht-edge); font-size: 1.05rem; font-variant-numeric: tabular-nums; font-weight: 700; margin-top: auto !important; padding: 1rem 0; }
 .aelan-ihht-next__card .aelan-ihht__button { align-self: flex-start; margin-top: 1.25rem; }
 
