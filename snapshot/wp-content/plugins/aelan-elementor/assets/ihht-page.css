@@ -143,7 +143,7 @@
 .aelan-ihht-faq__answer { margin-inline: var(--ihht-faq-inset); padding: .15rem 0 1.75rem; }
 .aelan-ihht-faq__answer p { color: var(--ihht-navy); font-size: 1rem; line-height: 1.75; max-width: 60rem; text-wrap: pretty; }
 
-.aelan-ihht-next { background: linear-gradient(180deg, var(--ihht-warm) 0%, var(--ihht-warm) 12%, #fae5d6 100%); padding: var(--ihht-space) var(--ihht-inset); }
+.aelan-ihht-next { background: linear-gradient(180deg, var(--ihht-warm) 0%, var(--ihht-warm) 12%, #fffaf7 100%); padding: var(--ihht-space) var(--ihht-inset); }
 .aelan-ihht-next__grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .aelan-ihht-next__card { border-radius: 1.75rem; color: var(--ihht-navy); display: flex; flex-direction: column; isolation: isolate; overflow: hidden; padding: clamp(1.75rem, 3.5vw, 3rem); position: relative; }
 .aelan-ihht-next__card h3 { color: var(--ihht-taupe); }
@@ -157,8 +157,8 @@
 
 /* Approved homepage Sunset Light preset, with a left-aligned editorial column. */
 .aelan-ihht-final {
-    /* Match the previous section's peach edge, lighten, then reveal Sunset Light. */
-    --ihht-final-join: linear-gradient(180deg, #fae5d6 0%, #fffaf7 18%, rgba(255,250,247,0) 48%);
+    /* Continue the previous section's soft white, then reveal Sunset Light. */
+    --ihht-final-join: linear-gradient(180deg, #fffaf7 0%, #fffaf7 18%, rgba(255,250,247,0) 48%);
     background:
         var(--ihht-final-join),
         radial-gradient(ellipse 42% 68% at 66% 50%, rgba(245,151,101,.78) 0%, rgba(248,177,133,.56) 38%, rgba(251,211,187,.22) 66%, transparent 82%),
