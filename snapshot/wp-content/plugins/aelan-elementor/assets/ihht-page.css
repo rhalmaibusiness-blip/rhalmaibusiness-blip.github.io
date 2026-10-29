@@ -186,8 +186,6 @@
     .aelan-ihht-facts__item { align-items: start; grid-template-columns: minmax(0, 1fr); gap: .7rem; }
     .aelan-ihht-facts__item dt { font-size: 1.55rem; }
     .aelan-ihht-next__grid { grid-template-columns: minmax(0, 1fr); }
-    .aelan-ihht-faq__item summary { padding: 1.2rem; }
-    .aelan-ihht-faq__answer { padding: 0 1.2rem 1.25rem; }
     .aelan-ihht-final__prices { font-size: .98rem; }
 }
 @media (prefers-reduced-motion: reduce) {
