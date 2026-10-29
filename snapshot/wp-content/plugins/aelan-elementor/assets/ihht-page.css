@@ -98,6 +98,8 @@
 .aelan-ihht-system__programs { display: grid; gap: 1rem; }
 .aelan-ihht-system__program { background: rgba(255,252,249,.86); border: 1px solid var(--ihht-white-edge); border-radius: 1.4rem; box-shadow: var(--ihht-shadow); padding: 1.6rem; position: relative; }
 .aelan-ihht-system__program::before { background: linear-gradient(90deg, var(--ihht-peach), var(--ihht-lavender)); content: ""; height: 2px; left: 1rem; position: absolute; right: 1rem; top: 0; }
+.aelan-ihht-system__icon { align-items: center; display: flex; height: 64px; margin-bottom: .85rem; width: 64px; }
+.aelan-ihht-system__icon img { height: 100%; object-fit: contain; width: 100%; }
 .aelan-ihht-system__program h3 { font-size: 1.35rem; }
 .aelan-ihht-system__program p { color: rgba(48,52,99,.72); font-size: .92rem; }
 
