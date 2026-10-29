@@ -132,14 +132,16 @@
 
 .aelan-ihht-faq { background: var(--ihht-warm); padding: var(--ihht-space) var(--ihht-inset); }
 .aelan-ihht-faq__list { display: grid; gap: .9rem; margin-inline: auto; max-width: 68rem; }
-.aelan-ihht-faq__item { background: var(--ihht-cream); border: 1px solid var(--ihht-white-edge); border-radius: 1.35rem; box-shadow: 0 14px 42px rgba(48,52,99,.05); overflow: hidden; }
-.aelan-ihht-faq__item summary { align-items: center; cursor: pointer; display: flex; gap: 1rem; justify-content: space-between; list-style: none; min-height: 76px; padding: 1.35rem 1.6rem; }
+.aelan-ihht-faq__item { --ihht-faq-inset: clamp(1.25rem, 2.5vw, 2rem); border-radius: 1.35rem; isolation: isolate; overflow: hidden; position: relative; }
+.aelan-ihht-faq__item summary { align-items: center; cursor: pointer; display: flex; gap: 1rem; justify-content: space-between; list-style: none; min-height: 88px; padding: 1.25rem var(--ihht-faq-inset); }
 .aelan-ihht-faq__item summary::-webkit-details-marker { display: none; }
-.aelan-ihht-faq__item summary h3 { font-size: 1.3rem; margin: 0; }
-.aelan-ihht-faq__item summary span::before { content: "+"; font-size: 1.35rem; }
-.aelan-ihht-faq__item[open] summary span::before { content: "−"; }
-.aelan-ihht-faq__answer { padding: 0 1.6rem 1.5rem; }
-.aelan-ihht-faq__answer p { color: rgba(48,52,99,.75); }
+.aelan-ihht-faq__item summary:focus-visible { outline: 2px solid var(--ihht-navy); outline-offset: -4px; border-radius: inherit; }
+.aelan-ihht-faq__item summary h3 { color: var(--ihht-taupe); font-size: clamp(1.2rem, 1.7vw, 1.45rem); line-height: 1.35; margin: 0; text-wrap: pretty; }
+.aelan-ihht-faq__toggle { align-items: center; border-radius: 50%; color: var(--ihht-navy); display: inline-flex; flex: 0 0 44px; height: 44px; justify-content: center; position: relative; }
+.aelan-ihht-faq__toggle::after { content: "+"; font: 400 1.5rem/1 var(--wp--preset--font-family--satoshi, Satoshi, sans-serif); position: relative; }
+.aelan-ihht-faq__item[open] .aelan-ihht-faq__toggle::after { content: "−"; }
+.aelan-ihht-faq__answer { margin-inline: var(--ihht-faq-inset); padding: .15rem 0 1.75rem; }
+.aelan-ihht-faq__answer p { color: var(--ihht-navy); font-size: 1rem; line-height: 1.75; max-width: 60rem; text-wrap: pretty; }
 
 .aelan-ihht-next { background: radial-gradient(ellipse 50% 130% at 96% 0%, rgba(198,192,224,.42), transparent 70%), var(--ihht-navy); color: var(--ihht-warm); padding: var(--ihht-space) var(--ihht-inset); }
 .aelan-ihht-next h2 { color: var(--ihht-warm); }
