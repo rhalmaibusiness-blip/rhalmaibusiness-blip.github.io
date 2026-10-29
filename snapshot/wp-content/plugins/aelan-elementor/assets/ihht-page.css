@@ -155,10 +155,53 @@
 .aelan-ihht-next__price { border-block: 1px solid var(--ihht-edge); font-size: 1.05rem; font-variant-numeric: tabular-nums; font-weight: 700; margin-top: auto !important; padding: 1rem 0; }
 .aelan-ihht-next__card .aelan-ihht__button { align-self: flex-start; margin-top: 1.25rem; }
 
-.aelan-ihht-final { background: radial-gradient(ellipse 44% 35% at 90% 10%, rgba(198,192,224,.12), transparent 70%), var(--ihht-cream); padding: var(--ihht-space) var(--ihht-inset); }
-.aelan-ihht-final__inner { text-align: center; }
-.aelan-ihht-final__inner h2 { margin-inline: auto; max-width: 18ch; }
-.aelan-ihht-final__inner .aelan-ihht__body { margin-inline: auto; max-width: 63rem; }
+/* Approved homepage Sunset Light preset, with a left-aligned editorial column. */
+.aelan-ihht-final {
+    background:
+        radial-gradient(ellipse 42% 68% at 66% 50%, rgba(245,151,101,.78) 0%, rgba(248,177,133,.56) 38%, rgba(251,211,187,.22) 66%, transparent 82%),
+        radial-gradient(ellipse 78% 56% at 36% 108%, rgba(243,177,134,.58) 0%, rgba(249,211,185,.28) 58%, transparent 82%),
+        linear-gradient(180deg, #fffaf7 0%, #fff8f4 18%, #fde9dc 48%, #f8ceb2 76%, #f3bb91 100%);
+    padding: clamp(5.5rem, 8vw, 7.5rem) var(--ihht-inset);
+}
+.aelan-ihht-final__inner { align-items: center; display: flex; min-height: clamp(440px, 32vw, 540px); text-align: left; }
+.aelan-ihht-final__copy { max-width: min(660px, 60%); }
+.aelan-ihht-final__inner h2 { color: var(--ihht-navy); font-size: clamp(3.35rem, 4.15vw, 4rem); line-height: 1.03; margin-bottom: 2rem; max-width: 12em; text-wrap: balance; }
+.aelan-ihht-final__inner .aelan-ihht__body { margin-bottom: 2rem; }
+.aelan-ihht-final__inner .aelan-ihht__body p + p { margin-top: 1.6rem; }
+.aelan-ihht-final .aelan-ihht__button { background: var(--ihht-navy); border-color: var(--ihht-navy); color: #fff; min-height: 56px; }
+
+/* The selected compact footer is limited to IHHT; other pages are unchanged. */
+body:has(.aelan-ihht-final) .aelan-site-footer.is-charcoal {
+    --af-copy: #303463;
+    --af-hover: #806b56;
+    background: linear-gradient(180deg, #fff 0%, #fff7f2 55%, #fae5d6 100%);
+    padding: 40px 32px !important;
+}
+body:has(.aelan-ihht-final) .af-footer__column:not(.af-footer__practical),
+body:has(.aelan-ihht-final) .af-footer__tagline,
+body:has(.aelan-ihht-final) .af-footer__address,
+body:has(.aelan-ihht-final) .af-footer__hours,
+body:has(.aelan-ihht-final) .af-footer__newsletter { display: none !important; }
+body:has(.aelan-ihht-final) .af-footer__main { align-items: center; display: flex; gap: var(--af-gap); justify-content: space-between; }
+body:has(.aelan-ihht-final) .af-footer__brand { flex: 1; padding: 0; }
+body:has(.aelan-ihht-final) .af-footer__logo { width: 100%; }
+body:has(.aelan-ihht-final) .af-footer__logo img { filter: none; }
+body:has(.aelan-ihht-final) .af-footer__practical { border: 0; flex: 0 0 auto; padding: 0; }
+body:has(.aelan-ihht-final) .af-footer__socials { margin: 0; }
+body:has(.aelan-ihht-final) .af-footer__socials :is(a,button) { color: var(--af-copy); }
+body:has(.aelan-ihht-final) .af-footer__copyright { border-top: 1px solid var(--af-line); margin-top: 30px; padding-top: 30px; }
+@media (max-width: 782px) {
+    .aelan-ihht-final {
+        background: radial-gradient(ellipse 95% 50% at 58% 54%, rgba(245,151,101,.72) 0%, rgba(248,181,139,.48) 42%, rgba(251,218,198,.18) 70%, transparent 86%), linear-gradient(180deg, #fffaf7 0%, #fff7f3 17%, #fde5d5 50%, #f6c49f 100%);
+        padding-block: clamp(4.5rem, 16vw, 6rem) clamp(5rem, 18vw, 6.75rem);
+    }
+    .aelan-ihht-final__inner { min-height: 0; }
+    .aelan-ihht-final__copy { max-width: 100%; }
+    .aelan-ihht-final__inner h2 { font-size: clamp(2.45rem, 10.5vw, 3.25rem); line-height: 1.04; }
+    .aelan-ihht-final__inner .aelan-ihht__body { font-size: 1rem; line-height: 1.65; }
+    .aelan-ihht-final .aelan-ihht__button { width: 100%; }
+    body:has(.aelan-ihht-final) .aelan-site-footer.is-charcoal { padding-inline: 24px !important; }
+}
 .aelan-ihht-final__prices { border-block: 1px solid var(--ihht-edge); font-size: 1.08rem; font-variant-numeric: tabular-nums; margin: 2rem auto !important; max-width: 70rem; padding: 1rem; white-space: pre-wrap; }
 
 @media (max-width: 900px) {
