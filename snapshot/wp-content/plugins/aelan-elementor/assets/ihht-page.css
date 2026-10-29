@@ -157,7 +157,10 @@
 
 /* Approved homepage Sunset Light preset, with a left-aligned editorial column. */
 .aelan-ihht-final {
+    /* Match the previous section's peach edge, lighten, then reveal Sunset Light. */
+    --ihht-final-join: linear-gradient(180deg, #fae5d6 0%, #fffaf7 18%, rgba(255,250,247,0) 48%);
     background:
+        var(--ihht-final-join),
         radial-gradient(ellipse 42% 68% at 66% 50%, rgba(245,151,101,.78) 0%, rgba(248,177,133,.56) 38%, rgba(251,211,187,.22) 66%, transparent 82%),
         radial-gradient(ellipse 78% 56% at 36% 108%, rgba(243,177,134,.58) 0%, rgba(249,211,185,.28) 58%, transparent 82%),
         linear-gradient(180deg, #fffaf7 0%, #fff8f4 18%, #fde9dc 48%, #f8ceb2 76%, #f3bb91 100%);
@@ -192,7 +195,7 @@ body:has(.aelan-ihht-final) .af-footer__socials :is(a,button) { color: var(--af-
 body:has(.aelan-ihht-final) .af-footer__copyright { border-top: 1px solid var(--af-line); margin-top: 30px; padding-top: 30px; }
 @media (max-width: 782px) {
     .aelan-ihht-final {
-        background: radial-gradient(ellipse 95% 50% at 58% 54%, rgba(245,151,101,.72) 0%, rgba(248,181,139,.48) 42%, rgba(251,218,198,.18) 70%, transparent 86%), linear-gradient(180deg, #fffaf7 0%, #fff7f3 17%, #fde5d5 50%, #f6c49f 100%);
+        background: var(--ihht-final-join), radial-gradient(ellipse 95% 50% at 58% 54%, rgba(245,151,101,.72) 0%, rgba(248,181,139,.48) 42%, rgba(251,218,198,.18) 70%, transparent 86%), linear-gradient(180deg, #fffaf7 0%, #fff7f3 17%, #fde5d5 50%, #f6c49f 100%);
         padding-block: clamp(4.5rem, 16vw, 6rem) clamp(5rem, 18vw, 6.75rem);
     }
     .aelan-ihht-final__inner { min-height: 0; }
