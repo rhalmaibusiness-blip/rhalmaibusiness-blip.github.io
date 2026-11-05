@@ -83,13 +83,44 @@
 .aelan-ihht-audience__icon img { height: 100%; object-fit: contain; width: 100%; }
 .aelan-ihht-audience__card p { color: rgba(48,52,99,.76); }
 
-.aelan-ihht-research { background: linear-gradient(180deg, var(--ihht-warm) 0%, var(--ihht-warm) 12%, #fae5d6 100%); padding: var(--ihht-space) var(--ihht-inset); }
-.aelan-ihht-research__list { display: grid; gap: 0; margin-top: 3rem; }
-.aelan-ihht-research__study { border-bottom: 1px solid rgba(163,139,115,.34); padding: clamp(1.65rem, 3vw, 2.25rem) 0; }
+.aelan-ihht-research {
+    --ihht-research-radius: 1.8rem;
+    --ihht-research-gap: clamp(1.25rem, 2vw, 2rem);
+    --ihht-research-card-padding: clamp(1.4rem, 2.3vw, 2.25rem);
+    --ihht-research-control-size: 3rem;
+    --ihht-research-card-surface: rgba(255,252,249,.78);
+    --ihht-research-rule: rgba(163,139,115,.34);
+    --ihht-research-title: clamp(2.15rem, 4vw, 3.5rem);
+    background: linear-gradient(180deg, var(--ihht-warm) 0%, var(--ihht-warm) 12%, #fae5d6 100%);
+    padding: clamp(3.5rem, 5vw, 5rem) var(--ihht-inset);
+}
+.aelan-ihht-research .aelan-ihht__header { margin-bottom: clamp(2rem, 3vw, 3rem); max-width: none; }
+.aelan-ihht-research .aelan-ihht__header h2 { font-size: var(--ihht-research-title); text-wrap: pretty; }
+.aelan-ihht-research__layout { display: grid; gap: var(--ihht-research-gap); }
+.aelan-ihht-research--with-photo .aelan-ihht-research__layout { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+.aelan-ihht-research__card { background: var(--ihht-research-card-surface); border: 1px solid var(--ihht-research-rule); border-radius: var(--ihht-research-radius); display: flex; flex-direction: column; min-width: 0; padding: var(--ihht-research-card-padding); }
+.aelan-ihht-research__list { display: grid; gap: 2rem; }
+.aelan-ihht-research__study { min-width: 0; }
+/* All studies remain readable without JavaScript. In carousel mode the longest
+   study still sets the height, so the controls and following content never jump. */
+.aelan-ihht-research__card.is-ready .aelan-ihht-research__list { flex: 1; gap: 0; }
+.aelan-ihht-research__card.is-ready .aelan-ihht-research__study { grid-area: 1 / 1; pointer-events: none; visibility: hidden; }
+.aelan-ihht-research__card.is-ready .aelan-ihht-research__study.is-active { pointer-events: auto; visibility: visible; }
 .aelan-ihht-research__heading { font-size: clamp(1.25rem, 1.85vw, 1.65rem) !important; line-height: 1.35 !important; margin-bottom: .7rem !important; max-width: 72rem; }
 .aelan-ihht-research__year { color: var(--ihht-taupe); font-family: var(--wp--preset--font-family--satoshi, Satoshi, sans-serif); font-variant-numeric: tabular-nums; font-weight: 700; letter-spacing: 0; }
 .aelan-ihht-research__study p { color: rgba(48,52,99,.8); max-width: 68rem; }
-.aelan-ihht-research__footer { align-items: center; display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) auto; margin-top: 2.5rem; }
+.aelan-ihht-research__controls { align-items: center; border-top: 1px solid var(--ihht-research-rule); display: flex; gap: 1rem; justify-content: space-between; margin-top: 2rem; padding-top: 1.25rem; }
+.aelan-ihht-research__controls[hidden] { display: none; }
+.aelan-ihht-research__counter { color: var(--ihht-taupe); font-size: clamp(1.4rem, 2vw, 1.8rem); font-variant-numeric: tabular-nums; font-weight: 700; line-height: 1; }
+.aelan-ihht-research__arrows { display: flex; gap: .75rem; }
+.aelan-ihht .aelan-ihht-research__arrow { align-items: center; background: transparent; border: 1px solid var(--ihht-taupe); border-radius: 50%; color: var(--ihht-taupe); cursor: pointer; display: inline-flex; flex: 0 0 var(--ihht-research-control-size); height: var(--ihht-research-control-size); justify-content: center; margin: 0; padding: .7rem; width: var(--ihht-research-control-size); }
+.aelan-ihht .aelan-ihht-research__arrow:hover { background: var(--ihht-cream); color: var(--ihht-navy); }
+.aelan-ihht .aelan-ihht-research__arrow:focus-visible { outline: 2px solid var(--ihht-navy); outline-offset: 4px; }
+.aelan-ihht-research__arrow svg { fill: none; height: 100%; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; width: 100%; }
+.aelan-ihht-research__sr-only { clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
+.aelan-ihht-research__photo { border-radius: var(--ihht-research-radius); min-height: 25rem; min-width: 0; overflow: hidden; position: relative; }
+.aelan-ihht-research__photo .aelan-ihht-research__photo__image { display: block; height: 100%; inset: 0; object-fit: cover; object-position: 61% center; position: absolute; width: 100%; }
+.aelan-ihht-research__footer { align-items: center; border-top: 1px solid var(--ihht-research-rule); display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) auto; margin-top: 2rem; padding-top: 1.4rem; }
 .aelan-ihht-research__note { border-left: 3px solid var(--ihht-peach); font-size: .86rem; margin: 0; padding: .8rem 1rem; }
 
 .aelan-ihht-system { background: radial-gradient(ellipse 40% 38% at 3% 95%, rgba(243,191,153,.16), transparent 70%), var(--ihht-warm); padding: var(--ihht-space) var(--ihht-inset); }
@@ -225,6 +256,8 @@ body:has(.aelan-ihht-final) .af-footer__copyright { border-top: 1px solid var(--
 }
 
 @media (max-width: 900px) {
+    .aelan-ihht-research--with-photo .aelan-ihht-research__layout { grid-template-columns: minmax(0, 1fr); }
+    .aelan-ihht-research__photo { aspect-ratio: 3 / 2; min-height: 0; }
     .aelan-ihht-facts__layout, .aelan-ihht-system__layout, .aelan-ihht-safety__layout { grid-template-columns: minmax(0, 1fr); }
     .aelan-ihht-safety__copy .aelan-ihht__body { max-width: 42rem; }
     .aelan-ihht-safety::before { bottom: 5%; height: 22rem; left: -30%; width: 160%; }
@@ -233,6 +266,11 @@ body:has(.aelan-ihht-final) .af-footer__copyright { border-top: 1px solid var(--
     .aelan-ihht-facts__item { gap: 1.75rem; grid-template-columns: minmax(215px, .58fr) minmax(0, 1.42fr); }
     .aelan-ihht-audience__grid { grid-template-columns: minmax(0, 1fr); }
     .aelan-ihht-research__footer { align-items: start; grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+    .aelan-ihht-research__card.is-ready .aelan-ihht-research__list { display: block; }
+    .aelan-ihht-research__card.is-ready .aelan-ihht-research__study { margin-bottom: 2rem; visibility: visible; }
+    .aelan-ihht-research__controls { display: none; }
 }
 @media (max-width: 1050px) {
     .aelan-ihht-hero__layout { grid-template-columns: minmax(0, 1fr); }
