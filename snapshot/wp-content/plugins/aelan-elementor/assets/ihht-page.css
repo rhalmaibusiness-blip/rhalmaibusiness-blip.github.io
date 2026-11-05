@@ -48,7 +48,9 @@
 .aelan-ihht-hero__copy h1 { font-size: clamp(calc(1.95rem + 2px), calc(2.7vw + 2px), calc(2.2rem + 2px)); max-width: none; white-space: pre; }
 .aelan-ihht-hero__copy .aelan-ihht__body { font-size: clamp(.95rem, 1.05vw, 1rem); hyphens: auto; line-height: 1.68; max-width: 40rem; text-align: justify; text-wrap: pretty; }
 .aelan-ihht-hero__copy .aelan-ihht__body p { margin-bottom: .8em; }
-.aelan-ihht-hero__device { color: var(--ihht-navy); font-size: var(--ihht-small); line-height: 1.6; margin: 1rem 0 0; max-width: 40rem; text-wrap: pretty; }
+.aelan-ihht-hero__visual { display: flex; flex-direction: column; margin: 0; min-width: 0; }
+.aelan-ihht-hero__visual .aelan-ihht-hero__media { flex: 1; }
+.aelan-ihht-hero__device { color: var(--ihht-navy); font-size: var(--ihht-small); line-height: 1.6; margin: 1rem 0 0; text-wrap: pretty; }
 .aelan-ihht-hero__price { border-block: 1px solid var(--ihht-edge); display: grid; gap: .45rem; margin: 2.25rem 0 1rem; padding: 1.2rem 0; }
 .aelan-ihht-hero__price strong { flex-basis: 100%; font: 500 clamp(1.35rem, 2vw, 1.75rem)/1.25 var(--wp--preset--font-family--satoshi, Satoshi, sans-serif); font-variant-numeric: tabular-nums; }
 .aelan-ihht-hero__price span { color: rgba(48,52,99,.76); font-size: .88rem; }
