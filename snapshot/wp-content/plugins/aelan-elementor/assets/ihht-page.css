@@ -53,7 +53,7 @@
 .aelan-ihht-hero__finder-band { background: rgba(243,191,153,.2); border: 1px solid var(--ihht-edge); border-radius: 1rem; color: inherit; font-size: .9rem; font-weight: 700; margin: 0 0 1.75rem !important; padding: .9rem 1rem; }
 .aelan-ihht-hero__finder { margin-top: 1.25rem; max-width: 42rem; }
 .aelan-ihht-hero__media { background: radial-gradient(ellipse at 82% 18%, rgba(243,191,153,.3), transparent 66%), radial-gradient(ellipse at 10% 88%, rgba(198,192,224,.22), transparent 68%), var(--ihht-cream); border: 1px solid var(--ihht-white-edge); border-radius: clamp(1.5rem, 3vw, 3.25rem); box-shadow: var(--ihht-shadow); min-height: 680px; overflow: hidden; position: relative; }
-.aelan-ihht-hero__media__image { display: block; height: 100%; inset: 0; object-fit: cover; position: absolute; width: 100%; }
+.aelan-ihht-hero__media .aelan-ihht-hero__media__image { display: block; height: 100%; inset: 0; object-fit: cover; position: absolute; width: 100%; }
 
 .aelan-ihht-process { background: #fff; padding: var(--ihht-space) var(--ihht-inset); }
 .aelan-ihht-process .aelan-ihht__header h2 { font-size: clamp(calc(2.35rem - 5px), calc(4.2vw - 5px), calc(4.25rem - 5px)); }
