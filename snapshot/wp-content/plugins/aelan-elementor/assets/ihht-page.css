@@ -107,6 +107,10 @@
     --ihht-safety-ribbon-opacity: .24;
     --ihht-safety-ribbon-height: clamp(15rem, 31vw, 32rem);
     --ihht-safety-title-size: clamp(2rem, 3.3vw, 2.75rem);
+    --ihht-safety-photo-ratio: 8 / 5;
+    --ihht-safety-photo-radius: 1.8rem;
+    --ihht-safety-photo-overlap: clamp(3rem, 6vw, 5.5rem);
+    --ihht-safety-panel-inset: clamp(1rem, 2vw, 2rem);
     background: var(--ihht-warm);
     isolation: isolate;
     overflow: hidden;
@@ -117,6 +121,12 @@
 .aelan-ihht-safety::before { background: url('starter/aelan-ihht-safety-ribbon.webp') center / 100% 100% no-repeat; bottom: clamp(2rem, 4vw, 4.5rem); content: ""; height: var(--ihht-safety-ribbon-height); left: -10%; opacity: var(--ihht-safety-ribbon-opacity); pointer-events: none; position: absolute; width: 120%; z-index: -1; }
 .aelan-ihht-safety__layout { align-items: start; display: grid; gap: var(--ihht-gap); grid-template-columns: minmax(0, .97fr) minmax(0, 1.03fr); position: relative; }
 .aelan-ihht-safety__copy { min-width: 0; padding-top: .35rem; }
+.aelan-ihht-safety__visual { min-width: 0; }
+.aelan-ihht-safety--with-photo .aelan-ihht-safety__layout { align-items: center; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); }
+.aelan-ihht-safety--with-photo .aelan-ihht-safety__copy { padding-top: 0; }
+.aelan-ihht-safety__photo { aspect-ratio: var(--ihht-safety-photo-ratio); background: var(--ihht-cream); border-radius: var(--ihht-safety-photo-radius); overflow: hidden; position: relative; }
+.aelan-ihht-safety__photo .aelan-ihht-safety__photo__image { display: block; height: 100%; inset: 0; object-fit: cover; object-position: 60% 42%; position: absolute; width: 100%; }
+.aelan-ihht-safety--with-photo .aelan-ihht-safety__panel { margin: calc(-1 * var(--ihht-safety-photo-overlap)) var(--ihht-safety-panel-inset) 0; position: relative; z-index: 1; }
 .aelan-ihht-safety__copy .aelan-ihht__eyebrow { border-bottom: 1px solid var(--ihht-edge); margin-bottom: 1.5rem; max-width: 8rem; padding-bottom: 1rem; }
 .aelan-ihht-safety__copy h2 { font-size: var(--ihht-safety-title-size); line-height: 1.15; margin-bottom: 1.75rem; text-wrap: pretty; white-space: pre-line; }
 .aelan-ihht-safety__copy .aelan-ihht__body { color: var(--ihht-navy); font-size: 1rem; line-height: 1.75; max-width: 36rem; text-wrap: pretty; }
@@ -206,6 +216,13 @@ body:has(.aelan-ihht-final) .af-footer__copyright { border-top: 1px solid var(--
     body:has(.aelan-ihht-final) .aelan-site-footer.is-charcoal { padding-inline: 24px !important; }
 }
 .aelan-ihht-final__prices { border-block: 1px solid var(--ihht-edge); font-size: 1.08rem; font-variant-numeric: tabular-nums; margin: 2rem auto !important; max-width: 70rem; padding: 1rem; white-space: pre-wrap; }
+
+@media (max-width: 1100px) {
+    .aelan-ihht-safety--with-photo { --ihht-safety-photo-ratio: 3 / 2; }
+    .aelan-ihht-safety--with-photo .aelan-ihht-safety__layout { grid-template-columns: minmax(0, 1fr); max-width: 42rem; }
+    .aelan-ihht-safety--with-photo .aelan-ihht-safety__visual { display: grid; gap: 1.5rem; }
+    .aelan-ihht-safety--with-photo .aelan-ihht-safety__panel { margin: 0; }
+}
 
 @media (max-width: 900px) {
     .aelan-ihht-facts__layout, .aelan-ihht-system__layout, .aelan-ihht-safety__layout { grid-template-columns: minmax(0, 1fr); }
